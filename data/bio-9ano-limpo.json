@@ -1,0 +1,2029 @@
+﻿{
+    "perguntas":  [
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a estrutura tridimensional em dupla hÃ©lice proposta por James Watson e Francis Crick para a molÃ©cula de DNA?",
+                          "alternativas":  [
+                                               "Uma fita simples circular",
+                                               "Uma dupla hÃ©lice formada por nucleotÃ­deos unidos por bases nitrogenadas complementares",
+                                               "Uma proteÃ­na globular compacta",
+                                               "Um carboidrato ramificado"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que causa o aquecimento global acentuado nas Ãºltimas dÃ©cadas?",
+                          "alternativas":  [
+                                               "O aumento exagerado na emissÃ£o de gases de efeito estufa (como CO2) devido Ã  queima de combustÃ­veis fÃ³sseis e desmatamento",
+                                               "A diminuiÃ§Ã£o da atividade solar",
+                                               "O excesso de chuva nos oceanos",
+                                               "A rotaÃ§Ã£o mais rÃ¡pida da Terra"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a importÃ¢ncia da preservaÃ§Ã£o dos corredores ecolÃ³gicos entre fragmentos de matas?",
+                          "alternativas":  [
+                                               "Facilitar a caÃ§a esportiva de animais silvestres",
+                                               "Permitir o fluxo gÃªnico, a migraÃ§Ã£o e a sobrevivÃªncia de populaÃ§Ãµes de animais e plantas entre Ã¡reas isoladas",
+                                               "Aumentar a poluiÃ§Ã£o sonora nas rodovias",
+                                               "Impedir o crescimento de Ã¡rvores nativas"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quem ocupa o primeiro nÃ­vel trÃ³fico?",
+                          "alternativas":  [
+                                               "CarnÃ­voros",
+                                               "Decompositores",
+                                               "Produtores (plantas)",
+                                               "Consumidores secundÃ¡rios"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a biodiversidade e por que sua preservaÃ§Ã£o Ã© vital?",
+                          "alternativas":  [
+                                               "A variedade de vida no planeta, fundamental para a estabilidade dos ecossistemas e equilÃ­brio ecolÃ³gico",
+                                               "A quantidade de fÃ¡bricas em uma cidade",
+                                               "O nÃºmero de rochas em uma montanha",
+                                               "A poluiÃ§Ã£o dos rios urbanos"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a ecologia?",
+                          "alternativas":  [
+                                               "InteraÃ§Ãµes entre seres vivos e ambiente",
+                                               "FabricaÃ§Ã£o de medicamentos",
+                                               "Estrutura dos Ã¡tomos",
+                                               "MecÃ¢nica dos fluidos"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a poliploidia em genÃ©tica e melhoramento vegetal?",
+                          "alternativas":  [
+                                               "A presenÃ§a de mais de dois conjuntos completos de cromossomos em uma cÃ©lula",
+                                               "A ausÃªncia total de material genÃ©tico no nÃºcleo",
+                                               "A troca de um Ãºnico par de bases nitrogenadas",
+                                               "A divisÃ£o normal de cÃ©lulas somÃ¡ticas por mitose"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© fotossÃ­ntese?",
+                          "alternativas":  [
+                                               "RespiraÃ§Ã£o animal",
+                                               "DigestÃ£o de alimentos",
+                                               "ConversÃ£o de luz em energia quÃ­mica pelas plantas",
+                                               "ReproduÃ§Ã£o de bactÃ©rias"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quais sÃ£o as bases nitrogenadas do DNA?",
+                          "alternativas":  [
+                                               "Uracil, Timina, Guanina, Citosina",
+                                               "Adenina, Timina, Citosina, Guanina",
+                                               "Adenina, Uracil, Prolina, Metionina",
+                                               "Fosfato, AÃ§Ãºcar, NitrogÃªnio"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a pegada ecolÃ³gica humana?",
+                          "alternativas":  [
+                                               "O tamanho do sapato necessÃ¡rio para caminhar em trilhas",
+                                               "Uma medida do impacto das atividades humanas sobre os recursos naturais e a capacidade da Terra de regenerÃ¡-los",
+                                               "A quantidade de lixo plÃ¡stico jogada nos oceanos por ano",
+                                               "A poluiÃ§Ã£o sonora nas grandes cidades"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual cientista propÃ´s a Teoria da EvoluÃ§Ã£o das EspÃ©cies atravÃ©s da SeleÃ§Ã£o Natural no livro \u0027A Origem das EspÃ©cies\u0027?",
+                          "alternativas":  [
+                                               "Charles Darwin",
+                                               "Gregor Mendel",
+                                               "Jean-Baptiste Lamarck",
+                                               "Watson e Crick"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© teia alimentar?",
+                          "alternativas":  [
+                                               "Rede de pesca",
+                                               "SequÃªncia Ãºnica de alimentaÃ§Ã£o",
+                                               "TÃ©cnica de cultivo",
+                                               "Cadeias alimentares interligadas"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual crÃ­tica Ã  teoria de Lamarck?",
+                          "alternativas":  [
+                                               "Animais evoluÃ­am pela Ã¡gua",
+                                               "Negava fÃ³sseis",
+                                               "CaracterÃ­sticas adquiridas nÃ£o se transmitem aos descendentes",
+                                               "Negava cÃ©lulas"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quais cromossomos determinam sexo masculino?",
+                          "alternativas":  [
+                                               "XY",
+                                               "XX",
+                                               "YY",
+                                               "XO"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© o papel da recombinaÃ§Ã£o genÃ©tica (crossing-over) durante a meiose na variabilidade das espÃ©cies?",
+                          "alternativas":  [
+                                               "Reduzir a quantidade de DNA celular a zero",
+                                               "Destruir os cromossomos defeituosos",
+                                               "Promover a troca de pedaÃ§os entre cromossomos homÃ³logos, gerando novas combinaÃ§Ãµes de alelos nos gametas",
+                                               "Impedir a reproduÃ§Ã£o sexuada"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quais sÃ£o os cromossomos sexuais que determinam o sexo biolÃ³gico humano masculino clÃ¡ssico?",
+                          "alternativas":  [
+                                               "Cromossomos XY",
+                                               "Cromossomos XX",
+                                               "Cromossomos YY",
+                                               "Cromossomos XO"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a ecologia populacional e de ecossistemas?",
+                          "alternativas":  [
+                                               "As interaÃ§Ãµes entre os seres vivos e o ambiente, fluxos de energia e ciclos biogeoquÃ­micos",
+                                               "Apenas a fabricaÃ§Ã£o de medicamentos sintÃ©ticos",
+                                               "A estrutura interna dos Ã¡tomos celulares",
+                                               "A mecÃ¢nica dos fluidos corporais"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que caracteriza um genÃ³tipo homozigoto?",
+                          "alternativas":  [
+                                               "PresenÃ§a de dois alelos iguais (ex: AA ou aa)",
+                                               "PresenÃ§a de alelos diferentes (ex: Aa)",
+                                               "AusÃªncia de genes",
+                                               "DuplicaÃ§Ã£o do nÃºcleo"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© pirÃ¢mide de energia?",
+                          "alternativas":  [
+                                               "ConstruÃ§Ã£o histÃ³rica",
+                                               "Quantidade de Ã¡gua",
+                                               "RepresentaÃ§Ã£o da energia em cada nÃ­vel trÃ³fico",
+                                               "Peso dos animais"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© reserva biolÃ³gica?",
+                          "alternativas":  [
+                                               "Ãrea para indÃºstrias",
+                                               "Terreno para lixo",
+                                               "Ãrea protegida para preservar biodiversidade",
+                                               "Fazenda de monocultura"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual causa da perda de biodiversidade nas florestas?",
+                          "alternativas":  [
+                                               "Excesso de plantio nativo",
+                                               "DiminuiÃ§Ã£o do sol",
+                                               "Desmatamento e fragmentaÃ§Ã£o de habitats",
+                                               "Canto de aves"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual base emparelha com Adenina no DNA?",
+                          "alternativas":  [
+                                               "Citosina",
+                                               "Timina",
+                                               "Guanina",
+                                               "Uracila"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o vacinas?",
+                          "alternativas":  [
+                                               "AntibiÃ³ticos",
+                                               "Vitaminas",
+                                               "PreparaÃ§Ãµes que estimulam defesas imunolÃ³gicas",
+                                               "AnalgÃ©sicos"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© codominÃ¢ncia?",
+                          "alternativas":  [
+                                               "Um alelo domina completamente",
+                                               "Gene sofre mutaÃ§Ã£o letal",
+                                               "Dois alelos expressam-se simultaneamente no heterozigoto",
+                                               "Genes fora do nÃºcleo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a poluiÃ§Ã£o tÃ©rmica dos corpos d\u0027Ã¡gua?",
+                          "alternativas":  [
+                                               "O congelamento de rios no verÃ£o",
+                                               "O aquecimento da Ã¡gua por vulcÃµes submarinos",
+                                               "O despejo de Ã¡gua aquecida (geralmente por indÃºstrias ou usinas) em rios e lagos, reduzindo o oxigÃªnio dissolvido e prejudicando a fauna aquÃ¡tica",
+                                               "A evaporaÃ§Ã£o rÃ¡pida de poÃ§as de chuva"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a definiÃ§Ã£o de fenÃ³tipo em biologia?",
+                          "alternativas":  [
+                                               "O conjunto de caracterÃ­sticas observÃ¡veis (fisiolÃ³gicas, anatÃ´micas ou comportamentais) de um organismo, resultante da interaÃ§Ã£o entre genÃ³tipo e ambiente",
+                                               "Apenas a sequÃªncia de nucleotÃ­deos do DNA",
+                                               "O nÃºmero exato de cromossomos no nÃºcleo",
+                                               "A quantidade de energia produzida pelas mitocÃ´ndrias"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como a educaÃ§Ã£o ambiental atua na formaÃ§Ã£o cidadÃ£ para a sustentabilidade do planeta?",
+                          "alternativas":  [
+                                               "Incentivando o consumo irresponsÃ¡vel de recursos",
+                                               "Ensinando apenas teorias abstratas sem prÃ¡tica",
+                                               "Mostrando que o lixo desaparece sozinho",
+                                               "Promovendo a conscientizaÃ§Ã£o crÃ­tica, valores e atitudes voltados para a conservaÃ§Ã£o ambiental e a responsabilidade coletiva"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o processo de eutrofizaÃ§Ã£o de um lago ou rio poluÃ­do?",
+                          "alternativas":  [
+                                               "A limpeza natural da Ã¡gua por peixes predadores",
+                                               "O enriquecimento excessivo de nutrientes (como fÃ³sforo e nitrogÃªnio de esgotos), provocando proliferaÃ§Ã£o de algas, esgotamento de oxigÃªnio e morte de peixes",
+                                               "O congelamento da Ã¡gua no inverno",
+                                               "A acidificaÃ§Ã£o do solo agrÃ­cola"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o gametas?",
+                          "alternativas":  [
+                                               "CÃ©lulas do sangue",
+                                               "CÃ©lulas nervosas",
+                                               "CÃ©lulas musculares",
+                                               "CÃ©lulas reprodutoras (Ã³vulo e espermatozoide)"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a base nitrogenada que se emparelha especificamente com a Adenina (A) na molÃ©cula de DNA?",
+                          "alternativas":  [
+                                               "Citosina (C)",
+                                               "Timina (T)",
+                                               "Guanina (G)",
+                                               "Uracila (U)"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual funÃ§Ã£o dos decompositores?",
+                          "alternativas":  [
+                                               "Produzir oxigÃªnio",
+                                               "CaÃ§ar animais",
+                                               "Degradar matÃ©ria morta devolvendo nutrientes",
+                                               "Polinizar flores"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a codominÃ¢ncia em genÃ©tica mendeliana?",
+                          "alternativas":  [
+                                               "Quando um alelo domina completamente o outro",
+                                               "Quando o gene sofre mutaÃ§Ã£o letal",
+                                               "Quando dois alelos diferentes expressam-se simultaneamente e de forma independente no fenÃ³tipo do heterozigoto (ex: sistema ABO sanguÃ­neo tipo AB)",
+                                               "Quando os genes localizam-se fora do nÃºcleo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estabelece a SeleÃ§Ã£o Natural?",
+                          "alternativas":  [
+                                               "Os mais adaptados tÃªm maiores chances de sobreviver e reproduzir",
+                                               "Animais mudam por vontade prÃ³pria",
+                                               "EspÃ©cies nascem idÃªnticas",
+                                               "O clima elimina todos os seres vivos"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a membrana plasmÃ¡tica?",
+                          "alternativas":  [
+                                               "Produz energia",
+                                               "Armazena DNA",
+                                               "Sintetiza proteÃ­nas",
+                                               "Delimita a cÃ©lula controlando entrada e saÃ­da de substÃ¢ncias"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© evoluÃ§Ã£o biolÃ³gica?",
+                          "alternativas":  [
+                                               "ModificaÃ§Ã£o gradual das populaÃ§Ãµes ao longo das geraÃ§Ãµes",
+                                               "TransformaÃ§Ã£o instantÃ¢nea de um animal",
+                                               "AdaptaÃ§Ã£o individual ao frio",
+                                               "CriaÃ§Ã£o espontÃ¢nea de bactÃ©rias"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como se chama a primeira Lei de Mendel?",
+                          "alternativas":  [
+                                               "Lei da SegregaÃ§Ã£o Independente",
+                                               "Lei da SegregaÃ§Ã£o dos Fatores",
+                                               "Lei das MutaÃ§Ãµes",
+                                               "Lei do DNA"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual importÃ¢ncia das abelhas?",
+                          "alternativas":  [
+                                               "Produzir veneno",
+                                               "Consumir pÃ³len",
+                                               "Garantir reproduÃ§Ã£o das plantas pela polinizaÃ§Ã£o",
+                                               "Alimento para carnÃ­voros"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o Ã³rgÃ£os vestigiais na evoluÃ§Ã£o biolÃ³gica?",
+                          "alternativas":  [
+                                               "Estruturas atrofiadas que perderam sua funÃ§Ã£o principal ao longo da evoluÃ§Ã£o (como o apÃªndice vermiforme humano)",
+                                               "Ã“rgÃ£os recÃ©m-criados por mutaÃ§Ã£o rÃ¡pida",
+                                               "O sistema nervoso central dos mamÃ­feros",
+                                               "Ã“rgÃ£os responsÃ¡veis pela respiraÃ§Ã£o branquial"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que diz a Segunda Lei de Mendel (Lei da SegregaÃ§Ã£o Independente)?",
+                          "alternativas":  [
+                                               "Os alelos de genes localizados em pares de cromossomos homÃ³logos diferentes segregam-se de maneira independente uns dos outros durante a formaÃ§Ã£o dos gametas",
+                                               "Todos os genes do corpo herdam-se juntos em bloco Ãºnico",
+                                               "O fenÃ³tipo nÃ£o tem relaÃ§Ã£o com o DNA",
+                                               "Apenas a mÃ£e transmite caracterÃ­sticas aos filhos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© transcriÃ§Ã£o do DNA?",
+                          "alternativas":  [
+                                               "DuplicaÃ§Ã£o do DNA",
+                                               "DivisÃ£o celular",
+                                               "DestruiÃ§Ã£o de genes",
+                                               "CÃ³pia da informaÃ§Ã£o do DNA para RNA mensageiro"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a importÃ¢ncia fundamental das unidades de conservaÃ§Ã£o de proteÃ§Ã£o integral (como parques nacionais)?",
+                          "alternativas":  [
+                                               "Permitir a exploraÃ§Ã£o comercial intensiva de madeira",
+                                               "Construir grandes complexos industriais e rodovias",
+                                               "Utilizar o solo para agricultura de monocultura",
+                                               "Garantir a preservaÃ§Ã£o dos ecossistemas naturais sem alteraÃ§Ã£o humana, permitindo apenas o turismo sustentÃ¡vel e pesquisas"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© o papel ecolÃ³gico das espÃ©cies pioneiras no processo de sucessÃ£o ecolÃ³gica primÃ¡ria?",
+                          "alternativas":  [
+                                               "Serem os primeiros organismos (como lÃ­quens e musgos) a colonizar rochas nuas, iniciando a formaÃ§Ã£o do solo fÃ©rtil",
+                                               "Alimentar-se exclusivamente de carnÃ­voros de topo",
+                                               "Bloquear totalmente a entrada de luz solar no ambiente",
+                                               "Impedir o crescimento de qualquer outra planta futura"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quem foi o monge agostiniano considerado o pai da genÃ©tica devido aos seus experimentos clÃ¡ssicos de cruzamento com ervilhas?",
+                          "alternativas":  [
+                                               "Gregor Mendel",
+                                               "Charles Darwin",
+                                               "Louis Pasteur",
+                                               "Robert Hooke"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© um alelo recessivo em genÃ©tica?",
+                          "alternativas":  [
+                                               "Aquele que sÃ³ se manifesta no fenÃ³tipo quando em dose dupla (homozigoto)",
+                                               "Aquele que sempre domina o outro alelo",
+                                               "Aquele que sofre mutaÃ§Ã£o a cada segundo",
+                                               "Aquele exclusivo das cÃ©lulas sexuais femininas"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a molÃ©cula responsÃ¡vel pelo armazenamento e transmissÃ£o da informaÃ§Ã£o genÃ©tica em quase todos os seres vivos?",
+                          "alternativas":  [
+                                               "DNA (Ãcido desoxirribonucleico)",
+                                               "Glicose simples",
+                                               "Hemoglobina do sangue",
+                                               "Insulina pancreÃ¡tica"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© biotecnologia?",
+                          "alternativas":  [
+                                               "FabricaÃ§Ã£o de ferramentas de pedra",
+                                               "Uso de organismos vivos para desenvolver produtos Ãºteis",
+                                               "Estudo de fÃ³sseis",
+                                               "ExtraÃ§Ã£o de petrÃ³leo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© fenÃ³tipo em biologia?",
+                          "alternativas":  [
+                                               "CaracterÃ­sticas observÃ¡veis de um organismo",
+                                               "SequÃªncia de nucleotÃ­deos do DNA",
+                                               "NÃºmero de cromossomos",
+                                               "Energia das mitocÃ´ndrias"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como o Neodarwinismo explica o pescoÃ§o da girafa?",
+                          "alternativas":  [
+                                               "Esticaram o pescoÃ§o e passaram aos filhos",
+                                               "MutaÃ§Ã£o e seleÃ§Ã£o natural favoreceram pescoÃ§os longos",
+                                               "Ambiente forneceu pescoÃ§os longos",
+                                               "Girafas antigas comiam carne"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a principal utilidade dos testes de DNA (impressÃ£o genÃ©tica ou DNA fingerprinting) em investigaÃ§Ãµes forenses?",
+                          "alternativas":  [
+                                               "Identificar indivÃ­duos com alto grau de certeza atravÃ©s de padrÃµes Ãºnicos em sequÃªncias nÃ£o codificantes do DNA",
+                                               "Medir a altura exata e o peso corporal de uma pessoa",
+                                               "Identificar o tipo sanguÃ­neo ABO instantaneamente",
+                                               "Avaliar a capacidade respiratÃ³ria dos pulmÃµes"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© crossing-over?",
+                          "alternativas":  [
+                                               "SeparaÃ§Ã£o dos cromossomos",
+                                               "DuplicaÃ§Ã£o do DNA",
+                                               "DestruiÃ§Ã£o de genes",
+                                               "Troca de segmentos entre cromossomos homÃ³logos"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como se chama a primeira Lei de Mendel (Lei da SegregaÃ§Ã£o dos Fatores)?",
+                          "alternativas":  [
+                                               "Os genes de caracterÃ­sticas diferentes segregam-se independentemente",
+                                               "Cada caracterÃ­stica Ã© condicionada por um par de fatores que se separam na formaÃ§Ã£o dos gametas",
+                                               "As mutaÃ§Ãµes ocorrem sempre por vontade do ambiente",
+                                               "O DNA duplica-se sem divisÃ£o celular"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que caracteriza uma espÃ©cie endÃªmica em uma regiÃ£o?",
+                          "alternativas":  [
+                                               "Uma espÃ©cie que ocorre nativamente apenas em uma determinada Ã¡rea geogrÃ¡fica especÃ­fica e em nenhum outro lugar do mundo",
+                                               "Uma espÃ©cie que se espalha rapidamente por todos os continentes",
+                                               "Uma espÃ©cie extinta hÃ¡ milhares de anos",
+                                               "Um animal domÃ©stico criado em fazendas"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual foi o nome da famosa ovelha clonada a partir de uma cÃ©lula adulta em 1996?",
+                          "alternativas":  [
+                                               "Ovelha Molly",
+                                               "Ovelha Dolly",
+                                               "Ovelha Polly",
+                                               "Ovelha Sally"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual problema da queima de combustÃ­veis fÃ³sseis?",
+                          "alternativas":  [
+                                               "Aumento da camada de ozÃ´nio",
+                                               "EmissÃ£o de gases poluentes e de efeito estufa",
+                                               "Resfriamento global",
+                                               "EliminaÃ§Ã£o do nitrogÃªnio"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como se chama o ciclo biogeoquÃ­mico que descreve a circulaÃ§Ã£o do elemento carbono entre a atmosfera, os oceanos, os seres vivos e o solo?",
+                          "alternativas":  [
+                                               "Ciclo do carbono",
+                                               "Ciclo da Ã¡gua",
+                                               "Ciclo das rochas",
+                                               "Ciclo do oxigÃªnio puro"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a poluiÃ§Ã£o visual nos centros urbanos modernos?",
+                          "alternativas":  [
+                                               "A fumaÃ§a preta emitida por escapamentos de carros",
+                                               "O barulho excessivo de sirenes e motores",
+                                               "O excesso de elementos de comunicaÃ§Ã£o visual (como outdoors, cartazes e luzes) que poluem a paisagem e causam estresse",
+                                               "A contaminaÃ§Ã£o da Ã¡gua potÃ¡vel por resÃ­duos quÃ­micos"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© vacÃºolo nas cÃ©lulas vegetais?",
+                          "alternativas":  [
+                                               "Organela de respiraÃ§Ã£o",
+                                               "SÃ­ntese de proteÃ­nas",
+                                               "NÃºcleo da cÃ©lula",
+                                               "Organela de armazenamento de Ã¡gua"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o OGMs (transgÃªnicos)?",
+                          "alternativas":  [
+                                               "Animais sem material genÃ©tico",
+                                               "Organismos que receberam genes de outras espÃ©cies",
+                                               "Plantas incapazes de fotossÃ­ntese",
+                                               "BactÃ©rias incapazes de reproduÃ§Ã£o"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o Ã³rgÃ£os anÃ¡logos?",
+                          "alternativas":  [
+                                               "Ã“rgÃ£os com mesma funÃ§Ã£o mas origens diferentes",
+                                               "Ã“rgÃ£os com mesma origem mas funÃ§Ãµes distintas",
+                                               "Ã“rgÃ£os sem utilidade",
+                                               "Estruturas idÃªnticas em bactÃ©rias"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o ciclo do carbono?",
+                          "alternativas":  [
+                                               "CirculaÃ§Ã£o do carbono entre atmosfera, oceanos e seres vivos",
+                                               "Ciclo da Ã¡gua",
+                                               "Ciclo das rochas",
+                                               "Ciclo do oxigÃªnio"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como se explica o pescoÃ§o longo das girafas segundo a Teoria SintÃ©tica da EvoluÃ§Ã£o (Neodarwinismo)?",
+                          "alternativas":  [
+                                               "As girafas esticaram o pescoÃ§o de tanto alcanÃ§ar folhas altas e passaram isso aos filhos",
+                                               "MutaÃ§Ã£o genÃ©tica gerou variabilidade de pescoÃ§o, e a seleÃ§Ã£o natural favoreceu os indivÃ­duos com pescoÃ§o mais longo para alcanÃ§ar alimento na seca",
+                                               "O ambiente forneceu pescoÃ§os longos automaticamente a todas",
+                                               "As girafas antigas alimentavam-se de carne"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o lisossomos?",
+                          "alternativas":  [
+                                               "Organelas de respiraÃ§Ã£o",
+                                               "Organelas de fotossÃ­ntese",
+                                               "SÃ­ntese de proteÃ­nas",
+                                               "Organelas de digestÃ£o intracelular"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© o principal argumento ecolÃ³gico contrÃ¡rio ao uso descontrolado de plantas transgÃªnicas resistentes a herbicidas?",
+                          "alternativas":  [
+                                               "O sabor dos alimentos torna-se excessivamente doce",
+                                               "As plantas perdem a capacidade de fazer fotossÃ­ntese",
+                                               "Ocorre aumento na produÃ§Ã£o de oxigÃªnio atmosfÃ©rico",
+                                               "O risco de surgimento de ervas daninhas super-resistentes por cruzamento com parentes silvestres e impacto sobre insetos nÃ£o-alvo"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© dominÃ¢ncia incompleta?",
+                          "alternativas":  [
+                                               "Recessivo anula dominante",
+                                               "NÃ£o hÃ¡ genes no cromossomo",
+                                               "Heterozigoto tem fenÃ³tipo intermediÃ¡rio",
+                                               "Pais transmitem caracterÃ­sticas iguais"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a biorremediaÃ§Ã£o ambiental?",
+                          "alternativas":  [
+                                               "O uso de mÃ¡quinas pesadas para cavar aterros sanitÃ¡rios",
+                                               "O uso de microrganismos (como bactÃ©rias e fungos) para degradar ou remover poluentes tÃ³xicos do solo e da Ã¡gua",
+                                               "A queima controlada de plÃ¡sticos em incineradores",
+                                               "A filtragem mecÃ¢nica da Ã¡gua da chuva em estaÃ§Ãµes de tratamento"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o Ã³rgÃ£os vestigiais?",
+                          "alternativas":  [
+                                               "Estruturas que perderam funÃ§Ã£o ao longo da evoluÃ§Ã£o",
+                                               "Ã“rgÃ£os criados por mutaÃ§Ã£o",
+                                               "Sistema nervoso dos mamÃ­feros",
+                                               "Ã“rgÃ£os de respiraÃ§Ã£o branquial"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a principal crÃ­tica ou insuficiÃªncia da teoria de Lamarck (Lamarckismo) refutada pela genÃ©tica moderna?",
+                          "alternativas":  [
+                                               "Lamarck dizia que os animais evoluÃ­am pela Ã¡gua",
+                                               "Lamarck afirmava que os fÃ³sseis nÃ£o existiam",
+                                               "A heranÃ§a de caracterÃ­sticas adquiridas pelo uso ou desuso durante a vida do indivÃ­duo nÃ£o se transmite aos descendentes",
+                                               "Lamarck negava a existÃªncia de cÃ©lulas"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o organismos geneticamente modificados (OGMs) ou transgÃªnicos?",
+                          "alternativas":  [
+                                               "Animais criados em laboratÃ³rio sem material genÃ©tico",
+                                               "Organismos que receberam em seu DNA genes de outras espÃ©cies atravÃ©s de tÃ©cnicas de engenharia genÃ©tica",
+                                               "Plantas que perderam a capacidade de fazer fotossÃ­ntese",
+                                               "BactÃ©rias incapazes de se reproduzir"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a principal diferenÃ§a entre mitose e meiose na divisÃ£o celular?",
+                          "alternativas":  [
+                                               "A mitose gera duas cÃ©lulas filhas idÃªnticas (crescimento/reparo), enquanto a meiose gera quatro cÃ©lulas com metade do nÃºmero de cromossomos (gametas)",
+                                               "A meiose ocorre apenas na pele e ossos",
+                                               "A mitose reduz o nÃºmero de cromossomos pela metade",
+                                               "NÃ£o hÃ¡ nenhuma diferenÃ§a estrutural entre elas"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como se define a pegada hÃ­drica de uma pessoa ou produto?",
+                          "alternativas":  [
+                                               "O volume total de Ã¡gua doce consumida diretamente no banho",
+                                               "O indicador que mede o volume total de Ã¡gua consumido e poluÃ­do, direta ou indiretamente, na produÃ§Ã£o de bens e serviÃ§os",
+                                               "A quantidade de chuva que cai em uma floresta por ano",
+                                               "O peso da Ã¡gua contida nos oceanos globais"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© retÃ­culo endoplasmÃ¡tico?",
+                          "alternativas":  [
+                                               "Organela de digestÃ£o",
+                                               "Centro de controle celular",
+                                               "Membrana externa",
+                                               "Rede de membranas para sÃ­ntese e transporte"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© especiaÃ§Ã£o no processo evolutivo?",
+                          "alternativas":  [
+                                               "A extinÃ§Ã£o de uma espÃ©cie inteira",
+                                               "O processo de surgimento de novas espÃ©cies a partir de uma populaÃ§Ã£o ancestral comum, geralmente por isolamento reprodutivo",
+                                               "A uniÃ£o de duas espÃ©cies diferentes em um Ãºnico ser",
+                                               "A mutaÃ§Ã£o rÃ¡pida de uma cÃ©lula somÃ¡tica"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© um ecossistema?",
+                          "alternativas":  [
+                                               "Apenas animais",
+                                               "Apenas plantas",
+                                               "Seres vivos e ambiente fÃ­sico onde interagem",
+                                               "Sistema de irrigaÃ§Ã£o"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© eutrofizaÃ§Ã£o de um lago?",
+                          "alternativas":  [
+                                               "Limpeza natural por peixes",
+                                               "Excesso de nutrientes causando proliferaÃ§Ã£o de algas",
+                                               "Congelamento da Ã¡gua",
+                                               "AcidificaÃ§Ã£o do solo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual o nome da ovelha clonada em 1996?",
+                          "alternativas":  [
+                                               "Molly",
+                                               "Dolly",
+                                               "Polly",
+                                               "Sally"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© sÃ­ntese de proteÃ­nas?",
+                          "alternativas":  [
+                                               "Quebra de gorduras",
+                                               "FabricaÃ§Ã£o de proteÃ­nas a partir do DNA",
+                                               "RespiraÃ§Ã£o celular",
+                                               "DigestÃ£o de carboidratos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual molÃ©cula armazena a informaÃ§Ã£o genÃ©tica?",
+                          "alternativas":  [
+                                               "DNA (Ãcido desoxirribonucleico)",
+                                               "Glicose",
+                                               "Hemoglobina",
+                                               "Insulina"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© cÃ©lula procariÃ³tica?",
+                          "alternativas":  [
+                                               "CÃ©lula com nÃºcleo definido",
+                                               "CÃ©lula vegetal com cloroplastos",
+                                               "CÃ©lula animal com mitocÃ´ndrias",
+                                               "CÃ©lula sem nÃºcleo organizado como bactÃ©rias"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© poluiÃ§Ã£o tÃ©rmica?",
+                          "alternativas":  [
+                                               "Congelamento de rios",
+                                               "Aquecimento por vulcÃµes",
+                                               "Despejo de Ã¡gua quente prejudicando fauna aquÃ¡tica",
+                                               "EvaporaÃ§Ã£o de poÃ§as"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© fluxo de energia no ecossistema?",
+                          "alternativas":  [
+                                               "Repasse de energia atravÃ©s da cadeia alimentar",
+                                               "Reciclagem de energia para o Sol",
+                                               "ProduÃ§Ã£o de eletricidade por plantas",
+                                               "Perda total de matÃ©ria"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a principal vantagem evolutiva da reproduÃ§Ã£o sexuada sobre a assexuada?",
+                          "alternativas":  [
+                                               "Gastar menos energia metabÃ³lica na busca de parceiros",
+                                               "Acelerar a velocidade de divisÃ£o celular sem controle",
+                                               "Gerar maior variabilidade genÃ©tica nas geraÃ§Ãµes descendentes, aumentando a capacidade de adaptaÃ§Ã£o a mudanÃ§as ambientais",
+                                               "Produzir clones idÃªnticos mais rapidamente"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© uma mutaÃ§Ã£o genÃ©tica?",
+                          "alternativas":  [
+                                               "AlteraÃ§Ã£o no DNA que pode gerar novas caracterÃ­sticas",
+                                               "DivisÃ£o normal das cÃ©lulas",
+                                               "Morte de tecidos",
+                                               "AbsorÃ§Ã£o de nutrientes"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual o papel do nÃºcleo celular?",
+                          "alternativas":  [
+                                               "DigestÃ£o intracelular",
+                                               "Produzir ATP",
+                                               "SÃ­ntese de proteÃ­nas",
+                                               "Armazenar e controlar informaÃ§Ã£o genÃ©tica"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como se chama a cÃ©lula reprodutora masculina (gameta) nos animais?",
+                          "alternativas":  [
+                                               "Ã“vulo",
+                                               "Espermatozoide",
+                                               "Zigoto",
+                                               "PlacentÃ¡rio"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© cÃ©lula eucariÃ³tica?",
+                          "alternativas":  [
+                                               "CÃ©lula sem membrana plasmÃ¡tica",
+                                               "CÃ©lula sem organelas",
+                                               "CÃ©lula sem material genÃ©tico",
+                                               "CÃ©lula com nÃºcleo organizado delimitado por membrana"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a principal consequÃªncia da destruiÃ§Ã£o da camada de ozÃ´nio estratosfÃ©rico para a vida na Terra?",
+                          "alternativas":  [
+                                               "Aquecimento instantÃ¢neo dos oceanos",
+                                               "Maior incidÃªncia de raios ultravioleta (UV) nocivos na superfÃ­cie terrestre, aumentando riscos de cÃ¢ncer de pele e danos biolÃ³gicos",
+                                               "Falta de oxigÃªnio para a respiraÃ§Ã£o animal",
+                                               "Aumento da pressÃ£o atmosfÃ©rica ao nÃ­vel do mar"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual a diferenÃ§a entre DNA e RNA?",
+                          "alternativas":  [
+                                               "DNA possui uracila",
+                                               "DNA Ã© dupla hÃ©lice com timina; RNA Ã© fita simples com uracila",
+                                               "RNA estÃ¡ sÃ³ no nÃºcleo",
+                                               "NÃ£o hÃ¡ diferenÃ§a"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o consumidores primÃ¡rios?",
+                          "alternativas":  [
+                                               "CarnÃ­voros",
+                                               "Plantas",
+                                               "HerbÃ­voros que comem produtores",
+                                               "Fungos"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o estruturas vestigiais na anatomia humana e animal?",
+                          "alternativas":  [
+                                               "Ã“rgÃ£os essenciais para a digestÃ£o rÃ¡pida",
+                                               "MÃºsculos voluntÃ¡rios do braÃ§o",
+                                               "Ã“rgÃ£os que perderam sua funÃ§Ã£o principal ao longo da evoluÃ§Ã£o, servindo como evidÃªncia de ancestralidade comum",
+                                               "CÃ©lulas sanguÃ­neas de defesa"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© traduÃ§Ã£o na sÃ­ntese proteica?",
+                          "alternativas":  [
+                                               "CÃ³pia do DNA",
+                                               "DivisÃ£o da cÃ©lula",
+                                               "DuplicaÃ§Ã£o dos cromossomos",
+                                               "ConversÃ£o da mensagem do RNA em aminoÃ¡cidos"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que significa desenvolvimento sustentÃ¡vel?",
+                          "alternativas":  [
+                                               "Parar totalmente o progresso tecnolÃ³gico e industrial da humanidade",
+                                               "Desenvolvimento que atende Ã s necessidades do presente sem comprometer a capacidade das geraÃ§Ãµes futuras de atenderem Ã s suas prÃ³prias necessidades",
+                                               "Explorar todos os recursos naturais atÃ© esgotÃ¡-los",
+                                               "Manter as florestas intocadas sem permitir nenhuma habitaÃ§Ã£o humana"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a biogeografia na biologia evolutiva?",
+                          "alternativas":  [
+                                               "A composiÃ§Ã£o quÃ­mica do solo rochoso",
+                                               "O clima das calotas polares",
+                                               "A distribuiÃ§Ã£o geogrÃ¡fica das espÃ©cies de seres vivos pelo planeta e as razÃµes histÃ³ricas/evolutivas dessa distribuiÃ§Ã£o",
+                                               "A reproduÃ§Ã£o de bactÃ©rias em tubos de ensaio"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© reciclagem de materiais?",
+                          "alternativas":  [
+                                               "Jogar lixo em aterros",
+                                               "Queimar plÃ¡sticos",
+                                               "Transformar resÃ­duos em matÃ©ria-prima",
+                                               "Triturar vidro para jardins"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o ciclo da Ã¡gua?",
+                          "alternativas":  [
+                                               "Ãgua encanada nas cidades",
+                                               "Tratamento de esgoto",
+                                               "CirculaÃ§Ã£o da Ã¡gua entre atmosfera, solo e seres vivos",
+                                               "FabricaÃ§Ã£o de gelo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quantos cromossomos tem uma cÃ©lula humana?",
+                          "alternativas":  [
+                                               "46 cromossomos (23 pares)",
+                                               "23 cromossomos",
+                                               "92 cromossomos",
+                                               "10 cromossomos"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© biodiversidade?",
+                          "alternativas":  [
+                                               "Variedade de vida no planeta",
+                                               "Quantidade de fÃ¡bricas",
+                                               "NÃºmero de rochas",
+                                               "PoluiÃ§Ã£o dos rios"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a importÃ¢ncia das abelhas e insetos polinizadores para os ecossistemas e para a agricultura humana?",
+                          "alternativas":  [
+                                               "Produzir veneno para uso mÃ©dico",
+                                               "Consumir todo o pÃ³len das flores indesejadas",
+                                               "Garantir a reproduÃ§Ã£o das plantas com flores e a produÃ§Ã£o de grande parte dos alimentos que consumimos",
+                                               "Servir de alimento exclusivo para carnÃ­voros de topo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual objetivo do mapeamento do genoma humano?",
+                          "alternativas":  [
+                                               "Contar ossos",
+                                               "Identificar e sequenciar todos os genes humanos",
+                                               "Fabricar hormÃ´nios",
+                                               "Criar super-humanos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o Ã³rgÃ£os anÃ¡logos na anatomia comparada?",
+                          "alternativas":  [
+                                               "Ã“rgÃ£os que possuem a mesma funÃ§Ã£o, mas origens embrionÃ¡rias diferentes (como asas de insetos e asas de aves)",
+                                               "Ã“rgÃ£os que possuem a mesma origem evolutiva mas funÃ§Ãµes distintas",
+                                               "Ã“rgÃ£os que perderam totalmente sua utilidade original",
+                                               "Estruturas genÃ©ticas idÃªnticas em bactÃ©rias"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© deriva genÃ©tica?",
+                          "alternativas":  [
+                                               "SeleÃ§Ã£o pelo ser humano",
+                                               "VariaÃ§Ã£o aleatÃ³ria nas frequÃªncias dos alelos",
+                                               "Cruzamento entre parentes",
+                                               "MigraÃ§Ã£o em massa"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual funÃ§Ã£o das bactÃ©rias fixadoras de nitrogÃªnio?",
+                          "alternativas":  [
+                                               "Transformar nitrogÃªnio gasoso em compostos para plantas",
+                                               "Consumir todo o nitrogÃªnio",
+                                               "Produzir oxigÃªnio",
+                                               "Destruir raÃ­zes"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quem propÃ´s a Teoria da SeleÃ§Ã£o Natural?",
+                          "alternativas":  [
+                                               "Charles Darwin",
+                                               "Gregor Mendel",
+                                               "Jean-Baptiste Lamarck",
+                                               "Watson e Crick"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© uma heranÃ§a genÃ©tica ligada ao sexo (como o daltonismo ou a hemofilia)?",
+                          "alternativas":  [
+                                               "CaracterÃ­sticas cujos genes estÃ£o localizados nos cromossomos sexuais (geralmente no cromossomo X)",
+                                               "Genes encontrados apenas nas mitocÃ´ndrias",
+                                               "CaracterÃ­sticas que aparecem apenas em plantas",
+                                               "DoenÃ§as transmitidas por picadas de insetos"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© um antibiÃ³tico?",
+                          "alternativas":  [
+                                               "Tipo de vacina",
+                                               "HormÃ´nio natural",
+                                               "Vitamina essencial",
+                                               "SubstÃ¢ncia que combate bactÃ©rias"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a importÃ¢ncia dos fÃ³sseis para a ciÃªncia da evoluÃ§Ã£o?",
+                          "alternativas":  [
+                                               "Servir de combustÃ­vel fÃ³ssil para carros",
+                                               "Fornecer evidÃªncias diretas de formas de vida antigas e documentar as transformaÃ§Ãµes das espÃ©cies ao longo do tempo geolÃ³gico",
+                                               "Prever terremotos na crosta terrestre",
+                                               "Determinar a pureza da Ã¡gua potÃ¡vel"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o Ã³rgÃ£os homÃ³logos?",
+                          "alternativas":  [
+                                               "Ã“rgÃ£os com mesma origem embrionÃ¡ria mas funÃ§Ãµes diferentes",
+                                               "Ã“rgÃ£os com funÃ§Ãµes iguais e origens diferentes",
+                                               "Estruturas sem relaÃ§Ã£o genÃ©tica",
+                                               "Ã“rgÃ£os exclusivos de insetos"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que causa o fenÃ´meno da chuva Ã¡cida?",
+                          "alternativas":  [
+                                               "O excesso de gÃ¡s oxigÃªnio nas nuvens de tempestade",
+                                               "A reaÃ§Ã£o da Ã¡gua da chuva com Ã³xidos de enxofre e nitrogÃªnio liberados pela queima de combustÃ­veis fÃ³sseis",
+                                               "A poluiÃ§Ã£o dos rios por detergentes domÃ©sticos",
+                                               "A radiaÃ§Ã£o solar ultravioleta intensa"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a clonagem biolÃ³gica reprodutiva?",
+                          "alternativas":  [
+                                               "A reproduÃ§Ã£o sexuada comum entre plantas e animais",
+                                               "A tÃ©cnica de produzir um organismo geneticamente idÃªntico a outro a partir de uma cÃ©lula somÃ¡tica",
+                                               "A mistura de genes de duas espÃ©cies diferentes",
+                                               "A extinÃ§Ã£o de linhagens genÃ©ticas fracas"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o Efeito Estufa natural?",
+                          "alternativas":  [
+                                               "FenÃ´meno que retÃ©m calor na atmosfera",
+                                               "Camada de poluiÃ§Ã£o",
+                                               "Derretimento das calotas",
+                                               "ReflexÃ£o da luz solar"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© espÃ©cie exÃ³tica invasora?",
+                          "alternativas":  [
+                                               "EspÃ©cie nativa protegida",
+                                               "EspÃ©cie introduzida que prejudica a biodiversidade nativa",
+                                               "FÃ³ssil descoberto",
+                                               "Microrganismo benÃ©fico"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a sÃ­ntese de proteÃ­nas nas cÃ©lulas?",
+                          "alternativas":  [
+                                               "A quebra de gorduras no estÃ´mago",
+                                               "O processo de fabricaÃ§Ã£o de proteÃ­nas a partir das instruÃ§Ãµes contidas no DNA, mediado pelo RNA",
+                                               "A respiraÃ§Ã£o celular nas mitocÃ´ndrias",
+                                               "A digestÃ£o de carboidratos complexos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a reciclagem de materiais sÃ³lidos urbanos?",
+                          "alternativas":  [
+                                               "Jogar todo o lixo em aterros sanitÃ¡rios profundos",
+                                               "Queimar plÃ¡sticos ao ar livre",
+                                               "O processo de transformar resÃ­duos descartados em matÃ©ria-prima para a fabricaÃ§Ã£o de novos produtos",
+                                               "Triturar vidro para enfeitar jardins"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© desenvolvimento sustentÃ¡vel?",
+                          "alternativas":  [
+                                               "Parar o progresso",
+                                               "Atender o presente sem comprometer geraÃ§Ãµes futuras",
+                                               "Esgotar todos os recursos",
+                                               "Manter florestas intocadas"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estabelece o mecanismo da SeleÃ§Ã£o Natural de Darwin?",
+                          "alternativas":  [
+                                               "Os organismos mais bem adaptados Ã s condiÃ§Ãµes do ambiente tÃªm maiores chances de sobreviver e deixar descendentes",
+                                               "Os animais escolhem mudar suas caracterÃ­sticas fÃ­sicas por vontade prÃ³pria",
+                                               "Todas as espÃ©cies nascem idÃªnticas e nunca mudam",
+                                               "O clima elimina todos os seres vivos sem exceÃ§Ã£o"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o ribossomos?",
+                          "alternativas":  [
+                                               "Organelas de energia",
+                                               "Transporte de substÃ¢ncias",
+                                               "Organelas de respiraÃ§Ã£o",
+                                               "Estruturas de sÃ­ntese de proteÃ­nas"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o fluxo de energia em um ecossistema?",
+                          "alternativas":  [
+                                               "O unidirecional repasse de energia luminosa convertida em quÃ­mica atravÃ©s dos nÃ­veis trÃ³ficos da cadeia alimentar",
+                                               "A reciclagem infinita de energia tÃ©rmica de volta para o Sol",
+                                               "A produÃ§Ã£o de eletricidade por plantas",
+                                               "A perda total de matÃ©ria orgÃ¢nica"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quais sÃ£o as quatro bases nitrogenadas que compÃµem a molÃ©cula de DNA?",
+                          "alternativas":  [
+                                               "Uracil, Timina, Guanina, Citosina",
+                                               "Adenina, Timina, Citosina, Guanina",
+                                               "Adenina, Uracil, Prolina, Metionina",
+                                               "Fosfato, AÃ§Ãºcar, NitrogÃªnio, HidrogÃªnio"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a genÃ©tica bÃ¡sica na biologia do ensino fundamental?",
+                          "alternativas":  [
+                                               "A hereditariedade e a transmissÃ£o das caracterÃ­sticas biolÃ³gicas de pais para filhos",
+                                               "Somente a anatomia interna dos Ã³rgÃ£os digestÃ³rios",
+                                               "A movimentaÃ§Ã£o dos animais em seus habitats",
+                                               "O ciclo da Ã¡gua na atmosfera"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© heranÃ§a ligada ao sexo?",
+                          "alternativas":  [
+                                               "Genes nas mitocÃ´ndrias",
+                                               "Genes nos cromossomos sexuais",
+                                               "DoenÃ§as por insetos",
+                                               "CaracterÃ­sticas em plantas"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual estrutura Watson e Crick propuseram para o DNA?",
+                          "alternativas":  [
+                                               "Fita simples circular",
+                                               "Dupla hÃ©lice de nucleotÃ­deos",
+                                               "ProteÃ­na globular",
+                                               "Carboidrato ramificado"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© pegada ecolÃ³gica?",
+                          "alternativas":  [
+                                               "Tamanho do sapato",
+                                               "Medida do impacto humano sobre recursos naturais",
+                                               "Quantidade de lixo nos oceanos",
+                                               "PoluiÃ§Ã£o sonora"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o cloroplastos?",
+                          "alternativas":  [
+                                               "Organelas de digestÃ£o",
+                                               "Organelas de respiraÃ§Ã£o",
+                                               "SÃ­ntese de proteÃ­nas",
+                                               "Organelas onde ocorre fotossÃ­ntese"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quantos cromossomos possui normalmente uma cÃ©lula somÃ¡tica humana normal?",
+                          "alternativas":  [
+                                               "46 cromossomos (23 pares)",
+                                               "23 cromossomos",
+                                               "92 cromossomos",
+                                               "10 cromossomos"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© especiaÃ§Ã£o?",
+                          "alternativas":  [
+                                               "ExtinÃ§Ã£o de espÃ©cie",
+                                               "Surgimento de novas espÃ©cies a partir de populaÃ§Ã£o ancestral",
+                                               "UniÃ£o de duas espÃ©cies",
+                                               "MutaÃ§Ã£o de cÃ©lula"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a evoluÃ§Ã£o biolÃ³gica segundo a teoria moderna?",
+                          "alternativas":  [
+                                               "O processo de modificaÃ§Ã£o gradual das populaÃ§Ãµes de seres vivos ao longo das geraÃ§Ãµes",
+                                               "A transformaÃ§Ã£o instantÃ¢nea de um animal em outro durante sua vida",
+                                               "A adaptaÃ§Ã£o individual que o corpo faz para sobreviver ao frio",
+                                               "A criaÃ§Ã£o espontÃ¢nea de bactÃ©rias em matÃ©ria morta"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a fragmentaÃ§Ã£o de habitats naturais?",
+                          "alternativas":  [
+                                               "A uniÃ£o de pequenas reservas florestais em grandes parques",
+                                               "O processo de divisÃ£o de grandes Ã¡reas naturais contÃ­nuas em pedaÃ§os menores e isolados devido Ã  aÃ§Ã£o humana",
+                                               "A expansÃ£o natural das savanas tropicais",
+                                               "O derretimento das geleiras nos polos terrestres"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a deriva genÃ©tica na evoluÃ§Ã£o das populaÃ§Ãµes?",
+                          "alternativas":  [
+                                               "A seleÃ§Ã£o dirigida pelo ser humano em laboratÃ³rio",
+                                               "A variaÃ§Ã£o aleatÃ³ria nas frequÃªncias dos alelos de uma populaÃ§Ã£o ao longo das geraÃ§Ãµes, muitas vezes por eventos fortuitos",
+                                               "O cruzamento sistemÃ¡tico entre parentes prÃ³ximos",
+                                               "A migraÃ§Ã£o em massa para florestas tropicais"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© sucessÃ£o ecolÃ³gica?",
+                          "alternativas":  [
+                                               "ExtinÃ§Ã£o de espÃ©cies",
+                                               "MigraÃ§Ã£o de animais",
+                                               "Crescimento de uma espÃ©cie",
+                                               "MudanÃ§as graduais na comunidade ao longo do tempo"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a embriologia comparada?",
+                          "alternativas":  [
+                                               "Anatomia dos ossos adultos",
+                                               "ComparaÃ§Ã£o do desenvolvimento embrionÃ¡rio entre animais",
+                                               "ContaminaÃ§Ã£o da Ã¡gua",
+                                               "Clima das eras geolÃ³gicas"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que sÃ£o produtores no ecossistema?",
+                          "alternativas":  [
+                                               "CarnÃ­voros",
+                                               "Decompositores",
+                                               "HerbÃ­voros",
+                                               "Organismos que fazem fotossÃ­ntese"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Se um homem com visÃ£o normal (homozigoto) casa-se com uma mulher daltÃ´nica, qual serÃ¡ a probabilidade de seus filhos homens nascerem daltÃ´nicos?",
+                          "alternativas":  [
+                                               "Cento por cento",
+                                               "Zero por cento (os filhos homens recebem o Y do pai e o X normal da mÃ£e, nascendo com visÃ£o normal, enquanto as filhas serÃ£o portadoras)",
+                                               "Cinquenta por cento",
+                                               "Vinte e cinco por cento"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o complexo de Golgi?",
+                          "alternativas":  [
+                                               "Organela de digestÃ£o",
+                                               "SÃ­ntese de proteÃ­nas",
+                                               "RespiraÃ§Ã£o celular",
+                                               "Processamento e empacotamento de substÃ¢ncias"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a diferenÃ§a estrutural fundamental entre o DNA e o RNA?",
+                          "alternativas":  [
+                                               "O DNA possui uracila e o RNA possui timina",
+                                               "O DNA Ã© dupla hÃ©lice com desoxirribose e timina, enquanto o RNA costuma ser fita simples com ribose e uracila",
+                                               "O RNA Ã© encontrado apenas no nÃºcleo celular",
+                                               "NÃ£o hÃ¡ nenhuma diferenÃ§a quÃ­mica entre eles"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a Segunda Lei de Mendel?",
+                          "alternativas":  [
+                                               "Lei da SegregaÃ§Ã£o dos Fatores",
+                                               "Lei da DominÃ¢ncia",
+                                               "Lei das MutaÃ§Ãµes",
+                                               "Lei da SegregaÃ§Ã£o Independente dos genes"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© competiÃ§Ã£o interespecÃ­fica?",
+                          "alternativas":  [
+                                               "CooperaÃ§Ã£o entre espÃ©cies",
+                                               "ReproduÃ§Ã£o entre espÃ©cies",
+                                               "PredaÃ§Ã£o de herbÃ­voros",
+                                               "Disputa por recursos entre espÃ©cies diferentes"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual consequÃªncia da destruiÃ§Ã£o da camada de ozÃ´nio?",
+                          "alternativas":  [
+                                               "Aquecimento dos oceanos",
+                                               "Maior incidÃªncia de raios UV nocivos",
+                                               "Falta de oxigÃªnio",
+                                               "Aumento da pressÃ£o"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o citoplasma?",
+                          "alternativas":  [
+                                               "NÃºcleo da cÃ©lula",
+                                               "Membrana externa",
+                                               "Parede celular",
+                                               "Material que preenche a cÃ©lula onde ficam organelas"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a embriologia comparada na evoluÃ§Ã£o?",
+                          "alternativas":  [
+                                               "A anatomia dos ossos de animais adultos",
+                                               "A comparaÃ§Ã£o do desenvolvimento embrionÃ¡rio entre diferentes grupos de animais, evidenciando parentesco evolutivo",
+                                               "A contaminaÃ§Ã£o da Ã¡gua por esgoto",
+                                               "O clima das eras geolÃ³gicas antigas"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Quem Ã© considerado o pai da genÃ©tica?",
+                          "alternativas":  [
+                                               "Gregor Mendel",
+                                               "Charles Darwin",
+                                               "Louis Pasteur",
+                                               "Robert Hooke"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a citogenÃ©tica na biologia moderna?",
+                          "alternativas":  [
+                                               "A estrutura e a funÃ§Ã£o dos cromossomos, correlacionando-os com a hereditariedade e as patologias genÃ©ticas",
+                                               "Somente a fisiologia da digestÃ£o estomacal",
+                                               "A circulaÃ§Ã£o do sangue em vasos capilares",
+                                               "O comportamento social dos insetos em colÃ´nias"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que significa dizer que um ecossistema estÃ¡ em equilÃ­brio ecolÃ³gico?",
+                          "alternativas":  [
+                                               "Que nenhum animal se alimenta de outro",
+                                               "Que o clima nunca muda de temperatura",
+                                               "Que as populaÃ§Ãµes de seres vivos mantÃªm interaÃ§Ãµes estÃ¡veis e a autorregulaÃ§Ã£o do sistema funciona, sem extinÃ§Ãµes em massa",
+                                               "Que todas as plantas param de crescer"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que caracteriza uma extinÃ§Ã£o em massa na histÃ³ria geolÃ³gica da Terra?",
+                          "alternativas":  [
+                                               "A morte de um Ãºnico animal idoso na floresta",
+                                               "A caÃ§a controlada de uma espÃ©cie de peixe",
+                                               "O desaparecimento rÃ¡pido e em larga escala de uma proporÃ§Ã£o significativa de espÃ©cies em todo o planeta em um perÃ­odo geolÃ³gico curto",
+                                               "A migraÃ§Ã£o sazonal de aves para o hemisfÃ©rio sul"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© o principal problema ambiental associado Ã  queima de combustÃ­veis fÃ³sseis derivados do petrÃ³leo e carvÃ£o em termos de poluiÃ§Ã£o atmosfÃ©rica?",
+                          "alternativas":  [
+                                               "Aumento da camada de ozÃ´nio na estratosfera",
+                                               "EmissÃ£o massiva de gases poluentes e de efeito estufa, alÃ©m de chuva Ã¡cida por Ã³xidos de enxofre e nitrogÃªnio",
+                                               "Resfriamento global drÃ¡stico dos oceanos",
+                                               "EliminaÃ§Ã£o total do nitrogÃªnio do ar"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o Neodarwinismo?",
+                          "alternativas":  [
+                                               "NegaÃ§Ã£o de Darwin",
+                                               "Teoria religiosa",
+                                               "UniÃ£o da SeleÃ§Ã£o Natural com genÃ©tica moderna",
+                                               "Estudo de fÃ³sseis marinhos"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a principal funÃ§Ã£o das bactÃ©rias fixadoras de nitrogÃªnio no solo dentro do ciclo do nitrogÃªnio?",
+                          "alternativas":  [
+                                               "Transformar o nitrogÃªnio gasoso da atmosfera em compostos nitrogenados utilizÃ¡veis pelas plantas",
+                                               "Consumir todo o nitrogÃªnio do planeta",
+                                               "Produzir gÃ¡s oxigÃªnio livre",
+                                               "Destruir a raiz das leguminosas"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© biotecnologia moderna?",
+                          "alternativas":  [
+                                               "A fabricaÃ§Ã£o artesanal de ferramentas de pedra",
+                                               "O uso de organismos vivos, cÃ©lulas ou molÃ©culas biolÃ³gicas para desenvolver produtos e tecnologias Ãºteis (como engenharia genÃ©tica e transgÃªnicos)",
+                                               "O estudo exclusivo de fÃ³sseis de dinossauros",
+                                               "A extraÃ§Ã£o de petrÃ³leo em alto mar"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual o papel da recombinaÃ§Ã£o genÃ©tica?",
+                          "alternativas":  [
+                                               "Reduzir DNA a zero",
+                                               "Destruir cromossomos",
+                                               "Promover troca entre cromossomos gerando novas combinaÃ§Ãµes",
+                                               "Impedir reproduÃ§Ã£o"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© uma reserva biolÃ³gica ou unidade de conservaÃ§Ã£o ambiental?",
+                          "alternativas":  [
+                                               "Uma Ã¡rea urbana destinada a indÃºstrias pesadas",
+                                               "Um terreno baldio para depÃ³sito de lixo",
+                                               "Uma Ã¡rea natural legalmente protegida pelo governo para preservar a biodiversidade e os recursos naturais",
+                                               "Uma fazenda de monocultura intensiva"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© espÃ©cie endÃªmica?",
+                          "alternativas":  [
+                                               "EspÃ©cie que ocorre apenas em uma Ã¡rea especÃ­fica",
+                                               "EspÃ©cie em todos os continentes",
+                                               "EspÃ©cie extinta",
+                                               "Animal domÃ©stico"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o Neodarwinismo (Teoria SintÃ©tica da EvoluÃ§Ã£o)?",
+                          "alternativas":  [
+                                               "A negaÃ§Ã£o de todas as ideias de Darwin",
+                                               "Uma teoria baseada apenas na religiÃ£o",
+                                               "A uniÃ£o da Teoria da SeleÃ§Ã£o Natural de Darwin com os conhecimentos da genÃ©tica moderna (mutaÃ§Ãµes, recombinaÃ§Ã£o genÃ©tica e deriva)",
+                                               "O estudo exclusivo de fÃ³sseis marinhos"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que caracteriza uma comunidade clÃ­max em ecologia?",
+                          "alternativas":  [
+                                               "Um estÃ¡gio avanÃ§ado e estÃ¡vel de uma sucessÃ£o ecolÃ³gica, onde a biodiversidade atinge seu ponto de equilÃ­brio dinÃ¢mico",
+                                               "A fase inicial de destruiÃ§Ã£o por incÃªndios florestais",
+                                               "Um ambiente desprovido de qualquer tipo de vida",
+                                               "O momento em que todas as espÃ©cies entram em extinÃ§Ã£o"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que caracteriza uma mutaÃ§Ã£o gÃªnica por substituiÃ§Ã£o de bases nitrogenadas no DNA?",
+                          "alternativas":  [
+                                               "A troca de um Ãºnico nucleotÃ­deo por outro na sequÃªncia genÃ©tica, o que pode alterar ou nÃ£o a proteÃ­na resultante",
+                                               "A duplicaÃ§Ã£o completa de todo o genoma celular",
+                                               "A perda de um cromossomo inteiro na meiose",
+                                               "A fusÃ£o de duas cÃ©lulas somÃ¡ticas distintas"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o zigoto?",
+                          "alternativas":  [
+                                               "CÃ©lula somÃ¡tica",
+                                               "Tipo de gameta",
+                                               "Espermatozoide maduro",
+                                               "CÃ©lula resultante da fecundaÃ§Ã£o"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual funÃ§Ã£o do sistema imunolÃ³gico?",
+                          "alternativas":  [
+                                               "Digerir alimentos",
+                                               "Transportar oxigÃªnio",
+                                               "Defender contra agentes invasores",
+                                               "Produzir hormÃ´nios"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© clonagem reprodutiva?",
+                          "alternativas":  [
+                                               "ReproduÃ§Ã£o sexuada",
+                                               "Produzir organismo geneticamente idÃªntico",
+                                               "Mistura de genes de espÃ©cies",
+                                               "ExtinÃ§Ã£o de linhagens"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a economia circular em contraponto ao modelo linear tradicional de produÃ§Ã£o e consumo?",
+                          "alternativas":  [
+                                               "Comprar produtos novos todos os dias e descartÃ¡-los",
+                                               "Queimar todo o lixo urbano para gerar energia tÃ©rmica",
+                                               "Produzir mercadorias com vida Ãºtil curtÃ­ssima",
+                                               "Um modelo econÃ´mico focado no reaproveitamento, reciclagem, reparo e reduÃ§Ã£o de resÃ­duos, fechando o ciclo dos materiais"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a transgenia em comparaÃ§Ã£o com o cruzamento seletivo tradicional?",
+                          "alternativas":  [
+                                               "Apenas plantar sementes em estufas climatizadas",
+                                               "Cruzar duas plantas da mesma espÃ©cie na horta",
+                                               "A transferÃªncia direta de genes especÃ­ficos de um organismo para outro, inclusive entre espÃ©cies diferentes que nÃ£o cruzariam naturalmente",
+                                               "A seleÃ§Ã£o natural de animais no campo livre"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a dominÃ¢ncia incompleta (ou intermediÃ¡ria) na heranÃ§a genÃ©tica?",
+                          "alternativas":  [
+                                               "Quando o alelo recessivo anula o dominante",
+                                               "Quando nÃ£o hÃ¡ genes no cromossomo",
+                                               "Quando o heterozigoto apresenta um fenÃ³tipo intermediÃ¡rio entre os dois homozigotos (ex: cruzamento de flor vermelha com branca gerando rosa)",
+                                               "Quando os pais transmitem caracterÃ­sticas iguais"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© cadeia alimentar?",
+                          "alternativas":  [
+                                               "Rede de pesca",
+                                               "Lojas de comida",
+                                               "SequÃªncia onde cada organismo serve de alimento para o seguinte",
+                                               "ConservaÃ§Ã£o de alimentos"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que causa o aquecimento global?",
+                          "alternativas":  [
+                                               "Aumento de gases de efeito estufa por queima de combustÃ­veis",
+                                               "DiminuiÃ§Ã£o da atividade solar",
+                                               "Excesso de chuva",
+                                               "RotaÃ§Ã£o mais rÃ¡pida da Terra"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© equilÃ­brio ecolÃ³gico?",
+                          "alternativas":  [
+                                               "Nenhum animal come outro",
+                                               "Clima nunca muda",
+                                               "PopulaÃ§Ãµes mantÃªm interaÃ§Ãµes estÃ¡veis",
+                                               "Plantas param de crescer"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a genÃ©tica bÃ¡sica na biologia?",
+                          "alternativas":  [
+                                               "A hereditariedade e transmissÃ£o de caracterÃ­sticas de pais para filhos",
+                                               "Somente a anatomia dos Ã³rgÃ£os digestÃ³rios",
+                                               "A movimentaÃ§Ã£o dos animais",
+                                               "O ciclo da Ã¡gua na atmosfera"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como sÃ£o chamadas as diferentes formas alternativas de um mesmo gene que determinam uma caracterÃ­stica (como olhos azuis ou castanhos)?",
+                          "alternativas":  [
+                                               "Alelos",
+                                               "Ribossomos",
+                                               "MitocÃ´ndrias",
+                                               "PlasmÃ­deos"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a pirÃ¢mide de energia em um ecossistema?",
+                          "alternativas":  [
+                                               "Uma construÃ§Ã£o histÃ³rica antiga",
+                                               "A quantidade de Ã¡gua em um lago",
+                                               "Uma representaÃ§Ã£o grÃ¡fica da quantidade de energia disponÃ­vel em cada nÃ­vel trÃ³fico, que diminui da base para o topo",
+                                               "O peso total de todos os animais juntos"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© um alelo recessivo?",
+                          "alternativas":  [
+                                               "SÃ³ se manifesta quando em dose dupla",
+                                               "Sempre domina o outro alelo",
+                                               "Sofre mutaÃ§Ã£o constante",
+                                               "Exclusivo das cÃ©lulas femininas"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual a cÃ©lula reprodutora masculina?",
+                          "alternativas":  [
+                                               "Ã“vulo",
+                                               "Espermatozoide",
+                                               "Zigoto",
+                                               "EmbriÃ£o"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que estuda a biogeografia?",
+                          "alternativas":  [
+                                               "ComposiÃ§Ã£o do solo",
+                                               "Clima polar",
+                                               "DistribuiÃ§Ã£o geogrÃ¡fica das espÃ©cies e razÃµes evolutivas",
+                                               "ReproduÃ§Ã£o de bactÃ©rias"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual organela faz respiraÃ§Ã£o celular?",
+                          "alternativas":  [
+                                               "Ribossomo",
+                                               "Golgi",
+                                               "MitocÃ´ndria",
+                                               "Lisossomo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© a principal causa da perda de biodiversidade nas florestas tropicais do mundo atual?",
+                          "alternativas":  [
+                                               "O excesso de plantio de Ã¡rvores nativas",
+                                               "A diminuiÃ§Ã£o da radiaÃ§Ã£o solar",
+                                               "O desmatamento, queimadas e fragmentaÃ§Ã£o de habitats para agricultura e pecuÃ¡ria",
+                                               "O canto excessivo de aves migratÃ³rias"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© genÃ³tipo?",
+                          "alternativas":  [
+                                               "CaracterÃ­sticas fÃ­sicas",
+                                               "Cor dos olhos",
+                                               "Conjunto de genes do organismo",
+                                               "Tipo sanguÃ­neo apenas"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a teoria celular?",
+                          "alternativas":  [
+                                               "SÃ³ animais tÃªm cÃ©lulas",
+                                               "CÃ©lulas surgem espontaneamente",
+                                               "CÃ©lulas nÃ£o se dividem",
+                                               "Todos os seres vivos sÃ£o formados por cÃ©lulas"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o conceito de bioindicadores ambientais?",
+                          "alternativas":  [
+                                               "Instrumentos eletrÃ´nicos de mediÃ§Ã£o de temperatura",
+                                               "EspÃ©cies de seres vivos cuja presenÃ§a, ausÃªncia ou comportamento indica as condiÃ§Ãµes de saÃºde ou poluiÃ§Ã£o de um ecossistema",
+                                               "FÃ³sseis encontrados em camadas profundas de rocha",
+                                               "BactÃ©rias patogÃªnicas que causam doenÃ§as letais"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© a parede celular?",
+                          "alternativas":  [
+                                               "Membrana de todas as cÃ©lulas",
+                                               "Organela de digestÃ£o",
+                                               "SÃ­ntese de proteÃ­nas",
+                                               "Estrutura rÃ­gida externa em plantas e fungos"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© o Efeito Estufa natural e qual Ã© a sua importÃ¢ncia para a Terra?",
+                          "alternativas":  [
+                                               "Um fenÃ´meno que retÃ©m parte do calor solar na atmosfera atravÃ©s de gases, mantendo o planeta em temperaturas adequadas para a vida",
+                                               "Uma camada de poluiÃ§Ã£o tÃ³xica nas cidades industriais",
+                                               "O derretimento completo das calotas polares",
+                                               "A reflexÃ£o total da luz solar para o espaÃ§o"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual Ã© o principal objetivo do mapeamento do genoma humano concluÃ­do no inÃ­cio do sÃ©culo XXI?",
+                          "alternativas":  [
+                                               "Contar o nÃºmero de ossos do esqueleto",
+                                               "Identificar e sequenciar todos os genes e pares de bases nitrogenadas do DNA humano para entender doenÃ§as e funÃ§Ãµes biolÃ³gicas",
+                                               "Fabricar hormÃ´nios sintÃ©ticos em massa",
+                                               "Criar super-humanos resistentes a radiaÃ§Ã£o"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que causa a chuva Ã¡cida?",
+                          "alternativas":  [
+                                               "Excesso de oxigÃªnio nas nuvens",
+                                               "ReaÃ§Ã£o da chuva com Ã³xidos de enxofre e nitrogÃªnio",
+                                               "PoluiÃ§Ã£o por detergentes",
+                                               "RadiaÃ§Ã£o ultravioleta"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual a diferenÃ§a entre mitose e meiose?",
+                          "alternativas":  [
+                                               "Mitose gera cÃ©lulas idÃªnticas; meiose gera cÃ©lulas com metade dos cromossomos",
+                                               "Meiose ocorre apenas na pele",
+                                               "Mitose reduz cromossomos pela metade",
+                                               "NÃ£o hÃ¡ diferenÃ§a"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Como sÃ£o chamadas as formas alternativas de um gene?",
+                          "alternativas":  [
+                                               "Alelos",
+                                               "Ribossomos",
+                                               "MitocÃ´ndrias",
+                                               "PlasmÃ­deos"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© uma espÃ©cie exÃ³tica invasora em um ecossistema?",
+                          "alternativas":  [
+                                               "Uma planta ou animal introduzido pelo ser humano em um novo ambiente onde nÃ£o ocorre naturalmente, multiplicando-se a ponto de prejudicar a biodiversidade nativa",
+                                               "Uma espÃ©cie nativa protegida por leis ambientais",
+                                               "Um fÃ³ssil descoberto recentemente",
+                                               "Um microrganismo benÃ©fico do solo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual gÃ¡s absorve UV na camada de ozÃ´nio?",
+                          "alternativas":  [
+                                               "OxigÃªnio (O2)",
+                                               "CO2",
+                                               "OzÃ´nio (O3)",
+                                               "NitrogÃªnio (N2)"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que Ã© respiraÃ§Ã£o celular?",
+                          "alternativas":  [
+                                               "Troca de gases nos pulmÃµes",
+                                               "Entrada de ar pelas narinas",
+                                               "FotossÃ­ntese nas plantas",
+                                               "ObtenÃ§Ã£o de energia a partir da glicose"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual a importÃ¢ncia dos fÃ³sseis?",
+                          "alternativas":  [
+                                               "CombustÃ­vel para carros",
+                                               "EvidÃªncias de formas de vida antigas",
+                                               "Prever terremotos",
+                                               "Pureza da Ã¡gua"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "Qual gÃ¡s atmosfÃ©rico Ã© o principal absorvedor de radiaÃ§Ã£o ultravioleta nociva na camada de ozÃ´nio?",
+                          "alternativas":  [
+                                               "OxigÃªnio (O2)",
+                                               "DiÃ³xido de carbono (CO2)",
+                                               "OzÃ´nio (O3)",
+                                               "NitrogÃªnio (N2)"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "bio-9ano",
+                          "enunciado":  "O que significa o princÃ­pio da precauÃ§Ã£o nas questÃµes de biologia ambiental e biotecnologia?",
+                          "alternativas":  [
+                                               "Aprovar qualquer tecnologia nova sem testes em laboratÃ³rio",
+                                               "Ignorar os riscos ecolÃ³gicos de produtos quÃ­micos",
+                                               "Adotar medidas preventivas diante de suspeitas cientÃ­ficas de danos graves ou irreversÃ­veis ao meio ambiente, mesmo sem certeza absoluta",
+                                               "Paralisar todas as pesquisas cientÃ­ficas no mundo"
+                                           ],
+                          "correta":  2
+                      }
+                  ],
+    "tema":  null
+}

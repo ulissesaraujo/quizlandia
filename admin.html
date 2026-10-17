@@ -1187,6 +1187,9 @@
                                 <option value="">Todos os temas</option>
                             </select>
                             <span class="filtro-contador" id="filtro-contador">0 perguntas</span>
+                            <button type="button" class="btn btn-primary btn-small oculto" id="btn-gerar-ia-filtro" title="Gerar perguntas com IA">
+                                🤖
+                            </button>
                             <button type="button" class="btn btn-danger btn-small oculto" id="btn-excluir-tema" title="Excluir TODAS as perguntas deste tema">
                                 🗑️
                             </button>
@@ -1769,10 +1772,14 @@
             form.addEventListener('submit', handleSubmit);
             filtroTema.addEventListener('change', () => {
                 filtroAtual = filtroTema.value;
-                // Mostra/oculta botão de excluir tema
+                // Mostra/oculta botões de ação do tema
                 const btnExcluirTema = document.getElementById('btn-excluir-tema');
+                const btnGerarIaFiltro = document.getElementById('btn-gerar-ia-filtro');
                 if (btnExcluirTema) {
                     btnExcluirTema.classList.toggle('oculto', !filtroAtual);
+                }
+                if (btnGerarIaFiltro) {
+                    btnGerarIaFiltro.classList.toggle('oculto', !filtroAtual);
                 }
                 // Carrega automaticamente ao selecionar tema
                 if (filtroAtual) {
@@ -1816,6 +1823,9 @@
             
             // Botão excluir todas perguntas do tema
             document.getElementById('btn-excluir-tema')?.addEventListener('click', excluirTodasDoTema);
+            
+            // Botão gerar IA - copia prompt direto pro clipboard
+            document.getElementById('btn-gerar-ia-filtro')?.addEventListener('click', copiarPromptDireto);
         }
 
         // Zera todas as partidas
@@ -2232,11 +2242,33 @@
         }
 
         // Exporta perguntas para JSON
-        function exportarPerguntas() {
+        async function exportarPerguntas() {
+            let perguntasExportar = perguntas;
+            let nomeArquivo = '';
+            
+            // Se não tem tema selecionado, busca todas as perguntas
+            if (!filtroAtual || perguntas.length === 0) {
+                mostrarMensagem('Buscando todas as perguntas...', 'info');
+                try {
+                    perguntasExportar = await buscarTodasPerguntas();
+                    nomeArquivo = `quizlandia-todas-perguntas-${new Date().toISOString().split('T')[0]}.json`;
+                } catch (e) {
+                    mostrarMensagem('Erro ao buscar perguntas: ' + e.message, 'erro');
+                    return;
+                }
+            } else {
+                nomeArquivo = `quizlandia-${filtroAtual}-${new Date().toISOString().split('T')[0]}.json`;
+            }
+            
+            if (perguntasExportar.length === 0) {
+                mostrarMensagem('Nenhuma pergunta para exportar.', 'erro');
+                return;
+            }
+            
             const dados = {
                 exportadoEm: new Date().toISOString(),
-                totalPerguntas: perguntas.length,
-                perguntas: perguntas.map(p => ({
+                totalPerguntas: perguntasExportar.length,
+                perguntas: perguntasExportar.map(p => ({
                     tema: p.tema,
                     enunciado: p.enunciado,
                     alternativas: p.alternativas,
@@ -2248,9 +2280,11 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `quizlandia-perguntas-${new Date().toISOString().split('T')[0]}.json`;
+            a.download = nomeArquivo;
             a.click();
             URL.revokeObjectURL(url);
+            
+            mostrarMensagem(`${perguntasExportar.length} perguntas exportadas!`, 'sucesso');
         }
 
         // Importa perguntas de JSON (suporta múltiplos arquivos)
@@ -2338,11 +2372,13 @@
         
         function interpretarTemaEscolar(temaId, temaNome) {
             const materias = {
-                'mat': 'Matemática', 'por': 'Português', 'his': 'História',
+                'mat': 'Matemática', 'por': 'Português', 'port': 'Português',
+                'his': 'História', 'hist': 'História',
                 'geo': 'Geografia', 'bio': 'Biologia', 'fis': 'Física',
-                'qui': 'Química', 'fil': 'Filosofia', 'soc': 'Sociologia',
+                'qui': 'Química', 'quim': 'Química',
+                'fil': 'Filosofia', 'soc': 'Sociologia',
                 'art': 'Artes', 'ing': 'Inglês', 'esp': 'Espanhol',
-                'lit': 'Literatura', 'red': 'Redação'
+                'lit': 'Literatura', 'red': 'Redação', 'cien': 'Ciências'
             };
             
             const series = {
@@ -2370,6 +2406,68 @@
         // ========================================
         // MODAL: GERAR PROMPT PARA IA
         // ========================================
+        
+        // Copia prompt direto pro clipboard sem abrir modal
+        async function copiarPromptDireto() {
+            if (!filtroAtual) {
+                mostrarMensagem('Selecione um tema primeiro.', 'erro');
+                return;
+            }
+            
+            const temaSelect = document.getElementById('filtro-tema');
+            const temaTexto = temaSelect.options[temaSelect.selectedIndex]?.text || 'Nome do Tema';
+            const temaTextoLimpo = temaTexto.replace(/^\s*└\s*/, '').trim();
+            const temaId = filtroAtual;
+            
+            const temaLimpo = interpretarTemaEscolar(temaId, temaTextoLimpo);
+            
+            const prompt = `Crie 100 perguntas de quiz sobre "${temaLimpo}" no formato JSON.
+
+**Regras:**
+- Perguntas variadas e interessantes sobre o tema
+- 4 alternativas por pergunta (A, B, C, D)
+- Apenas 1 alternativa correta
+- Dificuldade mista (fácil, média, difícil)
+- Não repita informações entre perguntas
+
+**DISTRIBUIÇÃO OBRIGATÓRIA DAS RESPOSTAS CORRETAS:**
+Das 100 perguntas, distribua assim:
+- 25 perguntas com "correta": 0
+- 25 perguntas com "correta": 1
+- 25 perguntas com "correta": 2
+- 25 perguntas com "correta": 3
+
+**Formato JSON obrigatório:**
+\`\`\`json
+{
+  "tema": "${temaId}",
+  "perguntas": [
+    {
+      "enunciado": "Qual é a pergunta?",
+      "alternativas": ["Opção A", "Opção B", "Opção C", "Opção D"],
+      "correta": 0
+    }
+  ]
+}
+\`\`\`
+
+**IMPORTANTE - Regras de formato:**
+- O campo "correta" é o índice (0, 1, 2 ou 3) da alternativa correta
+- Use encoding UTF-8
+- Retorne APENAS o JSON, sem texto adicional
+- **TODAS as alternativas DEVEM ser strings entre aspas duplas**
+- Coordenadas devem ser strings: "(3, 4)" e não (3, 4)
+- Números como resposta devem ser strings: "42" e não 42
+- Fórmulas matemáticas devem usar texto simples: "x² + 2x" ou "f(x) = 2x + 1"
+- Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível`;
+
+            try {
+                await navigator.clipboard.writeText(prompt);
+                mostrarMensagem('✅ Prompt copiado! Cole na IA.', 'sucesso');
+            } catch (e) {
+                mostrarMensagem('Erro ao copiar prompt.', 'erro');
+            }
+        }
         
         function abrirModalPrompt() {
             const temaSelect = document.getElementById('tema');
@@ -2550,20 +2648,17 @@ Das 100 perguntas, distribua assim:
         }
         
         // Abre modal de colar JSON com tema pré-selecionado (vindo da lista de temas)
+        // Não força o tema - respeita o que está no JSON
         function abrirModalColarJsonParaTema(temaId) {
             document.getElementById('json-area').value = '';
             document.getElementById('json-preview').classList.add('oculto');
             document.getElementById('modal-colar-json').classList.remove('oculto');
-            // Armazena o tema para usar na importação
-            document.getElementById('modal-colar-json').dataset.temaForcar = temaId;
             // Foco no campo de texto
             setTimeout(() => document.getElementById('json-area').focus(), 100);
         }
         
         function fecharModalColarJson() {
             document.getElementById('modal-colar-json').classList.add('oculto');
-            // Limpa tema forçado
-            delete document.getElementById('modal-colar-json').dataset.temaForcar;
         }
         
         function validarJsonColado() {
@@ -2620,11 +2715,7 @@ Das 100 perguntas, distribua assim:
         async function importarJsonColado() {
             const jsonArea = document.getElementById('json-area');
             const btnImportar = document.getElementById('btn-importar-json');
-            const modalColarJson = document.getElementById('modal-colar-json');
             const texto = jsonArea.value.trim();
-            
-            // Verifica se tem tema forçado (vindo da aba de temas)
-            const temaForcar = modalColarJson.dataset.temaForcar || null;
             
             if (!texto) {
                 alert('Cole o JSON no campo acima.');
@@ -2634,21 +2725,21 @@ Das 100 perguntas, distribua assim:
             try {
                 const dados = JSON.parse(texto);
                 let perguntas = [];
-                let tema = temaForcar; // Usa tema forçado se existir
+                let tema = null;
                 
                 if (Array.isArray(dados)) {
                     perguntas = dados;
                 } else if (dados.perguntas && Array.isArray(dados.perguntas)) {
                     perguntas = dados.perguntas;
-                    if (!tema) tema = dados.tema; // Só usa do JSON se não tiver forçado
+                    tema = dados.tema;
                 } else {
                     alert('Formato inválido. O JSON deve ter um array de perguntas.');
                     return;
                 }
                 
-                // Aplica tema (forçado ou do arquivo) se não tiver na pergunta
+                // Aplica tema do arquivo se não tiver na pergunta
                 const perguntasValidas = perguntas
-                    .map(p => ({ ...p, tema: temaForcar || p.tema || tema }))
+                    .map(p => ({ ...p, tema: p.tema || tema }))
                     .filter(p => 
                         p.tema && p.enunciado && Array.isArray(p.alternativas) && typeof p.correta === 'number'
                     );

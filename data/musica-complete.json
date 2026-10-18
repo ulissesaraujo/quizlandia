@@ -1,0 +1,495 @@
+{
+  "tema": "musica-complete",
+  "perguntas": [
+    {
+      "enunciado": "Legião Urbana - Complete: 'Quem me dera ao menos uma vez, ter de volta todo o ___ que eu gastei'",
+      "alternativas": ["ouro", "tempo", "amor", "sonho"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Chitãozinho & Xororó - Complete: 'Quando eu digo que não quero mais você, é porque eu te ___'",
+      "alternativas": ["preciso", "quero", "amo", "espero"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Cássia Eller - Complete: 'Mesmo que seja eu a pessoa errada a te fazer ___'",
+      "alternativas": ["chorar", "feliz", "sonhar", "sofrer"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Tim Maia - Complete: 'Descobri que te amo demais, descobri em você minha ___'",
+      "alternativas": ["vida", "paz", "luz", "razão"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Legião Urbana - Complete: 'Tendo a lua como testemunha, um ___ caboclo'",
+      "alternativas": ["romance", "cowboy", "faroeste", "vaqueiro"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Zezé Di Camargo & Luciano - Complete: 'É o amor que mexe com minha ___'",
+      "alternativas": ["vida", "cabeça", "alma", "mente"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Marisa Monte - Complete: 'Ainda lembro de você, ainda ___ de amor em Sampa'",
+      "alternativas": ["morro", "sofro", "choro", "vivo"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Charlie Brown Jr - Complete: 'Só os ___ entenderão'",
+      "alternativas": ["fortes", "loucos", "jovens", "fracos"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Skank - Complete: 'Vou deixar você de ___'",
+      "alternativas": ["lado", "castigo", "bobeira", "molho"],
+      "correta": 3
+    },
+    {
+      "enunciado": "Roberto Carlos - Complete: 'Eu voltei agora pra ficar, porque aqui é meu ___'",
+      "alternativas": ["lar", "lugar", "chão", "mundo"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Tribalistas - Complete: 'Já sei namorar, já sei ___, já sei sofrer'",
+      "alternativas": ["amar", "beijar", "cantar", "chorar"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Djavan - Complete: 'Se eu não te amasse tanto ___'",
+      "alternativas": ["assim", "mais", "aqui", "já"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Titãs - Complete: 'A gente não quer só comida, a gente quer ___ e diversão'",
+      "alternativas": ["amor", "paz", "bebida", "festa"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Ana Carolina - Complete: 'Quem de dentro de si não sai, vai morrer sem amar ___'",
+      "alternativas": ["alguém", "ninguém", "jamais", "demais"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Lulu Santos - Complete: 'Assim caminha a ___'",
+      "alternativas": ["vida", "humanidade", "gente", "história"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Jorge Ben Jor - Complete: 'Mas que nada, sai da minha frente que eu quero ___'",
+      "alternativas": ["cantar", "passar", "dançar", "viver"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Gilberto Gil - Complete: 'Toda menina baiana tem um ___ encantado'",
+      "alternativas": ["jeito", "brilho", "olhar", "sorriso"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Capital Inicial - Complete: 'Tudo que vai, ___'",
+      "alternativas": ["fica", "volta", "passa", "muda"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Ivete Sangalo - Complete: 'Poeira, ___, tá tudo dominado'",
+      "alternativas": ["bagunça", "poeira", "festa", "suor"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Jota Quest - Complete: 'Eu preciso dizer que te ___, eu preciso gritar'",
+      "alternativas": ["quero", "amo", "espero", "encontro"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Elis Regina - Complete: 'Como nossos pais, nossos ___ de colégio'",
+      "alternativas": ["amigos", "sonhos", "ídolos", "tempos"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Engenheiros do Hawaii - Complete: 'Toda forma de ___ vale a pena'",
+      "alternativas": ["amar", "viver", "poder", "sentir"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Barão Vermelho - Complete: 'Eu sou apenas um rapaz latino-americano sem ___ no banco'",
+      "alternativas": ["dinheiro", "amor", "tempo", "nada"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Claudia Leitte - Complete: 'Beijar na boca, beber ___'",
+      "alternativas": ["cerveja", "cachaça", "vodka", "vinho"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Sandy & Junior - Complete: 'As coisas que eu sinto não sei ___'",
+      "alternativas": ["falar", "dizer", "explicar", "mostrar"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Raça Negra - Complete: 'Você não soube me ___'",
+      "alternativas": ["amar", "querer", "ver", "ter"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Alcione - Complete: 'Você me vira a ___'",
+      "alternativas": ["alma", "vida", "cabeça", "razão"],
+      "correta": 2
+    },
+    {
+      "enunciado": "O Rappa - Complete: 'Minha alma, a paz que eu não ___'",
+      "alternativas": ["tenho", "quero", "sinto", "vejo"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Seu Jorge - Complete: 'Burguesinha, quer ___ comigo'",
+      "alternativas": ["dançar", "ficar", "sair", "viver"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Nando Reis - Complete: 'All Star sujo e um ___ do Joy Division'",
+      "alternativas": ["disco", "pôster", "show", "livro"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Cazuza - Complete: 'Brasil, mostra a tua ___'",
+      "alternativas": ["força", "cara", "alma", "garra"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Roupa Nova - Complete: 'Whisky a go go, a gente se ___'",
+      "alternativas": ["encontra", "conheceu", "amou", "beijou"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Kid Abelha - Complete: 'Como eu vou, como eu vou ___'",
+      "alternativas": ["voltar", "viver", "chorar", "dormir"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Mamonas Assassinas - Complete: 'Pelados em Santos, de ___ lá na praia'",
+      "alternativas": ["mãos dadas", "sunga", "patins", "bicicleta"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Los Hermanos - Complete: 'Anna Júlia, Anna Júlia, Anna ___'",
+      "alternativas": ["Maria", "Paula", "Carla", "Júlia"],
+      "correta": 3
+    },
+    {
+      "enunciado": "Detonautas - Complete: 'Você me faz tão ___'",
+      "alternativas": ["feliz", "bem", "mal", "triste"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Pitty - Complete: 'Me reconheço, desconstruído, ___ ao léu'",
+      "alternativas": ["jogado", "perdido", "largado", "caído"],
+      "correta": 2
+    },
+    {
+      "enunciado": "NX Zero - Complete: 'Razões e emoções, só você me ___'",
+      "alternativas": ["entende", "completa", "faz viver", "conhece"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Fresno - Complete: 'Desde que você voltou, o meu coração ___'",
+      "alternativas": ["parou", "voltou", "mudou", "partiu"],
+      "correta": 1
+    },
+    {
+      "enunciado": "CPM 22 - Complete: 'Um minuto para o fim do ___'",
+      "alternativas": ["mundo", "dia", "amor", "show"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Marjorie Estiano - Complete: 'Você sempre ___'",
+      "alternativas": ["fica", "volta", "vai", "some"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Natiruts - Complete: 'Você chegou quando eu mais ___'",
+      "alternativas": ["chorava", "precisei", "sofria", "rezava"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Cidade Negra - Complete: 'Onde você mora, aonde você ___'",
+      "alternativas": ["vai", "está", "foi", "quer"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Chiclete com Banana - Complete: 'Sou tão ___ a você'",
+      "alternativas": ["ligado", "apegado", "preso", "louco"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Babado Novo - Complete: 'Bola de sabão, eu sou seu ___'",
+      "alternativas": ["amor", "coração", "palhaço", "João"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Asa de Águia - Complete: 'Baianidade ___'",
+      "alternativas": ["pura", "nagô", "total", "real"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Netinho - Complete: 'Milla, Milla, a menina que ___'",
+      "alternativas": ["eu amei", "encanta", "eu vi", "sorri"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Olodum - Complete: 'Faraó, divindade do ___'",
+      "alternativas": ["Nilo", "Sol", "Egito", "céu"],
+      "correta": 2
+    },
+    {
+      "enunciado": "É O Tchan - Complete: 'Na boquinha da ___'",
+      "alternativas": ["noite", "garrafa", "praia", "boca"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Molejo - Complete: 'Paparico, paparico, ___ também quer'",
+      "alternativas": ["ela", "ele", "nego", "todo mundo"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Art Popular - Complete: 'Pimpolho, eu não sou nenhum ___'",
+      "alternativas": ["bobo", "santo", "tonto", "louco"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Só Pra Contrariar - Complete: 'Essa tal ___ já me fez chorar'",
+      "alternativas": ["liberdade", "mulher", "saudade", "paixão"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Exaltasamba - Complete: 'Tá vendo aquela lua que ___'",
+      "alternativas": ["brilha", "aparece", "surge", "reluz"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Revelação - Complete: 'Deixa acontecer ___, deixa que o amor responda'",
+      "alternativas": ["naturalmente", "devagar", "assim", "agora"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Sorriso Maroto - Complete: 'Ainda gosto de você, ainda ___ de você'",
+      "alternativas": ["preciso", "cuido", "lembro", "gosto"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Belo - Complete: 'Tudo que eu quero, você é o meu ___'",
+      "alternativas": ["amor", "tudo", "bem", "sol"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Thiaguinho - Complete: 'Ousadia e ___, é só isso'",
+      "alternativas": ["alegria", "amor", "festa", "coragem"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Turma do Pagode - Complete: 'Lancinho, vou dar um ___ no baile'",
+      "alternativas": ["rolê", "lance", "beijo", "giro"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Péricles - Complete: 'Até que durou, o nosso ___'",
+      "alternativas": ["amor", "namoro", "caso", "lance"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Dilsinho - Complete: 'Refém, eu sou ___ de você'",
+      "alternativas": ["louco", "refém", "escravo", "doido"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Ferrugem - Complete: 'Pirata e ___, vida louca vida'",
+      "alternativas": ["guerreiro", "tesouro", "pirata", "navio"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Gusttavo Lima - Complete: 'Balada boa, boa ___'",
+      "alternativas": ["balada", "demais", "noite", "festa"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Michel Teló - Complete: 'Ai se eu te ___, ai ai se eu te pego'",
+      "alternativas": ["pego", "vejo", "beijo", "encontro"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Luan Santana - Complete: 'Meteoro da ___'",
+      "alternativas": ["noite", "paixão", "vida", "festa"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Jorge & Mateus - Complete: 'Amo noite e ___'",
+      "alternativas": ["dia", "você", "lua", "sol"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Marília Mendonça - Complete: 'Infiel, eu fui ___'",
+      "alternativas": ["traída", "enganada", "infiel", "boba"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Henrique & Juliano - Complete: 'Cuida bem ___'",
+      "alternativas": ["de mim", "dela", "de nós", "do amor"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Maiara & Maraisa - Complete: 'Medo ___, de sofrer sozinha'",
+      "alternativas": ["bobo", "tolo", "idiota", "louco"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Simone & Simaria - Complete: 'Loka, loka, eu tô ___'",
+      "alternativas": ["louca", "loka", "doida", "maluca"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Wesley Safadão - Complete: 'Camarote, eu vim pra ___'",
+      "alternativas": ["curtir", "ficar", "zoar", "dançar"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Léo Santana - Complete: 'Santinha, essa menina é uma ___'",
+      "alternativas": ["santa", "diabinha", "santinha", "princesa"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Anitta - Complete: 'Show das ___, poderoooosas'",
+      "alternativas": ["divas", "meninas", "poderosas", "rainhas"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Ludmilla - Complete: 'Din din din, o ___ vai'",
+      "alternativas": ["tempo", "dinheiro", "amor", "som"],
+      "correta": 1
+    },
+    {
+      "enunciado": "IZA - Complete: 'Pesadão, eu tô pesada, eu tô ___'",
+      "alternativas": ["pesadona", "pesadão", "demais", "on"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Mc Kevinho - Complete: 'Olha a explosão, que ___'",
+      "alternativas": ["delícia", "loucura", "explosão", "maravilha"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Alok - Complete: 'Hear me now, I need you ___'",
+      "alternativas": ["now", "here", "baby", "tonight"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Vintage Culture - Complete: 'In the ___, we trust'",
+      "alternativas": ["night", "music", "love", "sound"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Vitor Kley - Complete: 'O sol, o ___, o céu azul'",
+      "alternativas": ["mar", "ar", "amor", "som"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Anavitória - Complete: 'Trevo, tu, eu quero ___'",
+      "alternativas": ["você", "amar", "ficar", "ser"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Melim - Complete: 'Meu abrigo, você é meu ___'",
+      "alternativas": ["amor", "porto", "abrigo", "lar"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Lagum - Complete: 'Deixa eu te ___, pelo menos uma vez'",
+      "alternativas": ["beijar", "amar", "ver", "ter"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Gilsons - Complete: 'Proposta, se você quiser eu ___'",
+      "alternativas": ["vou", "fico", "faço", "tento"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Maria Bethânia - Complete: 'Negue as aparências, não sou o que ___'",
+      "alternativas": ["pareço", "fui", "era", "sou"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Gal Costa - Complete: 'Meu nome é ___, se você quiser'",
+      "alternativas": ["amor", "Gal", "paz", "vida"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Caetano Veloso - Complete: 'É preciso estar atento e ___'",
+      "alternativas": ["forte", "vivo", "feliz", "alerta"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Milton Nascimento - Complete: 'Maria, Maria, é um dom, uma certa ___'",
+      "alternativas": ["paz", "magia", "luz", "alegria"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Chico Buarque - Complete: 'O que será que será, que andam ___'",
+      "alternativas": ["falando", "dizendo", "sussurrando", "comentando"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Tom Jobim - Complete: 'Garota de Ipanema, olha que coisa mais ___'",
+      "alternativas": ["bela", "linda", "pura", "doce"],
+      "correta": 1
+    },
+    {
+      "enunciado": "João Gilberto - Complete: 'Chega de saudade, a realidade é que sem ___'",
+      "alternativas": ["você", "amor", "ela", "nós"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Vinicius de Moraes - Complete: 'Eu sei que vou te amar, por toda a minha ___'",
+      "alternativas": ["vida", "alma", "eternidade", "existência"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Toquinho - Complete: 'Aquarela, numa folha qualquer eu desenho um ___'",
+      "alternativas": ["barco", "sol", "amor", "coração"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Rita Lee - Complete: 'Mania de você, meu bem, me ___'",
+      "alternativas": ["deixa", "faz", "leva", "mata"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Erasmo Carlos - Complete: 'Gatinha manhosa, eu sou o seu ___'",
+      "alternativas": ["gato", "amor", "herói", "dono"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Raul Seixas - Complete: 'Maluco beleza, eu prefiro ser essa ___ pirada'",
+      "alternativas": ["figura", "metamorfose", "criatura", "pessoa"],
+      "correta": 1
+    },
+    {
+      "enunciado": "Renato Russo - Complete: 'Eduardo e Mônica, eram tão ___'",
+      "alternativas": ["diferentes", "iguais", "felizes", "lindos"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Zeca Pagodinho - Complete: 'Deixa a vida me ___'",
+      "alternativas": ["levar", "guiar", "ensinar", "mostrar"],
+      "correta": 0
+    },
+    {
+      "enunciado": "Beth Carvalho - Complete: 'Vou festejar, o teu ___ ao meu lado'",
+      "alternativas": ["amor", "fim", "sumir", "partir"],
+      "correta": 2
+    },
+    {
+      "enunciado": "Martinho da Vila - Complete: 'Canta, canta, minha ___'",
+      "alternativas": ["alma", "gente", "dor", "voz"],
+      "correta": 1
+    }
+  ]
+}

@@ -66,7 +66,20 @@ export const TEMAS_DISPONIVEIS = [
             { id: 'politica-brasileira', nome: 'Política Brasileira', icone: '🇧🇷' }
         ]
     },
-    { id: 'literatura', nome: 'Literatura', icone: '📚' },
+    { 
+        id: 'literatura', 
+        nome: 'Literatura', 
+        icone: '📚',
+        subtemas: [
+            { id: 'lit-6ano', nome: '6º Ano', icone: '6️⃣' },
+            { id: 'lit-7ano', nome: '7º Ano', icone: '7️⃣' },
+            { id: 'lit-8ano', nome: '8º Ano', icone: '8️⃣' },
+            { id: 'lit-9ano', nome: '9º Ano', icone: '9️⃣' },
+            { id: 'lit-1em', nome: '1º Ano EM', icone: '🔟' },
+            { id: 'lit-2em', nome: '2º Ano EM', icone: '🔢' },
+            { id: 'lit-3em', nome: '3º Ano EM', icone: '🎓' }
+        ]
+    },
     { id: 'mitos-verdades', nome: 'Mitos ou Verdades', icone: '🤔' },
     { id: 'games', nome: 'Mundo dos Games', icone: '🎮' },
     { 

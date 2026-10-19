@@ -2459,7 +2459,12 @@ Das 100 perguntas, distribua assim:
 - Coordenadas devem ser strings: "(3, 4)" e não (3, 4)
 - Números como resposta devem ser strings: "42" e não 42
 - Fórmulas matemáticas devem usar texto simples: "x² + 2x" ou "f(x) = 2x + 1"
-- Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível`;
+- Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível
+
+**REGRA SOBRE DATAS E ATUALIDADE:**
+- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, etc.), adicione o campo "validoAte": "AAAA" com o ano até quando a resposta é válida
+- Exemplo: {"enunciado": "Quem é o atual presidente do Brasil?", "validoAte": "2026", ...}
+- Para fatos históricos imutáveis, não precisa do campo validoAte`;
 
             try {
                 await navigator.clipboard.writeText(prompt);
@@ -2519,7 +2524,12 @@ Das 100 perguntas, distribua assim:
 - Coordenadas devem ser strings: "(3, 4)" e não (3, 4)
 - Números como resposta devem ser strings: "42" e não 42
 - Fórmulas matemáticas devem usar texto simples: "x² + 2x" ou "f(x) = 2x + 1"
-- Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível`;
+- Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível
+
+**REGRA SOBRE DATAS E ATUALIDADE:**
+- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, etc.), adicione o campo "validoAte": "AAAA" com o ano até quando a resposta é válida
+- Exemplo: {"enunciado": "Quem é o atual presidente do Brasil?", "validoAte": "2026", ...}
+- Para fatos históricos imutáveis, não precisa do campo validoAte`;
 
             document.getElementById('prompt-area').value = prompt;
             document.getElementById('modal-prompt').classList.remove('oculto');
@@ -2599,7 +2609,12 @@ Das 100 perguntas, distribua assim:
 - Coordenadas devem ser strings: "(3, 4)" e não (3, 4)
 - Números como resposta devem ser strings: "42" e não 42
 - Fórmulas matemáticas devem usar texto simples: "x² + 2x" ou "f(x) = 2x + 1"
-- Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível`;
+- Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível
+
+**REGRA SOBRE DATAS E ATUALIDADE:**
+- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, etc.), adicione o campo "validoAte": "AAAA" com o ano até quando a resposta é válida
+- Exemplo: {"enunciado": "Quem é o atual presidente do Brasil?", "validoAte": "2026", ...}
+- Para fatos históricos imutáveis, não precisa do campo validoAte`;
 
             document.getElementById('prompt-area').value = prompt;
             document.getElementById('modal-prompt').classList.remove('oculto');

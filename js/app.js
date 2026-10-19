@@ -59,19 +59,46 @@ function entrarFullscreen() {
     // Só tenta fullscreen em mobile
     if (!isMobile()) return;
     
+    console.log('📱 Tentando entrar em fullscreen...');
+    
     const elem = document.documentElement;
     
     try {
+        // Método 1: Fullscreen API
         if (elem.requestFullscreen) {
-            elem.requestFullscreen().catch(() => {});
+            elem.requestFullscreen().then(() => {
+                console.log('✅ Fullscreen ativado');
+            }).catch((e) => {
+                console.log('⚠️ Fullscreen API falhou:', e.message);
+                // Fallback: scroll trick
+                esconderBarraURLComScroll();
+            });
         } else if (elem.webkitRequestFullscreen) {
             elem.webkitRequestFullscreen();
+            console.log('✅ Webkit fullscreen');
         } else if (elem.msRequestFullscreen) {
             elem.msRequestFullscreen();
+        } else {
+            // Fallback: scroll trick
+            esconderBarraURLComScroll();
         }
     } catch (e) {
-        // Silencia erros de fullscreen (requer interação do usuário)
+        console.log('⚠️ Erro fullscreen:', e);
+        esconderBarraURLComScroll();
     }
+}
+
+/**
+ * Fallback para esconder barra de URL via scroll (funciona em mais navegadores)
+ */
+function esconderBarraURLComScroll() {
+    // Scroll para baixo e depois para cima força a barra a esconder
+    setTimeout(() => {
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 50);
+    }, 100);
 }
 
 /**
@@ -332,11 +359,19 @@ function mostrarAvisoUltimaPergunta() {
     // Evita mostrar se já existe
     if (document.querySelector('.aviso-ultima-pergunta')) return;
     
+    console.log('🏁 Mostrando aviso de última pergunta');
+    
     const aviso = document.createElement('div');
     aviso.className = 'aviso-ultima-pergunta';
     aviso.innerHTML = '🏁 Última pergunta!';
     
-    document.body.appendChild(aviso);
+    // Adiciona na tela de quiz (não no body) para funcionar melhor no mobile
+    const telaQuiz = document.getElementById('tela-quiz');
+    if (telaQuiz) {
+        telaQuiz.appendChild(aviso);
+    } else {
+        document.body.appendChild(aviso);
+    }
     
     // Remove após animação
     setTimeout(() => {

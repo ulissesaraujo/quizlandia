@@ -1416,6 +1416,7 @@ async function mostrarResultado(resultado) {
     
     // Sai do fullscreen ao terminar
     sairFullscreen();
+}
 
 // Estado da ordenação do histórico pessoal
 let historicoPessoalDados = [];

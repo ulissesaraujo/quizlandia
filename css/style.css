@@ -833,10 +833,10 @@ body {
     margin-bottom: 16px;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--primary-dark);
-    background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%);
+    color: #166534;
+    background: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%);
     border-radius: var(--radius);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
 .pergunta-tema.oculto {

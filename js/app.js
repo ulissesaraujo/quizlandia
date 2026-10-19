@@ -46,6 +46,52 @@ function tocarBeep(vezes = 1) {
 }
 
 /**
+ * Verifica se está em modo mobile (tela pequena)
+ */
+function isMobile() {
+    return window.innerWidth <= 768;
+}
+
+/**
+ * Entra em modo fullscreen (esconde barra do navegador no mobile)
+ */
+function entrarFullscreen() {
+    // Só tenta fullscreen em mobile
+    if (!isMobile()) return;
+    
+    const elem = document.documentElement;
+    
+    try {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen().catch(() => {});
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    } catch (e) {
+        // Silencia erros de fullscreen (requer interação do usuário)
+    }
+}
+
+/**
+ * Sai do modo fullscreen
+ */
+function sairFullscreen() {
+    try {
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    } catch (e) {
+        // Silencia erros
+    }
+}
+
+/**
  * Separa emojis do início do texto
  * Retorna { emoji: string|null, texto: string }
  */
@@ -701,6 +747,9 @@ async function iniciarQuiz() {
         
         // Mostra tela do quiz
         mostrarTela('quiz');
+        
+        // Entra em fullscreen no mobile para mais espaço
+        entrarFullscreen();
     } catch (error) {
         console.error('Erro ao iniciar quiz:', error);
         // Mostra mensagem mais específica se disponível
@@ -794,6 +843,9 @@ async function iniciarDesafio(partidaOriginal) {
         
         // Mostra tela do quiz
         mostrarTela('quiz');
+        
+        // Entra em fullscreen no mobile para mais espaço
+        entrarFullscreen();
     } catch (error) {
         console.error('Erro ao iniciar desafio:', error);
         alert('Erro ao carregar o desafio. Tente novamente.');
@@ -1361,7 +1413,9 @@ async function mostrarResultado(resultado) {
     
     // Mostra tela de resultado
     mostrarTela('resultado');
-}
+    
+    // Sai do fullscreen ao terminar
+    sairFullscreen();
 
 // Estado da ordenação do histórico pessoal
 let historicoPessoalDados = [];

@@ -216,6 +216,8 @@ const elementos = {
     // Temas
     temasGrid: document.getElementById('temas-grid'),
     btnAleatorio: document.getElementById('btn-aleatorio'),
+    btnPorSerie: document.getElementById('btn-por-serie'),
+    serieDropdown: document.getElementById('serie-dropdown'),
     btnJogar: document.getElementById('btn-jogar'),
     badgeSelecionados: document.getElementById('badge-selecionados'),
     selecaoInfo: document.getElementById('selecao-info'),
@@ -226,6 +228,7 @@ const elementos = {
     linkLimparSelecao: document.getElementById('link-limpar-selecao'),
     
     // Quiz
+    quizLoading: document.getElementById('quiz-loading'),
     perguntaContador: document.getElementById('pergunta-contador'),
     // pontosAtuais removido - pontos só aparecem no resultado final
     faseLeitura: document.getElementById('fase-leitura'),
@@ -272,6 +275,7 @@ const elementos = {
     // Modal Ajuda
     modalAjuda: document.getElementById('modal-ajuda'),
     btnAjuda: document.getElementById('btn-ajuda'),
+    btnAjudaHeader: document.getElementById('btn-ajuda-header'),
     btnFecharAjuda: document.getElementById('btn-fechar-ajuda')
 };
 
@@ -310,6 +314,35 @@ function mostrarTela(telaNome) {
             setTimeout(() => atualizarUITemas(), 0);
         }
     }
+}
+
+/**
+ * Mostra/oculta o loading na tela de quiz
+ */
+function mostrarLoadingQuiz(mostrar) {
+    if (elementos.quizLoading) {
+        elementos.quizLoading.classList.toggle('oculto', !mostrar);
+    }
+}
+
+/**
+ * Mostra aviso rápido de última pergunta
+ */
+function mostrarAvisoUltimaPergunta() {
+    // Evita mostrar se já existe
+    if (document.querySelector('.aviso-ultima-pergunta')) return;
+    
+    const aviso = document.createElement('div');
+    aviso.className = 'aviso-ultima-pergunta';
+    aviso.innerHTML = '🏁 Última pergunta!';
+    
+    document.body.appendChild(aviso);
+    
+    // Remove após animação
+    setTimeout(() => {
+        aviso.classList.add('saindo');
+        setTimeout(() => aviso.remove(), 500);
+    }, 2000);
 }
 
 // ========================================
@@ -637,6 +670,41 @@ function inicializarTemas() {
         await iniciarQuiz();
     });
     
+    // Botão Por Série - abre/fecha dropdown
+    elementos.btnPorSerie?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = elementos.serieDropdown?.classList.toggle('oculto') === false;
+        elementos.btnPorSerie.setAttribute('aria-expanded', isOpen);
+    });
+    
+    // Clique em uma série do dropdown
+    elementos.serieDropdown?.addEventListener('click', async (e) => {
+        const serieItem = e.target.closest('.serie-item');
+        if (!serieItem) return;
+        
+        const serieId = serieItem.dataset.serie;
+        if (!serieId) return;
+        
+        // Fecha o dropdown
+        elementos.serieDropdown.classList.add('oculto');
+        elementos.btnPorSerie.setAttribute('aria-expanded', 'false');
+        
+        // Seleciona todos os subtemas dessa série
+        temasManager.selecionarPorSerie(serieId);
+        atualizarUITemas();
+        
+        // Inicia o quiz automaticamente
+        await iniciarQuiz();
+    });
+    
+    // Fecha dropdown de série ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.btn-serie-container')) {
+            elementos.serieDropdown?.classList.add('oculto');
+            elementos.btnPorSerie?.setAttribute('aria-expanded', 'false');
+        }
+    });
+    
     // Botão jogar
     elementos.btnJogar.addEventListener('click', async () => {
         if (!temasManager.podeIniciar()) return;
@@ -664,6 +732,11 @@ function inicializarTemas() {
     // Botão de ajuda / como jogar
     elementos.btnAjuda?.addEventListener('click', () => {
         elementos.menuDropdown?.classList.add('oculto');
+        mostrarModalAjuda();
+    });
+    
+    // Botão de ajuda no header (ao lado do nome)
+    elementos.btnAjudaHeader?.addEventListener('click', () => {
         mostrarModalAjuda();
     });
     
@@ -707,6 +780,10 @@ async function iniciarQuiz() {
     if (textoBtn) {
         textoBtn.textContent = 'Carregando...';
     }
+    
+    // Mostra a tela de quiz imediatamente com loading
+    mostrarTela('quiz');
+    mostrarLoadingQuiz(true);
     
     try {
         // Carrega configurações globais
@@ -764,8 +841,8 @@ async function iniciarQuiz() {
         // Configura os botões de ajuda APÓS iniciar o quiz (ajudas já estão setadas)
         configurarAjudas();
         
-        // Mostra tela do quiz
-        mostrarTela('quiz');
+        // Esconde o loading (tela de quiz já está visível)
+        mostrarLoadingQuiz(false);
         
         // Entra em fullscreen no mobile para mais espaço
         entrarFullscreen();
@@ -774,9 +851,12 @@ async function iniciarQuiz() {
         // Mostra mensagem mais específica se disponível
         const msg = error.message || 'Erro desconhecido';
         alert(`Erro ao carregar perguntas: ${msg}`);
+        // Volta para tela de temas em caso de erro
+        mostrarTela('temas');
     } finally {
         estado.carregando = false;
         elementos.btnJogar.disabled = false;
+        mostrarLoadingQuiz(false);
         
         // Restaura o texto do botão
         const textoBtn = elementos.btnJogar.querySelector('.btn-acao-texto');
@@ -876,6 +956,12 @@ async function iniciarDesafio(partidaOriginal) {
 function configurarCallbacksQuiz() {
     quizEngine.onPerguntaCarregada = ({ numero, total, pergunta, tema }) => {
         elementos.perguntaContador.textContent = `${numero}/${total}`;
+        
+        // Aviso de última pergunta
+        const isUltimaPergunta = numero === total;
+        if (isUltimaPergunta) {
+            mostrarAvisoUltimaPergunta();
+        }
         
         // Detecta emojis no início do enunciado
         const { emoji, texto } = separarEmojiDoTexto(pergunta.enunciado);

@@ -269,6 +269,23 @@ body {
     position: relative;
 }
 
+.btn-ajuda-inline {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 2px 6px;
+    margin-left: 4px;
+    border-radius: 50%;
+    transition: var(--transition);
+    vertical-align: middle;
+}
+
+.btn-ajuda-inline:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
 .btn-menu-hamburguer {
     background: var(--primary);
     color: white;
@@ -426,6 +443,89 @@ body {
 .btn-aleatorio.ativo {
     border-color: var(--warning);
     box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+}
+
+/* Botão Por Série */
+.btn-serie-container {
+    position: relative;
+}
+
+.btn-por-serie {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: var(--white);
+}
+
+.btn-por-serie:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-por-serie .btn-seta {
+    font-size: 0.7rem;
+    margin-left: 4px;
+    transition: transform 0.2s;
+}
+
+.btn-por-serie[aria-expanded="true"] .btn-seta {
+    transform: rotate(180deg);
+}
+
+.serie-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    min-width: 160px;
+    z-index: 100;
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+}
+
+.serie-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    text-align: left;
+    transition: background 0.15s;
+}
+
+.serie-item:hover {
+    background: var(--gray-100);
+}
+
+.serie-item.selecionada {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.serie-item-icone {
+    font-size: 1.1rem;
+}
+
+.serie-item-contagem {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    background: var(--gray-100);
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.serie-item.selecionada .serie-item-contagem {
+    background: var(--primary);
+    color: white;
 }
 
 .btn-jogar-principal {
@@ -760,6 +860,88 @@ body {
     border-radius: var(--radius-full);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
+}
+
+/* Loading do Quiz */
+.quiz-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-radius: var(--radius-lg);
+}
+
+.quiz-loading.oculto {
+    display: none;
+}
+
+.quiz-loading-content {
+    text-align: center;
+}
+
+.quiz-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--gray-200);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.quiz-loading-texto {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    margin: 0;
+}
+
+/* Aviso Última Pergunta */
+.aviso-ultima-pergunta {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+    z-index: 1000;
+    animation: avisoEntrar 0.5s ease-out;
+}
+
+@keyframes avisoEntrar {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+.aviso-ultima-pergunta.saindo {
+    animation: avisoSair 0.5s ease-in forwards;
+}
+
+@keyframes avisoSair {
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px) scale(0.8);
+    }
 }
 
 .quiz-container {

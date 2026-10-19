@@ -558,4 +558,95 @@ export class TemasManager {
             descricao: this.gerarDescricaoSelecao()
         };
     }
+
+    /**
+     * Extrai as séries escolares disponíveis a partir dos subtemas
+     * Procura padrões como -6ano, -7ano, -1em, etc.
+     * @returns {Array<{id: string, nome: string, icone: string, subtemas: Array}>}
+     */
+    obterSeriesDisponiveis() {
+        const seriesMap = new Map();
+        
+        // Padrões de séries conhecidos
+        const padroesSeries = [
+            { sufixo: '-6ano', nome: '6º Ano', icone: '6️⃣', ordem: 1 },
+            { sufixo: '-7ano', nome: '7º Ano', icone: '7️⃣', ordem: 2 },
+            { sufixo: '-8ano', nome: '8º Ano', icone: '8️⃣', ordem: 3 },
+            { sufixo: '-9ano', nome: '9º Ano', icone: '9️⃣', ordem: 4 },
+            { sufixo: '-1em', nome: '1º Ano EM', icone: '🔟', ordem: 5 },
+            { sufixo: '-2em', nome: '2º Ano EM', icone: '🔢', ordem: 6 },
+            { sufixo: '-3em', nome: '3º Ano EM', icone: '🎓', ordem: 7 }
+        ];
+        
+        // Percorre todos os temas e subtemas
+        this.temas.forEach(tema => {
+            if (tema.subtemas) {
+                tema.subtemas.forEach(subtema => {
+                    // Verifica se o subtema pertence a alguma série
+                    padroesSeries.forEach(padrao => {
+                        if (subtema.id.endsWith(padrao.sufixo)) {
+                            if (!seriesMap.has(padrao.sufixo)) {
+                                seriesMap.set(padrao.sufixo, {
+                                    id: padrao.sufixo,
+                                    nome: padrao.nome,
+                                    icone: padrao.icone,
+                                    ordem: padrao.ordem,
+                                    subtemas: []
+                                });
+                            }
+                            seriesMap.get(padrao.sufixo).subtemas.push({
+                                ...subtema,
+                                temaPaiId: tema.id,
+                                temaPaiNome: tema.nome
+                            });
+                        }
+                    });
+                });
+            }
+        });
+        
+        // Converte para array e ordena
+        return [...seriesMap.values()]
+            .filter(serie => serie.subtemas.length > 0)
+            .sort((a, b) => a.ordem - b.ordem);
+    }
+
+    /**
+     * Seleciona todos os subtemas de uma série específica
+     * @param {string} serieId - ID da série (ex: '-6ano', '-7ano')
+     */
+    selecionarPorSerie(serieId) {
+        // Limpa seleções anteriores
+        this.limparSelecao();
+        
+        // Busca todos os subtemas dessa série
+        this.temas.forEach(tema => {
+            if (tema.subtemas) {
+                tema.subtemas.forEach(subtema => {
+                    if (subtema.id.endsWith(serieId)) {
+                        this.subtemasSelecionados.add(subtema.id);
+                    }
+                });
+            }
+        });
+        
+        this.notificarSelecaoAlterada();
+    }
+
+    /**
+     * Verifica se uma série está selecionada (todos os subtemas dela)
+     * @param {string} serieId - ID da série
+     * @returns {boolean}
+     */
+    serieSelecionada(serieId) {
+        const series = this.obterSeriesDisponiveis();
+        const serie = series.find(s => s.id === serieId);
+        if (!serie || serie.subtemas.length === 0) return false;
+        
+        // Verifica se todos os subtemas dessa série estão selecionados
+        return serie.subtemas.every(subtema => 
+            this.subtemasSelecionados.has(subtema.id) || 
+            this.temasSelecionados.has(subtema.temaPaiId)
+        );
+    }
 }

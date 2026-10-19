@@ -145,6 +145,9 @@ export class TemasManager {
         // Mostra dica na primeira seleção
         if (primeiraSelecao && (this.temasSelecionados.size > 0 || this.subtemasSelecionados.size > 0)) {
             this.mostrarDicaPrimeiraSelecao();
+        } else if (!primeiraSelecao) {
+            // Se não é primeira seleção, cancela o auto-start (usuário está selecionando mais)
+            this.cancelarAutoStart();
         }
     }
 
@@ -174,38 +177,73 @@ export class TemasManager {
     
     /**
      * Mostra dica para novos usuários na primeira seleção de tema
+     * Com auto-start após 5 segundos
      */
     mostrarDicaPrimeiraSelecao() {
         // Evita mostrar se já existe uma dica na tela
-        if (document.querySelector('.dica-selecao')) return;
+        if (document.querySelector('.dica-selecao-overlay')) return;
         
         // Cria elemento da dica - overlay com fundo
         const dica = document.createElement('div');
         dica.className = 'dica-selecao-overlay';
+        
+        let segundosRestantes = 5;
+        
         dica.innerHTML = `
             <div class="dica-backdrop"></div>
             <div class="dica-card">
                 <span class="dica-linha1">Selecione mais temas</span>
-                <span class="dica-linha2">ou clique em Jogar</span>
+                <span class="dica-linha2">ou iniciando em <span class="dica-countdown">${segundosRestantes}</span>s...</span>
             </div>
         `;
         
-        // Fecha ao clicar em qualquer lugar
+        const countdownSpan = dica.querySelector('.dica-countdown');
+        
+        // Timer de countdown
+        const countdownInterval = setInterval(() => {
+            segundosRestantes--;
+            if (countdownSpan) {
+                countdownSpan.textContent = segundosRestantes;
+            }
+            
+            if (segundosRestantes <= 0) {
+                clearInterval(countdownInterval);
+                dica.remove();
+                // Simula clique no botão Jogar
+                const btnJogar = document.getElementById('btn-jogar');
+                if (btnJogar && !btnJogar.disabled) {
+                    btnJogar.click();
+                }
+            }
+        }, 1000);
+        
+        // Guarda referência do timer para poder cancelar
+        dica.dataset.timerId = countdownInterval;
+        
+        // Fecha ao clicar (cancela auto-start)
         dica.addEventListener('click', () => {
+            clearInterval(countdownInterval);
             dica.classList.add('dica-saindo');
             setTimeout(() => dica.remove(), 300);
         });
         
         // Insere no body para garantir que fique por cima de tudo
         document.body.appendChild(dica);
-        
-        // Remove automaticamente após 1 segundo
-        setTimeout(() => {
-            if (dica.parentNode) {
-                dica.classList.add('dica-saindo');
-                setTimeout(() => dica.remove(), 300);
+    }
+    
+    /**
+     * Cancela o auto-start se o usuário selecionar outro tema
+     */
+    cancelarAutoStart() {
+        const dica = document.querySelector('.dica-selecao-overlay');
+        if (dica) {
+            const timerId = dica.dataset.timerId;
+            if (timerId) {
+                clearInterval(parseInt(timerId));
             }
-        }, 1000);
+            dica.classList.add('dica-saindo');
+            setTimeout(() => dica.remove(), 300);
+        }
     }
 
     /**

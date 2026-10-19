@@ -571,6 +571,12 @@ body {
     color: var(--gray-500);
 }
 
+.dica-countdown {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
 /* Card de Tema */
 .tema-card {
     background: linear-gradient(145deg, #ffffff 0%, #f0f4ff 100%);

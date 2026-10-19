@@ -2462,9 +2462,12 @@ Das 100 perguntas, distribua assim:
 - Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível
 
 **REGRA SOBRE DATAS E ATUALIDADE:**
-- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, etc.), adicione o campo "validoAte": "AAAA" com o ano até quando a resposta é válida
-- Exemplo: {"enunciado": "Quem é o atual presidente do Brasil?", "validoAte": "2026", ...}
-- Para fatos históricos imutáveis, não precisa do campo validoAte`;
+- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, ranking, etc.):
+  1. Inclua o ano/período NO ENUNCIADO: "Em 2026, quem é o número 1 do tênis mundial?" ou "Quem foi o campeão da Copa de 2022?"
+  2. Adicione o campo "validoAte": "AAAA-MM" ou "AAAA" com ano/mês até quando a resposta é válida
+  3. Exemplo: {"enunciado": "Em outubro/2026, quem é o número 1 do ranking ATP?", "validoAte": "2026-10", ...}
+- Para fatos históricos imutáveis (datas, eventos passados), não precisa do campo validoAte
+- EVITE perguntas genéricas como "Quem é o atual presidente?" sem especificar o ano`;
 
             try {
                 await navigator.clipboard.writeText(prompt);
@@ -2527,9 +2530,12 @@ Das 100 perguntas, distribua assim:
 - Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível
 
 **REGRA SOBRE DATAS E ATUALIDADE:**
-- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, etc.), adicione o campo "validoAte": "AAAA" com o ano até quando a resposta é válida
-- Exemplo: {"enunciado": "Quem é o atual presidente do Brasil?", "validoAte": "2026", ...}
-- Para fatos históricos imutáveis, não precisa do campo validoAte`;
+- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, ranking, etc.):
+  1. Inclua o ano/período NO ENUNCIADO: "Em 2026, quem é o número 1 do tênis mundial?" ou "Quem foi o campeão da Copa de 2022?"
+  2. Adicione o campo "validoAte": "AAAA-MM" ou "AAAA" com ano/mês até quando a resposta é válida
+  3. Exemplo: {"enunciado": "Em outubro/2026, quem é o número 1 do ranking ATP?", "validoAte": "2026-10", ...}
+- Para fatos históricos imutáveis (datas, eventos passados), não precisa do campo validoAte
+- EVITE perguntas genéricas como "Quem é o atual presidente?" sem especificar o ano`;
 
             document.getElementById('prompt-area').value = prompt;
             document.getElementById('modal-prompt').classList.remove('oculto');
@@ -2612,9 +2618,12 @@ Das 100 perguntas, distribua assim:
 - Nunca use LaTeX (\\frac, \\sqrt, etc) - converta para texto legível
 
 **REGRA SOBRE DATAS E ATUALIDADE:**
-- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, etc.), adicione o campo "validoAte": "AAAA" com o ano até quando a resposta é válida
-- Exemplo: {"enunciado": "Quem é o atual presidente do Brasil?", "validoAte": "2026", ...}
-- Para fatos históricos imutáveis, não precisa do campo validoAte`;
+- Para perguntas sobre fatos que mudam com o tempo (presidente atual, campeão atual, recordes, ranking, etc.):
+  1. Inclua o ano/período NO ENUNCIADO: "Em 2026, quem é o número 1 do tênis mundial?" ou "Quem foi o campeão da Copa de 2022?"
+  2. Adicione o campo "validoAte": "AAAA-MM" ou "AAAA" com ano/mês até quando a resposta é válida
+  3. Exemplo: {"enunciado": "Em outubro/2026, quem é o número 1 do ranking ATP?", "validoAte": "2026-10", ...}
+- Para fatos históricos imutáveis (datas, eventos passados), não precisa do campo validoAte
+- EVITE perguntas genéricas como "Quem é o atual presidente?" sem especificar o ano`;
 
             document.getElementById('prompt-area').value = prompt;
             document.getElementById('modal-prompt').classList.remove('oculto');

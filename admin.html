@@ -2752,14 +2752,25 @@ Das 100 perguntas, distribua assim:
                 // Valida se os temas existem como subtemas cadastrados
                 const temasUnicos = [...new Set(perguntasValidas.map(p => p.tema))];
                 const { collection, getDocs, db } = window._firestore;
-                const subtemasSnapshot = await getDocs(collection(db, 'subtemas'));
-                const subtemasIds = new Set();
-                subtemasSnapshot.forEach(doc => subtemasIds.add(doc.id));
                 
-                const temasNaoCadastrados = temasUnicos.filter(t => !subtemasIds.has(t));
+                // Busca todos os temas e seus subtemas
+                const temasSnapshot = await getDocs(collection(db, 'temas'));
+                const temasValidos = new Set();
+                
+                temasSnapshot.forEach(doc => {
+                    // Adiciona o tema principal
+                    temasValidos.add(doc.id);
+                    // Adiciona os subtemas (se existirem)
+                    const data = doc.data();
+                    if (data.subtemas && Array.isArray(data.subtemas)) {
+                        data.subtemas.forEach(sub => temasValidos.add(sub.id));
+                    }
+                });
+                
+                const temasNaoCadastrados = temasUnicos.filter(t => !temasValidos.has(t));
                 
                 if (temasNaoCadastrados.length > 0) {
-                    alert(`❌ ERRO: Os seguintes temas não estão cadastrados como subtemas:\n\n${temasNaoCadastrados.join('\n')}\n\nCadastre os subtemas primeiro ou corrija o tema no JSON.`);
+                    alert(`❌ ERRO: Os seguintes temas não estão cadastrados:\n\n${temasNaoCadastrados.join('\n')}\n\nCadastre os subtemas primeiro ou corrija o tema no JSON.`);
                     return;
                 }
                 
@@ -2769,10 +2780,7 @@ Das 100 perguntas, distribua assim:
                 
                 await adicionarPerguntasEmLote(perguntasValidas);
                 
-                // Identifica os temas únicos das perguntas importadas
-                const temasUnicos = [...new Set(perguntasValidas.map(p => p.tema))];
-                
-                // Atualiza a contagem de cada tema afetado
+                // Atualiza a contagem de cada tema afetado (usa temasUnicos já declarado acima)
                 btnImportar.textContent = '⏳ Atualizando contagens...';
                 for (const temaId of temasUnicos) {
                     try {

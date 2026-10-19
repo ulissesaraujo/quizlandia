@@ -729,58 +729,30 @@ body {
 /* ========================================
    TELA 3: QUIZ
    ======================================== */
-.header-quiz {
+
+/* Barra de controles do quiz (Contador | Cronômetro | Ajudas) */
+.quiz-controles-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--primary);
-    color: white;
-    padding: 12px 20px;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: var(--radius);
-    margin-bottom: 24px;
-    box-shadow: var(--shadow);
-}
-
-.quiz-info {
-    display: flex;
-    align-items: center;
     gap: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.quiz-info .pergunta-tema {
-    margin: 0;
+/* Contador de perguntas à esquerda */
+.pergunta-contador {
+    font-size: 0.9rem;
     font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--primary-dark);
-    background: white;
-    padding: 6px 14px;
+    color: var(--gray-600);
+    background: var(--white);
+    padding: 6px 12px;
     border-radius: var(--radius-full);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.quiz-info .pergunta-contador {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.15);
-    padding: 4px 10px;
-    border-radius: var(--radius-full);
-}
-
-.pontuacao-atual {
-    text-align: right;
-}
-
-.pontuacao-atual .pontos {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-}
-
-.pontuacao-atual .label {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
 }
 
 .quiz-container {
@@ -853,13 +825,18 @@ body {
     margin-bottom: 32px;
 }
 
+/* Tema/Subtema acima da pergunta */
 .pergunta-tema {
-    display: inline-block;
-    padding: 4px 12px;
-    background: var(--gray-100);
-    border-radius: var(--radius-full);
-    font-size: 0.85rem;
-    color: var(--gray-600);
+    display: block;
+    text-align: center;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%);
+    border-radius: var(--radius);
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .pergunta-tema.oculto {
@@ -867,17 +844,6 @@ body {
 }
 
 .pergunta-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    gap: 12px;
-    border-bottom: 2px solid var(--gray-200);
-}
-
-/* Barra de controles: Cronômetro | Ajudas */
-.quiz-controles-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1730,11 +1696,20 @@ body {
         font-size: 1.2rem;
     }
     
-    .header-temas,
-    .header-quiz {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
+    .quiz-controles-bar {
+        flex-wrap: wrap;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+    
+    .pergunta-contador {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+    
+    .pergunta-tema {
+        font-size: 0.9rem;
+        padding: 6px 12px;
     }
     
     .ranking-tabela {

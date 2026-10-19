@@ -67,10 +67,23 @@ export class TemasManager {
     }
 
     /**
-     * Retorna um tema específico por ID
+     * Retorna um tema específico por ID (busca também nos subtemas)
      */
     obterTemaPorId(temaId) {
-        return this.temas.find(t => t.id === temaId) || buscarTemaPorId(temaId);
+        // Primeiro busca nos temas principais
+        const temaPrincipal = this.temas.find(t => t.id === temaId);
+        if (temaPrincipal) return temaPrincipal;
+        
+        // Se não encontrou, busca nos subtemas dos temas carregados
+        for (const tema of this.temas) {
+            if (tema.subtemas) {
+                const subtema = tema.subtemas.find(s => s.id === temaId);
+                if (subtema) return { ...subtema, temaPai: tema.id, temaPaiNome: tema.nome, temaPaiIcone: tema.icone };
+            }
+        }
+        
+        // Fallback para o array estático
+        return buscarTemaPorId(temaId);
     }
 
     /**

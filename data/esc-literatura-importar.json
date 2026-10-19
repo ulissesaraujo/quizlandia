@@ -1,0 +1,1842 @@
+{
+    "perguntas":  [
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Sol na Cabeça\u0027?",
+                          "alternativas":  [
+                                               "Jeferson Tenório",
+                                               "Geovani Martins",
+                                               "Itamar Vieira Junior",
+                                               "Luiz Ruffato"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Onde ocorreu a Semana de Arte Moderna de 1922?",
+                          "alternativas":  [
+                                               "Rio de Janeiro",
+                                               "São Paulo",
+                                               "Belo Horizonte",
+                                               "Salvador"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Torto Arado\u0027?",
+                          "alternativas":  [
+                                               "Itamar Vieira Junior",
+                                               "Jeferson Tenório",
+                                               "Geovani Martins",
+                                               "Paulo Scott"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor brasileiro escreveu \u0027Feliz Ano Velho\u0027?",
+                          "alternativas":  [
+                                               "Caio Fernando Abreu",
+                                               "Marcelo Rubens Paiva",
+                                               "Fernando Bonassi",
+                                               "Marçal Aquino"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu crônicas famosas como \u0027A Eterna Privação do Zagueiro Absoluto\u0027?",
+                          "alternativas":  [
+                                               "Rubem Braga",
+                                               "Luis Fernando Verissimo",
+                                               "Fernando Sabino",
+                                               "Paulo Mendes Campos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Como Água para Chocolate\u0027?",
+                          "alternativas":  [
+                                               "Isabel Allende",
+                                               "Laura Esquivel",
+                                               "Elena Poniatowska",
+                                               "Ángeles Mastretta"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "O que significa a sigla ABL?",
+                          "alternativas":  [
+                                               "Associação Brasileira de Leitura",
+                                               "Academia Brasileira de Letras",
+                                               "Arquivo Brasileiro Literário",
+                                               "Aliança Brasileira de Literatura"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Lavoura Arcaica\u0027?",
+                          "alternativas":  [
+                                               "Milton Hatoum",
+                                               "Raduan Nassar",
+                                               "Hilda Hilst",
+                                               "Osman Lins"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem foi o primeiro presidente da Academia Brasileira de Letras?",
+                          "alternativas":  [
+                                               "Machado de Assis",
+                                               "José de Alencar",
+                                               "Joaquim Nabuco",
+                                               "Olavo Bilac"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Resistência\u0027?",
+                          "alternativas":  [
+                                               "Chico Buarque",
+                                               "Milton Hatoum",
+                                               "Julián Fuks",
+                                               "Bernardo Carvalho"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "O que é realismo mágico?",
+                          "alternativas":  [
+                                               "Apenas magia em histórias",
+                                               "Elementos mágicos em contexto realista",
+                                               "Contos de fadas",
+                                               "Ficção científica"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Xangô de Baker Street\u0027?",
+                          "alternativas":  [
+                                               "Rubem Fonseca",
+                                               "Jô Soares",
+                                               "Luis Fernando Verissimo",
+                                               "Millôr Fernandes"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Labirinto da Solidão\u0027?",
+                          "alternativas":  [
+                                               "Carlos Fuentes",
+                                               "Octavio Paz",
+                                               "Juan Rulfo",
+                                               "Alfonso Reyes"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Avesso da Pele\u0027?",
+                          "alternativas":  [
+                                               "Itamar Vieira Junior",
+                                               "Jeferson Tenório",
+                                               "Geovani Martins",
+                                               "Mailson Furtado"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autora ganhou o Nobel de Literatura em 2022?",
+                          "alternativas":  [
+                                               "Margaret Atwood",
+                                               "Annie Ernaux",
+                                               "Elena Ferrante",
+                                               "Chimamanda Ngozi Adichie"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Angústia\u0027?",
+                          "alternativas":  [
+                                               "José Lins do Rego",
+                                               "Graciliano Ramos",
+                                               "Jorge Amado",
+                                               "Rachel de Queiroz"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Um Defeito de Cor\u0027?",
+                          "alternativas":  [
+                                               "Conceição Evaristo",
+                                               "Ana Maria Gonçalves",
+                                               "Carolina Maria de Jesus",
+                                               "Eliana Alves Cruz"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Quarup\u0027?",
+                          "alternativas":  [
+                                               "Darcy Ribeiro",
+                                               "Antonio Callado",
+                                               "Jorge Amado",
+                                               "Ã‰rico Veríssimo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027A Sangue Frio\u0027?",
+                          "alternativas":  [
+                                               "Norman Mailer",
+                                               "Truman Capote",
+                                               "Tom Wolfe",
+                                               "Hunter S. Thompson"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Cidade e os Cachorros\u0027?",
+                          "alternativas":  [
+                                               "Gabriel García Márquez",
+                                               "Mario Vargas Llosa",
+                                               "Carlos Fuentes",
+                                               "Julio Cortázar"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Cem Dias Entre Céu e Mar\u0027?",
+                          "alternativas":  [
+                                               "Rubem Fonseca",
+                                               "Amyr Klink",
+                                               "Fernando Gabeira",
+                                               "Paulo Francis"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem é conhecido como o \u0027poeta das coisas\u0027?",
+                          "alternativas":  [
+                                               "Carlos Drummond de Andrade",
+                                               "Manoel de Barros",
+                                               "João Cabral de Melo Neto",
+                                               "Mário Quintana"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autora escreveu \u0027Ponciá Vicêncio\u0027?",
+                          "alternativas":  [
+                                               "Carolina Maria de Jesus",
+                                               "Conceição Evaristo",
+                                               "Ana Maria Gonçalves",
+                                               "Miriam Alves"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual movimento literário brasileiro ocorreu em 1922?",
+                          "alternativas":  [
+                                               "Romantismo",
+                                               "Realismo",
+                                               "Modernismo",
+                                               "Parnasianismo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027São Bernardo\u0027?",
+                          "alternativas":  [
+                                               "Jorge Amado",
+                                               "José Lins do Rego",
+                                               "Graciliano Ramos",
+                                               "Ã‰rico Veríssimo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Pedro Páramo\u0027?",
+                          "alternativas":  [
+                                               "Carlos Fuentes",
+                                               "Juan Rulfo",
+                                               "Octavio Paz",
+                                               "José Emilio Pacheco"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor argentino é famoso por labirintos e bibliotecas?",
+                          "alternativas":  [
+                                               "Julio Cortázar",
+                                               "Jorge Luis Borges",
+                                               "Ernesto Sabato",
+                                               "Manuel Puig"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Amor nos Tempos do Cólera\u0027?",
+                          "alternativas":  [
+                                               "Mario Vargas Llosa",
+                                               "Gabriel García Márquez",
+                                               "Julio Cortázar",
+                                               "Carlos Fuentes"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autora escreveu \u0027Ciranda de Pedra\u0027?",
+                          "alternativas":  [
+                                               "Clarice Lispector",
+                                               "Lygia Fagundes Telles",
+                                               "Nélida Piñon",
+                                               "Hilda Hilst"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual poeta gaúcho escreveu \u0027Quintana de Bolso\u0027?",
+                          "alternativas":  [
+                                               "Carlos Drummond de Andrade",
+                                               "Mário Quintana",
+                                               "Ferreira Gullar",
+                                               "Vinícius de Moraes"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Dona Flor e Seus Dois Maridos\u0027?",
+                          "alternativas":  [
+                                               "Ã‰rico Veríssimo",
+                                               "Jorge Amado",
+                                               "João Ubaldo Ribeiro",
+                                               "Rubem Fonseca"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor peruano ganhou o Nobel de Literatura?",
+                          "alternativas":  [
+                                               "César Vallejo",
+                                               "Mario Vargas Llosa",
+                                               "Julio Ramón Ribeyro",
+                                               "Alfredo Bryce Echenique"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Gabriela, Cravo e Canela\u0027?",
+                          "alternativas":  [
+                                               "Graciliano Ramos",
+                                               "José Lins do Rego",
+                                               "Jorge Amado",
+                                               "Ã‰rico Veríssimo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor brasileiro escreveu \u0027Dois Irmãos\u0027?",
+                          "alternativas":  [
+                                               "Raduan Nassar",
+                                               "Milton Hatoum",
+                                               "Bernardo Carvalho",
+                                               "Luiz Ruffato"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual gênero literário \u0027O Senhor dos Anéis\u0027 representa?",
+                          "alternativas":  [
+                                               "Ficção científica",
+                                               "Fantasia épica",
+                                               "Terror",
+                                               "Suspense"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Sagarana\u0027?",
+                          "alternativas":  [
+                                               "Jorge Amado",
+                                               "Guimarães Rosa",
+                                               "Graciliano Ramos",
+                                               "José Lins do Rego"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Budapeste\u0027?",
+                          "alternativas":  [
+                                               "Milton Hatoum",
+                                               "Chico Buarque",
+                                               "Rubem Fonseca",
+                                               "João Ubaldo Ribeiro"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Ficciones\u0027?",
+                          "alternativas":  [
+                                               "Julio Cortázar",
+                                               "Jorge Luis Borges",
+                                               "Adolfo Bioy Casares",
+                                               "Ernesto Sabato"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Morangos Mofados\u0027?",
+                          "alternativas":  [
+                                               "Marcelo Rubens Paiva",
+                                               "Caio Fernando Abreu",
+                                               "João Gilberto Noll",
+                                               "Sérgio Sant\u0027Anna"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Leite Derramado\u0027?",
+                          "alternativas":  [
+                                               "Chico Buarque",
+                                               "Milton Hatoum",
+                                               "Raduan Nassar",
+                                               "Bernardo Carvalho"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Tenda dos Milagres\u0027?",
+                          "alternativas":  [
+                                               "João Ubaldo Ribeiro",
+                                               "Jorge Amado",
+                                               "Darcy Ribeiro",
+                                               "Antonio Callado"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Encontro Marcado\u0027?",
+                          "alternativas":  [
+                                               "Rubem Braga",
+                                               "Fernando Sabino",
+                                               "Paulo Mendes Campos",
+                                               "Otto Lara Resende"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem é considerado o maior cronista brasileiro?",
+                          "alternativas":  [
+                                               "Fernando Sabino",
+                                               "Rubem Braga",
+                                               "Carlos Drummond de Andrade",
+                                               "Rachel de Queiroz"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor é famoso por romances ambientados na Bahia?",
+                          "alternativas":  [
+                                               "Graciliano Ramos",
+                                               "Jorge Amado",
+                                               "José Lins do Rego",
+                                               "Ã‰rico Veríssimo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor brasileiro escreveu \u0027Viva o Povo Brasileiro\u0027?",
+                          "alternativas":  [
+                                               "Jorge Amado",
+                                               "João Ubaldo Ribeiro",
+                                               "Darcy Ribeiro",
+                                               "Antonio Callado"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Conto da Aia\u0027?",
+                          "alternativas":  [
+                                               "Ursula K. Le Guin",
+                                               "Margaret Atwood",
+                                               "Octavia Butler",
+                                               "N.K. Jemisin"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Continente\u0027?",
+                          "alternativas":  [
+                                               "Jorge Amado",
+                                               "Ã‰rico Veríssimo",
+                                               "José Lins do Rego",
+                                               "Graciliano Ramos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual poeta escreveu \u0027Poema Sujo\u0027?",
+                          "alternativas":  [
+                                               "Carlos Drummond de Andrade",
+                                               "Ferreira Gullar",
+                                               "João Cabral de Melo Neto",
+                                               "Manoel de Barros"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Rayuela\u0027?",
+                          "alternativas":  [
+                                               "Gabriel García Márquez",
+                                               "Julio Cortázar",
+                                               "Jorge Luis Borges",
+                                               "Ernesto Sabato"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Madame Bovary\u0027?",
+                          "alternativas":  [
+                                               "Ã‰mile Zola",
+                                               "Gustave Flaubert",
+                                               "Honoré de Balzac",
+                                               "Guy de Maupassant"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Cem Sonetos de Amor\u0027?",
+                          "alternativas":  [
+                                               "Federico García Lorca",
+                                               "Pablo Neruda",
+                                               "Octavio Paz",
+                                               "César Vallejo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Como começa \u0027Canção do Exílio\u0027?",
+                          "alternativas":  [
+                                               "Minha terra tem palmeiras",
+                                               "Nossos bosques têm mais vida",
+                                               "Terra adorada",
+                                               "Pátria amada"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Escrava Isaura\u0027?",
+                          "alternativas":  [
+                                               "José de Alencar",
+                                               "Bernardo Guimarães",
+                                               "Castro Alves",
+                                               "Gonçalves Dias"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Os Miseráveis\u0027?",
+                          "alternativas":  [
+                                               "Alexandre Dumas",
+                                               "Victor Hugo",
+                                               "Honoré de Balzac",
+                                               "Ã‰mile Zola"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o protagonista de \u0027Os Miseráveis\u0027?",
+                          "alternativas":  [
+                                               "Javert",
+                                               "Jean Valjean",
+                                               "Marius",
+                                               "Enjolras"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o nome do capitão obcecado pela baleia branca?",
+                          "alternativas":  [
+                                               "Ismael",
+                                               "Ahab",
+                                               "Starbuck",
+                                               "Queequeg"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Moby Dick\u0027?",
+                          "alternativas":  [
+                                               "Mark Twain",
+                                               "Herman Melville",
+                                               "Nathaniel Hawthorne",
+                                               "Edgar Allan Poe"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Quinze\u0027?",
+                          "alternativas":  [
+                                               "Graciliano Ramos",
+                                               "Rachel de Queiroz",
+                                               "José Lins do Rego",
+                                               "Jorge Amado"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Conde de Monte Cristo\u0027?",
+                          "alternativas":  [
+                                               "Victor Hugo",
+                                               "Alexandre Dumas",
+                                               "Stendhal",
+                                               "Gustave Flaubert"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Romancero Gitano\u0027?",
+                          "alternativas":  [
+                                               "Pablo Neruda",
+                                               "Federico García Lorca",
+                                               "Rafael Alberti",
+                                               "Luis Cernuda"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o nome do cachorro em \u0027Vidas Secas\u0027?",
+                          "alternativas":  [
+                                               "Totó",
+                                               "Baleia",
+                                               "Rex",
+                                               "Fiel"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual poeta chileno ganhou o Nobel de Literatura?",
+                          "alternativas":  [
+                                               "Gabriela Mistral",
+                                               "Pablo Neruda",
+                                               "Ambos ganharam",
+                                               "Nenhum dos dois"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o nome completo do monstro de Frankenstein?",
+                          "alternativas":  [
+                                               "Frankenstein Jr.",
+                                               "A Criatura",
+                                               "Ele não tem nome",
+                                               "Adam"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autora escreveu \u0027Jane Eyre\u0027?",
+                          "alternativas":  [
+                                               "Emily Brontë",
+                                               "Charlotte Brontë",
+                                               "Anne Brontë",
+                                               "Jane Austen"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Tempo e o Vento\u0027?",
+                          "alternativas":  [
+                                               "Jorge Amado",
+                                               "Ã‰rico Veríssimo",
+                                               "Mário Quintana",
+                                               "Dyonélio Machado"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Frankenstein\u0027?",
+                          "alternativas":  [
+                                               "Bram Stoker",
+                                               "Mary Shelley",
+                                               "Edgar Allan Poe",
+                                               "H.G. Wells"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Vidas Secas\u0027?",
+                          "alternativas":  [
+                                               "Jorge Amado",
+                                               "Graciliano Ramos",
+                                               "José Lins do Rego",
+                                               "João Cabral de Melo Neto"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual poeta romântico escreveu \u0027Canção do Exílio\u0027?",
+                          "alternativas":  [
+                                               "Castro Alves",
+                                               "Gonçalves Dias",
+                                               "Álvares de Azevedo",
+                                               "Casimiro de Abreu"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Grande Gatsby\u0027?",
+                          "alternativas":  [
+                                               "Ernest Hemingway",
+                                               "F. Scott Fitzgerald",
+                                               "John Steinbeck",
+                                               "William Faulkner"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Menino de Engenho\u0027?",
+                          "alternativas":  [
+                                               "Graciliano Ramos",
+                                               "José Lins do Rego",
+                                               "Jorge Amado",
+                                               "Gilberto Freyre"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Memórias de um Sargento de Milícias\u0027?",
+                          "alternativas":  [
+                                               "Joaquim Manuel de Macedo",
+                                               "Manuel Antônio de Almeida",
+                                               "José de Alencar",
+                                               "Machado de Assis"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual poeta escreveu \u0027Soneto de Fidelidade\u0027?",
+                          "alternativas":  [
+                                               "Carlos Drummond",
+                                               "Vinícius de Moraes",
+                                               "Manuel Bandeira",
+                                               "Cecília Meireles"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem é o protagonista de \u0027A Odisseia\u0027?",
+                          "alternativas":  [
+                                               "Aquiles",
+                                               "Ulisses/Odisseu",
+                                               "Heitor",
+                                               "Páris"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Sidarta\u0027?",
+                          "alternativas":  [
+                                               "Thomas Mann",
+                                               "Hermann Hesse",
+                                               "Rainer Maria Rilke",
+                                               "Stefan Zweig"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Drácula\u0027?",
+                          "alternativas":  [
+                                               "Mary Shelley",
+                                               "Bram Stoker",
+                                               "H.P. Lovecraft",
+                                               "Edgar Allan Poe"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Admirável Mundo Novo\u0027?",
+                          "alternativas":  [
+                                               "George Orwell",
+                                               "Aldous Huxley",
+                                               "Philip K. Dick",
+                                               "Isaac Asimov"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autora escreveu \u0027Mrs. Dalloway\u0027?",
+                          "alternativas":  [
+                                               "Jane Austen",
+                                               "Virginia Woolf",
+                                               "George Eliot",
+                                               "Charlotte Brontë"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Senhor dos Anéis\u0027?",
+                          "alternativas":  [
+                                               "C.S. Lewis",
+                                               "J.R.R. Tolkien",
+                                               "George R.R. Martin",
+                                               "Terry Pratchett"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027A Náusea\u0027?",
+                          "alternativas":  [
+                                               "Albert Camus",
+                                               "Jean-Paul Sartre",
+                                               "André Malraux",
+                                               "André Gide"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu o \u0027Manifesto Antropófago\u0027?",
+                          "alternativas":  [
+                                               "Mário de Andrade",
+                                               "Oswald de Andrade",
+                                               "Manuel Bandeira",
+                                               "Menotti Del Picchia"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Fahrenheit 451\u0027?",
+                          "alternativas":  [
+                                               "Isaac Asimov",
+                                               "Arthur C. Clarke",
+                                               "Ray Bradbury",
+                                               "Philip K. Dick"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Estrangeiro\u0027?",
+                          "alternativas":  [
+                                               "Jean-Paul Sartre",
+                                               "Albert Camus",
+                                               "Simone de Beauvoir",
+                                               "André Gide"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Esperando Godot\u0027?",
+                          "alternativas":  [
+                                               "James Joyce",
+                                               "Samuel Beckett",
+                                               "Harold Pinter",
+                                               "Tom Stoppard"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o nome do índio protagonista de \u0027O Guarani\u0027?",
+                          "alternativas":  [
+                                               "Peri",
+                                               "Ubirajara",
+                                               "Araribóia",
+                                               "Tibiriçá"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Apanhador no Campo de Centeio\u0027?",
+                          "alternativas":  [
+                                               "F. Scott Fitzgerald",
+                                               "J.D. Salinger",
+                                               "Jack Kerouac",
+                                               "William S. Burroughs"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Retrato de Dorian Gray\u0027?",
+                          "alternativas":  [
+                                               "Charles Dickens",
+                                               "Oscar Wilde",
+                                               "Thomas Hardy",
+                                               "Henry James"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027A Casa dos Espíritos\u0027?",
+                          "alternativas":  [
+                                               "Gabriel García Márquez",
+                                               "Isabel Allende",
+                                               "Mario Vargas Llosa",
+                                               "Laura Esquivel"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quantos livros compõem a série Harry Potter?",
+                          "alternativas":  [
+                                               "5",
+                                               "6",
+                                               "7",
+                                               "8"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Crime do Padre Amaro\u0027?",
+                          "alternativas":  [
+                                               "Machado de Assis",
+                                               "Eça de Queiroz",
+                                               "Aluísio Azevedo",
+                                               "Raul Pompeia"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027A Montanha Mágica\u0027?",
+                          "alternativas":  [
+                                               "Hermann Hesse",
+                                               "Thomas Mann",
+                                               "Franz Kafka",
+                                               "Günter Grass"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autora escreveu \u0027Harry Potter\u0027?",
+                          "alternativas":  [
+                                               "Stephenie Meyer",
+                                               "Suzanne Collins",
+                                               "J.K. Rowling",
+                                               "Veronica Roth"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual objeto está no meio do caminho no poema?",
+                          "alternativas":  [
+                                               "Uma flor",
+                                               "Uma pedra",
+                                               "Um rio",
+                                               "Uma árvore"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Ulisses\u0027?",
+                          "alternativas":  [
+                                               "Samuel Beckett",
+                                               "James Joyce",
+                                               "W.B. Yeats",
+                                               "Oscar Wilde"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Ensaio sobre a Cegueira\u0027?",
+                          "alternativas":  [
+                                               "António Lobo Antunes",
+                                               "José Saramago",
+                                               "Valter Hugo Mãe",
+                                               "Gonçalo M. Tavares"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Auto da Compadecida\u0027?",
+                          "alternativas":  [
+                                               "Dias Gomes",
+                                               "Ariano Suassuna",
+                                               "Nelson Rodrigues",
+                                               "Gianfrancesco Guarnieri"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é a característica de Macunaíma?",
+                          "alternativas":  [
+                                               "Trabalhador",
+                                               "Herói sem nenhum caráter",
+                                               "Honesto",
+                                               "Corajoso"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Navio Negreiro\u0027?",
+                          "alternativas":  [
+                                               "Gonçalves Dias",
+                                               "Castro Alves",
+                                               "Álvares de Azevedo",
+                                               "Fagundes Varela"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Os Maias\u0027?",
+                          "alternativas":  [
+                                               "Camilo Castelo Branco",
+                                               "Eça de Queiroz",
+                                               "Almeida Garrett",
+                                               "Alexandre Herculano"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027As Vinhas da Ira\u0027?",
+                          "alternativas":  [
+                                               "Ernest Hemingway",
+                                               "John Steinbeck",
+                                               "William Faulkner",
+                                               "Sinclair Lewis"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027A Cidade e as Serras\u0027?",
+                          "alternativas":  [
+                                               "Camilo Castelo Branco",
+                                               "Eça de Queiroz",
+                                               "Almeida Garrett",
+                                               "Júlio Dinis"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Alquimista\u0027?",
+                          "alternativas":  [
+                                               "José Saramago",
+                                               "Paulo Coelho",
+                                               "Fernando Sabino",
+                                               "Rubem Fonseca"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor brasileiro escreveu \u0027Iracema\u0027?",
+                          "alternativas":  [
+                                               "Machado de Assis",
+                                               "José de Alencar",
+                                               "Gonçalves Dias",
+                                               "Castro Alves"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Segundo Sexo\u0027?",
+                          "alternativas":  [
+                                               "Virginia Woolf",
+                                               "Simone de Beauvoir",
+                                               "Marguerite Duras",
+                                               "Colette"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor português ganhou o Nobel de Literatura?",
+                          "alternativas":  [
+                                               "Fernando Pessoa",
+                                               "Eça de Queiroz",
+                                               "José Saramago",
+                                               "Camilo Castelo Branco"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Macunaíma\u0027?",
+                          "alternativas":  [
+                                               "Oswald de Andrade",
+                                               "Mário de Andrade",
+                                               "Manuel Bandeira",
+                                               "Carlos Drummond"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Na Estrada\u0027?",
+                          "alternativas":  [
+                                               "J.D. Salinger",
+                                               "Jack Kerouac",
+                                               "William S. Burroughs",
+                                               "Allen Ginsberg"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Laços de Família\u0027?",
+                          "alternativas":  [
+                                               "Lygia Fagundes Telles",
+                                               "Clarice Lispector",
+                                               "Rachel de Queiroz",
+                                               "Nélida Piñon"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Sobre qual guerra trata \u0027A Ilíada\u0027?",
+                          "alternativas":  [
+                                               "Guerras Médicas",
+                                               "Guerra de Troia",
+                                               "Guerra do Peloponeso",
+                                               "Conquistas de Alexandre"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Ilíada\u0027?",
+                          "alternativas":  [
+                                               "Homero",
+                                               "Virgílio",
+                                               "Ovídio",
+                                               "Hesíodo"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Nome da Rosa\u0027?",
+                          "alternativas":  [
+                                               "Italo Calvino",
+                                               "Umberto Eco",
+                                               "Primo Levi",
+                                               "Alberto Moravia"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual dramaturgo escreveu \u0027Vestido de Noiva\u0027?",
+                          "alternativas":  [
+                                               "Ariano Suassuna",
+                                               "Nelson Rodrigues",
+                                               "Jorge Andrade",
+                                               "Plínio Marcos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Ateneu\u0027?",
+                          "alternativas":  [
+                                               "Aluísio Azevedo",
+                                               "Raul Pompeia",
+                                               "Adolfo Caminha",
+                                               "Machado de Assis"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "O que é queimado em \u0027Fahrenheit 451\u0027?",
+                          "alternativas":  [
+                                               "Casas",
+                                               "Livros",
+                                               "Pessoas",
+                                               "Tecnologia"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Lolita\u0027?",
+                          "alternativas":  [
+                                               "Truman Capote",
+                                               "Vladimir Nabokov",
+                                               "J.D. Salinger",
+                                               "Jack Kerouac"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Lobo da Estepe\u0027?",
+                          "alternativas":  [
+                                               "Thomas Mann",
+                                               "Hermann Hesse",
+                                               "Franz Kafka",
+                                               "Robert Musil"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor brasileiro escreveu \u0027Capitães da Areia\u0027?",
+                          "alternativas":  [
+                                               "Ã‰rico Veríssimo",
+                                               "Jorge Amado",
+                                               "José Lins do Rego",
+                                               "Rachel de Queiroz"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Primo Basílio\u0027?",
+                          "alternativas":  [
+                                               "Machado de Assis",
+                                               "Eça de Queiroz",
+                                               "Camilo Castelo Branco",
+                                               "Almeida Garrett"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Mensagem\u0027?",
+                          "alternativas":  [
+                                               "Fernando Pessoa",
+                                               "Mário de Sá-Carneiro",
+                                               "Florbela Espanca",
+                                               "Almada Negreiros"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é a protagonista de \u0027A Hora da Estrela\u0027?",
+                          "alternativas":  [
+                                               "Clarice",
+                                               "Macabéa",
+                                               "Olímpico",
+                                               "Glória"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual poeta brasileiro escreveu \u0027A Rosa do Povo\u0027?",
+                          "alternativas":  [
+                                               "Manuel Bandeira",
+                                               "Carlos Drummond de Andrade",
+                                               "Cecília Meireles",
+                                               "Vinícius de Moraes"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027As Crônicas de Nárnia\u0027?",
+                          "alternativas":  [
+                                               "J.R.R. Tolkien",
+                                               "C.S. Lewis",
+                                               "Ursula K. Le Guin",
+                                               "Philip Pullman"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem são os protagonistas de \u0027O Auto da Compadecida\u0027?",
+                          "alternativas":  [
+                                               "Pedro e Paulo",
+                                               "João Grilo e Chicó",
+                                               "Zé e Maria",
+                                               "Antônio e José"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o nome do hobbit protagonista de \u0027O Senhor dos Anéis\u0027?",
+                          "alternativas":  [
+                                               "Bilbo",
+                                               "Frodo",
+                                               "Sam",
+                                               "Merry"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Revolução dos Bichos\u0027?",
+                          "alternativas":  [
+                                               "Aldous Huxley",
+                                               "George Orwell",
+                                               "Ray Bradbury",
+                                               "H.G. Wells"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Hora da Estrela\u0027?",
+                          "alternativas":  [
+                                               "Rachel de Queiroz",
+                                               "Clarice Lispector",
+                                               "Lygia Fagundes Telles",
+                                               "Nélida Piñon"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Odisseia\u0027?",
+                          "alternativas":  [
+                                               "Sófocles",
+                                               "Eurípides",
+                                               "Homero",
+                                               "Ã‰squilo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Guarani\u0027?",
+                          "alternativas":  [
+                                               "Machado de Assis",
+                                               "José de Alencar",
+                                               "Bernardo Guimarães",
+                                               "Visconde de Taunay"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Morte e Vida Severina\u0027?",
+                          "alternativas":  [
+                                               "Carlos Drummond",
+                                               "João Cabral de Melo Neto",
+                                               "Manuel Bandeira",
+                                               "Ferreira Gullar"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual poeta é conhecido como \u0027Poeta dos Escravos\u0027?",
+                          "alternativas":  [
+                                               "Gonçalves Dias",
+                                               "Castro Alves",
+                                               "Álvares de Azevedo",
+                                               "Casimiro de Abreu"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Morro dos Ventos Uivantes\u0027?",
+                          "alternativas":  [
+                                               "Jane Austen",
+                                               "Charlotte Brontë",
+                                               "Emily Brontë",
+                                               "George Eliot"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o lema dos porcos em \u0027A Revolução dos Bichos\u0027?",
+                          "alternativas":  [
+                                               "Liberdade para todos",
+                                               "Todos os animais são iguais",
+                                               "Trabalho é liberdade",
+                                               "Unidos venceremos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Romeu e Julieta\u0027?",
+                          "alternativas":  [
+                                               "Christopher Marlowe",
+                                               "Ben Jonson",
+                                               "William Shakespeare",
+                                               "John Milton"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Quarto de Despejo\u0027?",
+                          "alternativas":  [
+                                               "Carolina Maria de Jesus",
+                                               "Conceição Evaristo",
+                                               "Ruth Guimarães",
+                                               "Zélia Gattai"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027No Meio do Caminho\u0027?",
+                          "alternativas":  [
+                                               "Vinícius de Moraes",
+                                               "Carlos Drummond de Andrade",
+                                               "Manuel Bandeira",
+                                               "João Cabral de Melo Neto"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027A Moreninha\u0027?",
+                          "alternativas":  [
+                                               "José de Alencar",
+                                               "Joaquim Manuel de Macedo",
+                                               "Manuel Antônio de Almeida",
+                                               "Bernardo Guimarães"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Ou Isto ou Aquilo\u0027?",
+                          "alternativas":  [
+                                               "Vinícius de Moraes",
+                                               "Cecília Meireles",
+                                               "Henriqueta Lisboa",
+                                               "Mário Quintana"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Hamlet\u0027?",
+                          "alternativas":  [
+                                               "Charles Dickens",
+                                               "Oscar Wilde",
+                                               "William Shakespeare",
+                                               "Jane Austen"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Dom Quixote\u0027?",
+                          "alternativas":  [
+                                               "William Shakespeare",
+                                               "Miguel de Cervantes",
+                                               "Dante Alighieri",
+                                               "Victor Hugo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Guerra e Paz\u0027?",
+                          "alternativas":  [
+                                               "Fiódor Dostoiévski",
+                                               "Leon Tolstói",
+                                               "Nikolai Gogol",
+                                               "Mikhail Bulgakov"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor criou Sherlock Holmes?",
+                          "alternativas":  [
+                                               "Edgar Allan Poe",
+                                               "Arthur Conan Doyle",
+                                               "Agatha Christie",
+                                               "G.K. Chesterton"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o nome do protagonista de \u00271984\u0027 de George Orwell?",
+                          "alternativas":  [
+                                               "John Smith",
+                                               "Winston Smith",
+                                               "George Wilson",
+                                               "Arthur Dent"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Cem Anos de Solidão\u0027?",
+                          "alternativas":  [
+                                               "Pablo Neruda",
+                                               "Gabriel García Márquez",
+                                               "Mario Vargas Llosa",
+                                               "Julio Cortázar"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o pseudônimo de Fernando Pessoa mais famoso?",
+                          "alternativas":  [
+                                               "Ricardo Reis",
+                                               "Álvaro de Campos",
+                                               "Alberto Caeiro",
+                                               "Todos são igualmente famosos"
+                                           ],
+                          "correta":  3
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor brasileiro escreveu \u0027Memórias Póstumas de Brás Cubas\u0027?",
+                          "alternativas":  [
+                                               "José de Alencar",
+                                               "Machado de Assis",
+                                               "Jorge Amado",
+                                               "Graciliano Ramos"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem é o narrador de \u0027Dom Casmurro\u0027?",
+                          "alternativas":  [
+                                               "Capitu",
+                                               "Bentinho",
+                                               "José Dias",
+                                               "Escobar"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Orgulho e Preconceito\u0027?",
+                          "alternativas":  [
+                                               "Charlotte Brontë",
+                                               "Emily Brontë",
+                                               "Jane Austen",
+                                               "Virginia Woolf"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027Crime e Castigo\u0027?",
+                          "alternativas":  [
+                                               "Leon Tolstói",
+                                               "Fiódor Dostoiévski",
+                                               "Anton Tchekhov",
+                                               "Ivan Turguêniev"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual movimento literário Machado de Assis representa?",
+                          "alternativas":  [
+                                               "Romantismo",
+                                               "Realismo",
+                                               "Naturalismo",
+                                               "Modernismo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Cortiço\u0027?",
+                          "alternativas":  [
+                                               "Machado de Assis",
+                                               "Aluísio Azevedo",
+                                               "Raul Pompeia",
+                                               "Adolfo Caminha"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "O que é o Naturalismo na literatura?",
+                          "alternativas":  [
+                                               "Exaltação da natureza",
+                                               "Análise científica do comportamento humano",
+                                               "Poesia sobre flores",
+                                               "Romance de aventura"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Metamorfose\u0027?",
+                          "alternativas":  [
+                                               "Thomas Mann",
+                                               "Franz Kafka",
+                                               "Hermann Hesse",
+                                               "Robert Musil"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Em que animal Gregor Samsa se transforma?",
+                          "alternativas":  [
+                                               "Barata",
+                                               "Inseto monstruoso",
+                                               "Escaravelho",
+                                               "Aranha"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor escreveu \u0027O Pequeno Príncipe\u0027?",
+                          "alternativas":  [
+                                               "Victor Hugo",
+                                               "Jules Verne",
+                                               "Antoine de Saint-Exupéry",
+                                               "Albert Camus"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Velho e o Mar\u0027?",
+                          "alternativas":  [
+                                               "John Steinbeck",
+                                               "Ernest Hemingway",
+                                               "F. Scott Fitzgerald",
+                                               "William Faulkner"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é a primeira parte de \u0027A Divina Comédia\u0027?",
+                          "alternativas":  [
+                                               "Paraíso",
+                                               "Purgatório",
+                                               "Inferno",
+                                               "Limbo"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Em qual planeta o Pequeno Príncipe vivia?",
+                          "alternativas":  [
+                                               "Marte",
+                                               "Asteroide B-612",
+                                               "Lua",
+                                               "Vênus"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Divina Comédia\u0027?",
+                          "alternativas":  [
+                                               "Petrarca",
+                                               "Boccaccio",
+                                               "Dante Alighieri",
+                                               "Maquiavel"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Grande Sertão: Veredas\u0027?",
+                          "alternativas":  [
+                                               "Jorge Amado",
+                                               "Guimarães Rosa",
+                                               "Graciliano Ramos",
+                                               "Ã‰rico Veríssimo"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Os Lusíadas\u0027?",
+                          "alternativas":  [
+                                               "Fernando Pessoa",
+                                               "Luís de Camões",
+                                               "Eça de Queiroz",
+                                               "Gil Vicente"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quantos livros tem a série Harry Potter?",
+                          "alternativas":  [
+                                               "5",
+                                               "6",
+                                               "7",
+                                               "8"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autor criou Sherlock Holmes?",
+                          "alternativas":  [
+                                               "Agatha Christie",
+                                               "Arthur Conan Doyle",
+                                               "Edgar Allan Poe",
+                                               "H.G. Wells"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027Dom Quixote\u0027?",
+                          "alternativas":  [
+                                               "Miguel de Cervantes",
+                                               "William Shakespeare",
+                                               "Dante Alighieri",
+                                               "Victor Hugo"
+                                           ],
+                          "correta":  0
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u00271984\u0027?",
+                          "alternativas":  [
+                                               "Aldous Huxley",
+                                               "Ray Bradbury",
+                                               "George Orwell",
+                                               "H.G. Wells"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual autora escreveu \u0027Orgulho e Preconceito\u0027?",
+                          "alternativas":  [
+                                               "Charlotte Brontë",
+                                               "Jane Austen",
+                                               "Emily Brontë",
+                                               "Virginia Woolf"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Qual é o livro mais vendido de todos os tempos (excluindo religiosos)?",
+                          "alternativas":  [
+                                               "Harry Potter",
+                                               "O Senhor dos Anéis",
+                                               "Dom Quixote",
+                                               "O Pequeno Príncipe"
+                                           ],
+                          "correta":  2
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027O Velho e o Mar\u0027?",
+                          "alternativas":  [
+                                               "F. Scott Fitzgerald",
+                                               "Ernest Hemingway",
+                                               "John Steinbeck",
+                                               "Mark Twain"
+                                           ],
+                          "correta":  1
+                      },
+                      {
+                          "tema":  "esc-literatura",
+                          "enunciado":  "Quem escreveu \u0027A Metamorfose\u0027?",
+                          "alternativas":  [
+                                               "Albert Camus",
+                                               "Franz Kafka",
+                                               "Fiódor Dostoiévski",
+                                               "Jean-Paul Sartre"
+                                           ],
+                          "correta":  1
+                      }
+                  ],
+    "tema":  "esc-literatura"
+}

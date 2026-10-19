@@ -27,7 +27,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="canonical" href="https://ulissesaraujo.github.io/quizlandia/">
-    <link rel="stylesheet" href="css/style.css?v=91">
+    <link rel="stylesheet" href="css/style.css?v=92">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,7 @@
                     </button>
                 </form>
                 
-                <p class="versao-debug">Build #153 - 00:15:00 18/10/2026</p>
+                <p class="versao-debug">Build #154 - 23:16:43 18/10/2026</p>
             </div>
         </section>
 
@@ -184,36 +184,21 @@
                  class="tela" 
                  role="region" 
                  aria-label="Tela do quiz">
-            <!-- Header com tema, contador e pontos -->
-            <header class="header-quiz">
-                <div class="quiz-info">
-                    <p class="pergunta-tema" 
-                       id="pergunta-tema">
-                        🗺️ Geografia
-                    </p>
-                    <span class="pergunta-contador" 
-                          id="pergunta-contador"
-                          role="status"
-                          aria-live="polite"
-                          aria-label="Progresso das perguntas">
-                        1/10
-                    </span>
-                </div>
-                <div class="pontuacao-atual" aria-label="Pontuação atual">
-                    <span class="pontos" 
-                          id="pontos-atuais" 
-                          aria-live="polite">
-                        0
-                    </span>
-                    <span class="label">pontos</span>
-                </div>
-            </header>
 
             <div class="quiz-container">
                 <!-- Pergunta -->
                 <div class="pergunta-container" role="article">
-                    <!-- Barra de controles: Cronômetro | Ajudas -->
+                    <!-- Barra de controles: Contador | Cronômetro | Ajudas -->
                     <div class="quiz-controles-bar">
+                        <!-- Contador de perguntas -->
+                        <span class="pergunta-contador" 
+                              id="pergunta-contador"
+                              role="status"
+                              aria-live="polite"
+                              aria-label="Progresso das perguntas">
+                            1/10
+                        </span>
+                        
                         <!-- Cronômetro -->
                         <div class="cronometro oculto" 
                              id="cronometro"
@@ -241,6 +226,12 @@
                             </button>
                         </div>
                     </div>
+                    
+                    <!-- Tema/Subtema acima da pergunta -->
+                    <p class="pergunta-tema" 
+                       id="pergunta-tema">
+                        🗺️ Geografia
+                    </p>
                     
                     <h2 class="pergunta-enunciado" 
                         id="pergunta-enunciado"

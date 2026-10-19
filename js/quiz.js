@@ -207,6 +207,7 @@ export class QuizEngine {
 
     /**
      * Inicia a fase de leitura com countdown dinâmico
+     * Perguntas muito grandes (>150 caracteres) = 7 segundos
      * Perguntas grandes (>90 caracteres) = 5 segundos
      * Perguntas normais = 3 segundos
      */
@@ -215,7 +216,7 @@ export class QuizEngine {
         const tamanhoEnunciado = pergunta.enunciado ? pergunta.enunciado.length : 0;
         
         // Perguntas grandes têm mais tempo para leitura
-        let contador = tamanhoEnunciado > 90 ? 5 : 3;
+        let contador = tamanhoEnunciado > 150 ? 7 : tamanhoEnunciado > 90 ? 5 : 3;
         
         // Anuncia início da contagem
         try {
@@ -264,6 +265,15 @@ export class QuizEngine {
         this.tempoAdicional = 0; // Reseta tempo adicional para nova pergunta
         this.cronometroSegundos = 0;
         this._ultimoAnuncioTempo = 10; // Para controlar anúncios de tempo
+        
+        // Verifica se as alternativas são longas e adiciona tempo extra
+        const pergunta = this.perguntas[this.perguntaAtual];
+        if (pergunta && pergunta.alternativas) {
+            const totalCaracteres = pergunta.alternativas.reduce((sum, alt) => sum + (alt?.length || 0), 0);
+            if (totalCaracteres > 200) {
+                this.tempoAdicional = 10; // Adiciona 10 segundos para alternativas longas
+            }
+        }
         
         // Notifica início da fase de resposta
         if (this.onFaseResposta) {

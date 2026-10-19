@@ -13,6 +13,39 @@ import { Anunciador, GerenciadorFoco, NavegacaoTeclado } from './acessibilidade.
 // ========================================
 
 /**
+ * Toca beep de alerta usando Web Audio API
+ * @param {number} vezes - Quantidade de beeps (1 = amarelo, 2 = vermelho)
+ */
+function tocarBeep(vezes = 1) {
+    try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        
+        const tocarUmBeep = (delay = 0) => {
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            oscillator.frequency.value = 800; // Frequência do beep (Hz)
+            oscillator.type = 'sine';
+            
+            gainNode.gain.value = 0.3; // Volume (0 a 1)
+            
+            const startTime = audioCtx.currentTime + delay;
+            oscillator.start(startTime);
+            oscillator.stop(startTime + 0.15); // Duração do beep (150ms)
+        };
+        
+        for (let i = 0; i < vezes; i++) {
+            tocarUmBeep(i * 0.25); // 250ms entre beeps
+        }
+    } catch (e) {
+        // Silencia erros de áudio (pode falhar em alguns navegadores)
+    }
+}
+
+/**
  * Separa emojis do início do texto
  * Retorna { emoji: string|null, texto: string }
  */
@@ -148,7 +181,7 @@ const elementos = {
     
     // Quiz
     perguntaContador: document.getElementById('pergunta-contador'),
-    pontosAtuais: document.getElementById('pontos-atuais'),
+    // pontosAtuais removido - pontos só aparecem no resultado final
     faseLeitura: document.getElementById('fase-leitura'),
     countdownNumero: document.getElementById('countdown-numero'),
     perguntaEnunciado: document.getElementById('pergunta-enunciado'),
@@ -647,8 +680,7 @@ async function iniciarQuiz() {
         // Prepara configuração dos temas
         const configTemas = temasManager.serializarParaResultado();
         
-        // Atualiza UI
-        elementos.pontosAtuais.textContent = '0';
+        // Atualiza UI (pontos só aparecem no resultado final)
         
         // Atualiza o badge do tema na barra de controles
         if (elementos.perguntaTema) {
@@ -744,7 +776,7 @@ async function iniciarDesafio(partidaOriginal) {
         if (elementos.perguntaTema) {
             elementos.perguntaTema.textContent = configDesafio.descricao;
         }
-        elementos.pontosAtuais.textContent = '0';
+        // Pontos só aparecem no resultado final
         
         // Configura callbacks do quiz engine
         configurarCallbacksQuiz();
@@ -789,7 +821,12 @@ function configurarCallbacksQuiz() {
         if (elementos.perguntaTema && tema) {
             const temaObj = temasManager.obterTemaPorId(tema);
             if (temaObj) {
-                elementos.perguntaTema.textContent = `${temaObj.icone} ${temaObj.nome}`;
+                // Se é subtema, mostra "Tema Pai - Subtema"
+                if (temaObj.temaPaiNome) {
+                    elementos.perguntaTema.textContent = `${temaObj.temaPaiIcone || ''} ${temaObj.temaPaiNome} - ${temaObj.nome}`.trim();
+                } else {
+                    elementos.perguntaTema.textContent = `${temaObj.icone} ${temaObj.nome}`;
+                }
             }
         }
         
@@ -832,12 +869,24 @@ function configurarCallbacksQuiz() {
             const tempoAlerta = limite * 0.4;  // 40% restante = alerta
             const tempoCritico = limite * 0.2; // 20% restante = crítico
             
+            // Estado anterior para detectar transição
+            const eraAlerta = elementos.cronometroTempo.classList.contains('alerta');
+            const eraCritico = elementos.cronometroTempo.classList.contains('critico');
+            
             // Muda cor do cronômetro conforme o tempo restante
             elementos.cronometroTempo.classList.remove('alerta', 'critico');
             if (tempoRestante <= tempoCritico) {
                 elementos.cronometroTempo.classList.add('critico');
+                // Beep duplo ao entrar em crítico (vermelho)
+                if (!eraCritico) {
+                    tocarBeep(2);
+                }
             } else if (tempoRestante <= tempoAlerta) {
                 elementos.cronometroTempo.classList.add('alerta');
+                // Beep simples ao entrar em alerta (amarelo)
+                if (!eraAlerta && !eraCritico) {
+                    tocarBeep(1);
+                }
             }
             
             // Habilita ajudas quando fase de resposta inicia (alternativas visíveis)
@@ -853,7 +902,8 @@ function configurarCallbacksQuiz() {
     };
     
     quizEngine.onPontuacaoAtualizada = (pontuacao) => {
-        elementos.pontosAtuais.textContent = pontuacao;
+        // Pontos não são mais exibidos durante o quiz, apenas no resultado final
+        console.log('Pontuação atual:', pontuacao);
     };
     
     quizEngine.onRespostaProcessada = (resultado) => {

@@ -315,13 +315,31 @@ function mostrarTela(telaNome) {
 // ========================================
 // TELA DE LOGIN
 // ========================================
-function inicializarLogin() {
+async function inicializarLogin() {
     // Verifica se já existe um jogador salvo
     const jogadorSalvo = localStorage.getItem('quiz_jogador');
     if (jogadorSalvo) {
         estado.jogador = jogadorSalvo;
         rankingManager.setJogador(jogadorSalvo);
         elementos.inputNome.value = jogadorSalvo;
+        
+        // Auto-login: pula direto para temas se já tem jogador
+        await rankingManager.carregarHistorico();
+        elementos.displayJogador.textContent = jogadorSalvo;
+        await carregarTemas();
+        mostrarTela('temas');
+        
+        // Mostra atalho admin se jogador for Admin
+        const btnAdmin = document.getElementById('btn-painel-admin');
+        if (btnAdmin) {
+            if (jogadorSalvo.toLowerCase() === 'admin') {
+                btnAdmin.classList.remove('oculto');
+            } else {
+                btnAdmin.classList.add('oculto');
+            }
+        }
+        
+        console.log(`🚀 Auto-login: ${jogadorSalvo}`);
     }
     
     elementos.formLogin.addEventListener('submit', async (e) => {
@@ -2020,26 +2038,16 @@ function fecharModal(modal) {
 // INICIALIZAÇÃO
 // ========================================
 async function init() {
-    console.log('🏰 Quizlândia - Build #67 - Iniciando...');
+    console.log('🏰 Quizlândia - Iniciando...');
     
-    // Inicializa módulos
-    inicializarLogin();
+    // Inicializa módulos (login primeiro pois pode fazer auto-login)
+    await inicializarLogin();
     inicializarTemas();
     inicializarResultado();
     inicializarModal();
     inicializarFaseLeitura();
     inicializarAjudas();
     inicializarBotaoDesistir();
-    
-    // Verifica se existe jogador salvo
-    const jogadorSalvo = localStorage.getItem('quiz_jogador');
-    if (jogadorSalvo) {
-        estado.jogador = jogadorSalvo;
-        rankingManager.setJogador(jogadorSalvo);
-        await rankingManager.carregarHistorico();
-        elementos.displayJogador.textContent = jogadorSalvo;
-        elementos.inputNome.value = jogadorSalvo;
-    }
     
     console.log('✅ Quizlândia - Pronto!');
 }

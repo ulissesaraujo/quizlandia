@@ -775,6 +775,10 @@ async function iniciarQuiz() {
     estado.carregando = true;
     elementos.btnJogar.disabled = true;
     
+    // Entra em fullscreen IMEDIATAMENTE (antes de qualquer await)
+    // Precisa estar no contexto direto do clique do usuário
+    entrarFullscreen();
+    
     // Atualiza apenas o texto, mantendo a estrutura do botão
     const textoBtn = elementos.btnJogar.querySelector('.btn-acao-texto');
     if (textoBtn) {
@@ -843,9 +847,6 @@ async function iniciarQuiz() {
         
         // Esconde o loading (tela de quiz já está visível)
         mostrarLoadingQuiz(false);
-        
-        // Entra em fullscreen no mobile para mais espaço
-        entrarFullscreen();
     } catch (error) {
         console.error('Erro ao iniciar quiz:', error);
         // Mostra mensagem mais específica se disponível
@@ -885,6 +886,9 @@ async function iniciarDesafio(partidaOriginal) {
         alert('Esta partida não suporta desafio (formato antigo).');
         return;
     }
+    
+    // Entra em fullscreen IMEDIATAMENTE (antes de qualquer await)
+    entrarFullscreen();
     
     estado.carregando = true;
     
@@ -942,9 +946,6 @@ async function iniciarDesafio(partidaOriginal) {
         
         // Mostra tela do quiz
         mostrarTela('quiz');
-        
-        // Entra em fullscreen no mobile para mais espaço
-        entrarFullscreen();
     } catch (error) {
         console.error('Erro ao iniciar desafio:', error);
         alert('Erro ao carregar o desafio. Tente novamente.');

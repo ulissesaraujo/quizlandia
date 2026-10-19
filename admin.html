@@ -2749,6 +2749,20 @@ Das 100 perguntas, distribua assim:
                     return;
                 }
                 
+                // Valida se os temas existem como subtemas cadastrados
+                const temasUnicos = [...new Set(perguntasValidas.map(p => p.tema))];
+                const { collection, getDocs, db } = window._firestore;
+                const subtemasSnapshot = await getDocs(collection(db, 'subtemas'));
+                const subtemasIds = new Set();
+                subtemasSnapshot.forEach(doc => subtemasIds.add(doc.id));
+                
+                const temasNaoCadastrados = temasUnicos.filter(t => !subtemasIds.has(t));
+                
+                if (temasNaoCadastrados.length > 0) {
+                    alert(`❌ ERRO: Os seguintes temas não estão cadastrados como subtemas:\n\n${temasNaoCadastrados.join('\n')}\n\nCadastre os subtemas primeiro ou corrija o tema no JSON.`);
+                    return;
+                }
+                
                 // Mostra loading
                 btnImportar.disabled = true;
                 btnImportar.textContent = '⏳ Importando...';

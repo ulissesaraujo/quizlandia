@@ -1354,8 +1354,8 @@ async function mostrarResultado(resultado) {
             <div class="detalhe-header">
                 <span class="detalhe-numero">#${index + 1}</span>
                 ${temaInfo}
-                <span class="detalhe-tempo">${detalhe.tempo}s</span>
-                <span class="detalhe-pontos">${detalhe.pontosTotais} pts</span>
+                <span class="detalhe-tempo">${detalhe.tempo || 0}s</span>
+                <span class="detalhe-pontos">${detalhe.pontosTotais || 0} pts</span>
                 ${btnDestaque}
                 ${btnRevisar}
             </div>

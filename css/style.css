@@ -1157,6 +1157,31 @@ body {
 .feedback.errado .feedback-texto { color: var(--danger-dark); }
 .feedback.errado .feedback-pontos { color: var(--danger); }
 
+/* Botão Desistir */
+.desistir-container {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--gray-200);
+}
+
+.btn-desistir {
+    background: transparent;
+    border: 1px solid var(--gray-300);
+    color: var(--gray-500);
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-desistir:hover {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
 /* ========================================
    TELA 4: RESULTADO
    ======================================== */

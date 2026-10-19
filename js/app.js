@@ -245,6 +245,7 @@ const elementos = {
     feedbackTexto: document.getElementById('feedback-texto'),
     feedbackPontos: document.getElementById('feedback-pontos'),
     feedback: document.getElementById('feedback'),
+    btnDesistir: document.getElementById('btn-desistir'),
     
     // Resultado
     resultadoTemas: document.getElementById('resultado-temas'),
@@ -2028,6 +2029,7 @@ async function init() {
     inicializarModal();
     inicializarFaseLeitura();
     inicializarAjudas();
+    inicializarBotaoDesistir();
     
     // Verifica se existe jogador salvo
     const jogadorSalvo = localStorage.getItem('quiz_jogador');
@@ -2054,6 +2056,17 @@ function inicializarFaseLeitura() {
     
     // Adiciona cursor pointer para indicar que é clicável
     elementos.faseLeitura.style.cursor = 'pointer';
+}
+
+/**
+ * Inicializa o botão de desistir
+ */
+function inicializarBotaoDesistir() {
+    elementos.btnDesistir.addEventListener('click', () => {
+        if (confirm('Tem certeza que deseja desistir?\n\nAs perguntas restantes serão marcadas como erradas.')) {
+            quizEngine.desistir();
+        }
+    });
 }
 
 // Inicia a aplicação quando o DOM estiver pronto

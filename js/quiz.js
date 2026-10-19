@@ -525,6 +525,41 @@ export class QuizEngine {
     }
 
     /**
+     * Desiste do quiz - marca perguntas restantes como erradas e finaliza
+     */
+    desistir() {
+        // Limpa timers
+        clearInterval(this.timerLeitura);
+        clearInterval(this.timerCronometro);
+        
+        // Marca a pergunta atual (se ainda não respondeu) e todas as restantes como erradas
+        const perguntasRestantes = this.perguntas.slice(this.perguntaAtual);
+        
+        for (const pergunta of perguntasRestantes) {
+            // Encontra a alternativa correta
+            const indiceCorreto = pergunta.alternativas.findIndex(a => a.correta);
+            
+            this.respostas.push({
+                perguntaId: pergunta.id,
+                tema: pergunta.tema,
+                enunciado: pergunta.enunciado,
+                respostaEscolhida: null, // Não respondeu
+                respostaCorreta: indiceCorreto,
+                correto: false,
+                tempo: 0, // Não gastou tempo
+                pontos: 0,
+                desistiu: true // Marca que desistiu
+            });
+        }
+        
+        // Atualiza índice para o final
+        this.perguntaAtual = this.perguntas.length;
+        
+        // Finaliza normalmente
+        return this.finalizar();
+    }
+
+    /**
      * Reseta o estado do quiz
      */
     resetar() {

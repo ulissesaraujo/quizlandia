@@ -286,9 +286,7 @@ const elementos = {
 // Controle do histórico para botão voltar do navegador
 let telaAtual = 'login';
 
-function mostrarTela(telaNome, adicionarHistorico = true) {
-    // Guarda tela anterior
-    const telaAnterior = telaAtual;
+function mostrarTela(telaNome) {
     telaAtual = telaNome;
     
     // Oculta todas as telas
@@ -318,8 +316,13 @@ function mostrarTela(telaNome, adicionarHistorico = true) {
         
         // Atualiza UI dos temas quando volta para a tela de seleção
         if (telaNome === 'temas') {
-            // Usa setTimeout para garantir que o DOM está pronto
             setTimeout(() => atualizarUITemas(), 0);
+        }
+        
+        // Quando entra no quiz ou resultado, adiciona entrada no histórico
+        // para que o botão voltar seja interceptado
+        if (telaNome === 'quiz' || telaNome === 'resultado') {
+            history.pushState({ tela: telaNome }, '');
         }
     }
 }
@@ -328,32 +331,16 @@ function mostrarTela(telaNome, adicionarHistorico = true) {
  * Configura o listener para o botão voltar do navegador
  */
 function configurarBotaoVoltar() {
-    // Adiciona entrada inicial para ter algo no histórico
-    history.pushState({ tela: 'inicio' }, '', '');
-    
-    // Listener para quando o usuário aperta "voltar"
-    window.addEventListener('popstate', (event) => {
-        // Sempre previne sair do site adicionando nova entrada
-        history.pushState({ tela: 'navegacao' }, '', '');
-        
-        // Se está no quiz, pergunta se quer abandonar
+    window.addEventListener('popstate', () => {
+        // Se está no quiz ou resultado, volta para temas
         if (telaAtual === 'quiz') {
-            if (confirm('Deseja abandonar a partida?')) {
-                quizEngine.pausar();
-                sairFullscreen();
-                mostrarTela('temas');
-            }
-            return;
-        }
-        
-        // Se está no resultado, volta para temas
-        if (telaAtual === 'resultado') {
+            quizEngine.pausar();
             sairFullscreen();
             mostrarTela('temas');
-            return;
+        } else if (telaAtual === 'resultado') {
+            sairFullscreen();
+            mostrarTela('temas');
         }
-        
-        // Se está em temas ou login, não faz nada (já preveniu sair do site)
     });
 }
 

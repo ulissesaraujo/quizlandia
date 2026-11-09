@@ -504,6 +504,12 @@ function renderizarTemas() {
         
         // Click handler para selecionar tema
         card.addEventListener('click', (e) => {
+            // Se clicou na setinha, apenas expande/colapsa
+            if (e.target.classList.contains('tema-expandir')) {
+                toggleSubtemas(temaContainer);
+                return;
+            }
+            
             console.log('🖱️ Click no tema:', tema.id, 'temSubtemas:', temSubtemas);
             
             if (temSubtemas) {

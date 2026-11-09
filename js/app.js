@@ -507,9 +507,22 @@ function renderizarTemas() {
             console.log('🖱️ Click no tema:', tema.id, 'temSubtemas:', temSubtemas);
             
             if (temSubtemas) {
-                // TEM subtemas: expande para escolher + mostra mensagem
-                toggleSubtemas(temaContainer);
-                mostrarMensagemRapida('Selecione os subtemas desejados');
+                const estaExpandido = temaContainer.classList.contains('expandido');
+                const estaSelecionado = temasManager.temaSelecionado(tema.id);
+                
+                if (!estaExpandido) {
+                    // 1º clique: expande subtemas + mostra toast
+                    toggleSubtemas(temaContainer);
+                    mostrarMensagemRapida('Selecione os subtemas desejados');
+                } else if (!estaSelecionado) {
+                    // 2º clique: seleciona todos
+                    temasManager.alternarTema(tema.id);
+                    atualizarUITemas();
+                } else {
+                    // 3º clique: desmarca todos
+                    temasManager.alternarTema(tema.id);
+                    atualizarUITemas();
+                }
             } else {
                 // NÃO tem subtemas: seleciona direto
                 temasManager.alternarTema(tema.id);
@@ -522,8 +535,19 @@ function renderizarTemas() {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 if (temSubtemas) {
-                    toggleSubtemas(temaContainer);
-                    mostrarMensagemRapida('Selecione os subtemas desejados');
+                    const estaExpandido = temaContainer.classList.contains('expandido');
+                    const estaSelecionado = temasManager.temaSelecionado(tema.id);
+                    
+                    if (!estaExpandido) {
+                        toggleSubtemas(temaContainer);
+                        mostrarMensagemRapida('Selecione os subtemas desejados');
+                    } else if (!estaSelecionado) {
+                        temasManager.alternarTema(tema.id);
+                        atualizarUITemas();
+                    } else {
+                        temasManager.alternarTema(tema.id);
+                        atualizarUITemas();
+                    }
                 } else {
                     temasManager.alternarTema(tema.id);
                     atualizarUITemas();

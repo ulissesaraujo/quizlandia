@@ -351,8 +351,11 @@ function configurarBotaoVoltar() {
             if (confirm('Deseja abandonar a partida?')) {
                 quizEngine.pausar();
                 sairFullscreen();
+                // Muda para temas
+                document.querySelectorAll('.tela').forEach(tela => tela.classList.remove('ativa'));
+                document.getElementById('tela-temas').classList.add('ativa');
                 telaAtual = 'temas';
-                mostrarTela('temas', false);
+                setTimeout(() => atualizarUITemas(), 0);
             }
             // Sempre adiciona entrada para não sair do site
             history.pushState({ tela: telaAtual }, '', `#${telaAtual}`);
@@ -362,8 +365,11 @@ function configurarBotaoVoltar() {
         // Se está no resultado, volta para temas
         if (telaAtual === 'resultado') {
             sairFullscreen();
+            // Muda para temas diretamente
+            document.querySelectorAll('.tela').forEach(tela => tela.classList.remove('ativa'));
+            document.getElementById('tela-temas').classList.add('ativa');
             telaAtual = 'temas';
-            mostrarTela('temas', false);
+            setTimeout(() => atualizarUITemas(), 0);
             history.pushState({ tela: 'temas' }, '', '#temas');
             return;
         }

@@ -339,7 +339,10 @@ function configurarBotaoVoltar() {
         // Se está no quiz ou resultado, volta para temas
         if (telaAtual === 'quiz') {
             console.log('➡️ Saindo do quiz para temas');
-            quizEngine.pausar();
+            // Para o quiz (limpa timers)
+            if (quizEngine && quizEngine.resetar) {
+                quizEngine.resetar();
+            }
             sairFullscreen();
             mostrarTela('temas');
         } else if (telaAtual === 'resultado') {

@@ -301,9 +301,19 @@ function mostrarTela(telaNome, adicionarHistorico = true) {
     if (tela) {
         tela.classList.add('ativa');
         
-        // Adiciona ao histórico do navegador (para botão voltar funcionar)
+        // Gerencia histórico do navegador para botão voltar
         if (adicionarHistorico && telaAnterior !== telaNome) {
-            history.pushState({ tela: telaNome }, '', `#${telaNome}`);
+            // Só adiciona entrada no histórico em transições específicas
+            if (telaNome === 'quiz' || telaNome === 'resultado') {
+                // Quiz e resultado: substitui estado atual (não empilha)
+                history.replaceState({ tela: telaNome }, '', `#${telaNome}`);
+            } else if (telaNome === 'temas' && telaAnterior === 'login') {
+                // Login → Temas: adiciona entrada
+                history.pushState({ tela: telaNome }, '', `#${telaNome}`);
+            } else {
+                // Outras transições: substitui
+                history.replaceState({ tela: telaNome }, '', `#${telaNome}`);
+            }
         }
         
         // Gerencia foco para acessibilidade
@@ -334,43 +344,33 @@ function mostrarTela(telaNome, adicionarHistorico = true) {
  */
 function configurarBotaoVoltar() {
     // Estado inicial no histórico
-    history.replaceState({ tela: 'login' }, '', '#login');
+    history.replaceState({ tela: 'temas' }, '', '#temas');
     
     // Listener para quando o usuário aperta "voltar"
     window.addEventListener('popstate', (event) => {
-        // Se tem estado salvo, usa ele
-        if (event.state && event.state.tela) {
-            mostrarTela(event.state.tela, false);
-            return;
-        }
-        
-        // Senão, decide baseado na tela atual
-        switch (telaAtual) {
-            case 'resultado':
-                // Do resultado, volta para temas
-                mostrarTela('temas', false);
-                // Adiciona entrada para não sair do site no próximo voltar
-                history.pushState({ tela: 'temas' }, '', '#temas');
-                break;
-            case 'quiz':
-                // Do quiz, volta para temas (abandona a partida)
+        // Sempre volta para temas (tela principal)
+        if (telaAtual === 'resultado' || telaAtual === 'quiz') {
+            // Se está no quiz, pergunta se quer abandonar
+            if (telaAtual === 'quiz') {
                 if (confirm('Deseja abandonar a partida?')) {
                     quizEngine.pausar();
                     sairFullscreen();
-                    mostrarTela('temas', false);
-                    history.pushState({ tela: 'temas' }, '', '#temas');
                 } else {
                     // Usuário cancelou, mantém no quiz
                     history.pushState({ tela: 'quiz' }, '', '#quiz');
+                    return;
                 }
-                break;
-            case 'temas':
-                // Dos temas, adiciona entrada para não sair do site
-                history.pushState({ tela: 'temas' }, '', '#temas');
-                break;
-            default:
-                // Login ou outra tela
-                history.pushState({ tela: telaAtual }, '', `#${telaAtual}`);
+            }
+            
+            // Volta para temas
+            sairFullscreen();
+            telaAtual = 'temas';
+            mostrarTela('temas', false);
+            // Garante que próximo voltar não saia do site
+            history.pushState({ tela: 'temas' }, '', '#temas');
+        } else {
+            // Já está em temas ou login, não deixa sair do site
+            history.pushState({ tela: telaAtual }, '', `#${telaAtual}`);
         }
     });
 }

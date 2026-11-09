@@ -187,7 +187,7 @@ export class TemasManager {
         const dica = document.createElement('div');
         dica.className = 'dica-selecao-overlay';
         
-        let segundosRestantes = 5;
+        let segundosRestantes = 3;
         
         dica.innerHTML = `
             <div class="dica-backdrop"></div>

@@ -504,22 +504,30 @@ function renderizarTemas() {
         
         // Click handler para selecionar tema
         card.addEventListener('click', (e) => {
-            // Se clicou no botão de expandir, não seleciona
-            if (e.target.classList.contains('tema-expandir')) {
+            console.log('🖱️ Click no tema:', tema.id, 'temSubtemas:', temSubtemas);
+            
+            if (temSubtemas) {
+                // TEM subtemas: expande para escolher + mostra mensagem
                 toggleSubtemas(temaContainer);
-                return;
+                mostrarMensagemRapida('Selecione os subtemas desejados');
+            } else {
+                // NÃO tem subtemas: seleciona direto
+                temasManager.alternarTema(tema.id);
+                atualizarUITemas();
             }
-            console.log('🖱️ Click no tema:', tema.id);
-            temasManager.alternarTema(tema.id);
-            atualizarUITemas();
         });
         
         // Keyboard handler
         card.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                temasManager.alternarTema(tema.id);
-                atualizarUITemas();
+                if (temSubtemas) {
+                    toggleSubtemas(temaContainer);
+                    mostrarMensagemRapida('Selecione os subtemas desejados');
+                } else {
+                    temasManager.alternarTema(tema.id);
+                    atualizarUITemas();
+                }
             }
             // Seta direita expande subtemas
             if (e.key === 'ArrowRight' && temSubtemas) {
@@ -606,6 +614,26 @@ function toggleSubtemas(temaContainer) {
     if (expandirBtn) {
         expandirBtn.textContent = temaContainer.classList.contains('expandido') ? '▼' : '▶';
     }
+}
+
+/**
+ * Mostra uma mensagem rápida (toast) na tela
+ */
+function mostrarMensagemRapida(texto) {
+    // Remove mensagem anterior se existir
+    const msgAnterior = document.querySelector('.mensagem-rapida');
+    if (msgAnterior) msgAnterior.remove();
+    
+    const msg = document.createElement('div');
+    msg.className = 'mensagem-rapida';
+    msg.textContent = texto;
+    document.body.appendChild(msg);
+    
+    // Remove após 2 segundos
+    setTimeout(() => {
+        msg.classList.add('saindo');
+        setTimeout(() => msg.remove(), 300);
+    }, 2000);
 }
 
 function atualizarUITemas() {

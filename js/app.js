@@ -301,17 +301,6 @@ function mostrarTela(telaNome, adicionarHistorico = true) {
     if (tela) {
         tela.classList.add('ativa');
         
-        // Gerencia histórico do navegador para botão voltar
-        if (adicionarHistorico && telaAnterior !== telaNome) {
-            // Quiz e resultado: adiciona entrada para o botão voltar funcionar
-            if (telaNome === 'quiz' || telaNome === 'resultado') {
-                history.pushState({ tela: telaNome }, '', `#${telaNome}`);
-            } else if (telaNome === 'temas') {
-                // Temas: substitui estado atual
-                history.replaceState({ tela: telaNome }, '', `#${telaNome}`);
-            }
-        }
-        
         // Gerencia foco para acessibilidade
         GerenciadorFoco.moverFoco(`tela-${telaNome}`);
         
@@ -339,43 +328,32 @@ function mostrarTela(telaNome, adicionarHistorico = true) {
  * Configura o listener para o botão voltar do navegador
  */
 function configurarBotaoVoltar() {
-    // Estado inicial no histórico
-    history.replaceState({ tela: 'temas' }, '', '#temas');
+    // Adiciona entrada inicial para ter algo no histórico
+    history.pushState({ tela: 'inicio' }, '', '');
     
     // Listener para quando o usuário aperta "voltar"
     window.addEventListener('popstate', (event) => {
-        console.log('🔙 Botão voltar pressionado. Tela atual:', telaAtual);
+        // Sempre previne sair do site adicionando nova entrada
+        history.pushState({ tela: 'navegacao' }, '', '');
         
         // Se está no quiz, pergunta se quer abandonar
         if (telaAtual === 'quiz') {
             if (confirm('Deseja abandonar a partida?')) {
                 quizEngine.pausar();
                 sairFullscreen();
-                // Muda para temas
-                document.querySelectorAll('.tela').forEach(tela => tela.classList.remove('ativa'));
-                document.getElementById('tela-temas').classList.add('ativa');
-                telaAtual = 'temas';
-                setTimeout(() => atualizarUITemas(), 0);
+                mostrarTela('temas');
             }
-            // Sempre adiciona entrada para não sair do site
-            history.pushState({ tela: telaAtual }, '', `#${telaAtual}`);
             return;
         }
         
         // Se está no resultado, volta para temas
         if (telaAtual === 'resultado') {
             sairFullscreen();
-            // Muda para temas diretamente
-            document.querySelectorAll('.tela').forEach(tela => tela.classList.remove('ativa'));
-            document.getElementById('tela-temas').classList.add('ativa');
-            telaAtual = 'temas';
-            setTimeout(() => atualizarUITemas(), 0);
-            history.pushState({ tela: 'temas' }, '', '#temas');
+            mostrarTela('temas');
             return;
         }
         
-        // Já está em temas ou login, não deixa sair do site
-        history.pushState({ tela: telaAtual }, '', `#${telaAtual}`);
+        // Se está em temas ou login, não faz nada (já preveniu sair do site)
     });
 }
 

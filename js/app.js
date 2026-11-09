@@ -282,7 +282,15 @@ const elementos = {
 // ========================================
 // NAVEGAÇÃO ENTRE TELAS
 // ========================================
-function mostrarTela(telaNome) {
+
+// Controle do histórico para botão voltar do navegador
+let telaAtual = 'login';
+
+function mostrarTela(telaNome, adicionarHistorico = true) {
+    // Guarda tela anterior
+    const telaAnterior = telaAtual;
+    telaAtual = telaNome;
+    
     // Oculta todas as telas
     document.querySelectorAll('.tela').forEach(tela => {
         tela.classList.remove('ativa');
@@ -292,6 +300,11 @@ function mostrarTela(telaNome) {
     const tela = document.getElementById(`tela-${telaNome}`);
     if (tela) {
         tela.classList.add('ativa');
+        
+        // Adiciona ao histórico do navegador (para botão voltar funcionar)
+        if (adicionarHistorico && telaAnterior !== telaNome) {
+            history.pushState({ tela: telaNome }, '', `#${telaNome}`);
+        }
         
         // Gerencia foco para acessibilidade
         GerenciadorFoco.moverFoco(`tela-${telaNome}`);
@@ -314,6 +327,52 @@ function mostrarTela(telaNome) {
             setTimeout(() => atualizarUITemas(), 0);
         }
     }
+}
+
+/**
+ * Configura o listener para o botão voltar do navegador
+ */
+function configurarBotaoVoltar() {
+    // Estado inicial no histórico
+    history.replaceState({ tela: 'login' }, '', '#login');
+    
+    // Listener para quando o usuário aperta "voltar"
+    window.addEventListener('popstate', (event) => {
+        // Se tem estado salvo, usa ele
+        if (event.state && event.state.tela) {
+            mostrarTela(event.state.tela, false);
+            return;
+        }
+        
+        // Senão, decide baseado na tela atual
+        switch (telaAtual) {
+            case 'resultado':
+                // Do resultado, volta para temas
+                mostrarTela('temas', false);
+                // Adiciona entrada para não sair do site no próximo voltar
+                history.pushState({ tela: 'temas' }, '', '#temas');
+                break;
+            case 'quiz':
+                // Do quiz, volta para temas (abandona a partida)
+                if (confirm('Deseja abandonar a partida?')) {
+                    quizEngine.pausar();
+                    sairFullscreen();
+                    mostrarTela('temas', false);
+                    history.pushState({ tela: 'temas' }, '', '#temas');
+                } else {
+                    // Usuário cancelou, mantém no quiz
+                    history.pushState({ tela: 'quiz' }, '', '#quiz');
+                }
+                break;
+            case 'temas':
+                // Dos temas, adiciona entrada para não sair do site
+                history.pushState({ tela: 'temas' }, '', '#temas');
+                break;
+            default:
+                // Login ou outra tela
+                history.pushState({ tela: telaAtual }, '', `#${telaAtual}`);
+        }
+    });
 }
 
 /**
@@ -2127,6 +2186,9 @@ function fecharModal(modal) {
 // ========================================
 async function init() {
     console.log('🏰 Quizlândia - Iniciando...');
+    
+    // Configura navegação com botão voltar do navegador
+    configurarBotaoVoltar();
     
     // Inicializa módulos (login primeiro pois pode fazer auto-login)
     await inicializarLogin();

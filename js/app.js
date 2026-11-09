@@ -287,6 +287,7 @@ const elementos = {
 let telaAtual = 'login';
 
 function mostrarTela(telaNome) {
+    console.log('📺 mostrarTela:', telaNome, '(anterior:', telaAtual, ')');
     telaAtual = telaNome;
     
     // Oculta todas as telas
@@ -322,6 +323,7 @@ function mostrarTela(telaNome) {
         // Quando entra no quiz ou resultado, adiciona entrada no histórico
         // para que o botão voltar seja interceptado
         if (telaNome === 'quiz' || telaNome === 'resultado') {
+            console.log('📌 Adicionando entrada no histórico para:', telaNome);
             history.pushState({ tela: telaNome }, '');
         }
     }
@@ -331,17 +333,25 @@ function mostrarTela(telaNome) {
  * Configura o listener para o botão voltar do navegador
  */
 function configurarBotaoVoltar() {
-    window.addEventListener('popstate', () => {
+    window.addEventListener('popstate', (event) => {
+        console.log('🔙 POPSTATE disparado! telaAtual:', telaAtual, 'event.state:', event.state);
+        
         // Se está no quiz ou resultado, volta para temas
         if (telaAtual === 'quiz') {
+            console.log('➡️ Saindo do quiz para temas');
             quizEngine.pausar();
             sairFullscreen();
             mostrarTela('temas');
         } else if (telaAtual === 'resultado') {
+            console.log('➡️ Saindo do resultado para temas');
             sairFullscreen();
             mostrarTela('temas');
+        } else {
+            console.log('⏹️ Tela atual não é quiz nem resultado, ignorando');
         }
     });
+    
+    console.log('✅ Listener do botão voltar configurado');
 }
 
 /**

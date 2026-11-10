@@ -464,7 +464,13 @@ async function carregarTemas() {
 }
 
 function renderizarTemas() {
-    const temas = temasManager.obterTemas();
+    let temas = temasManager.obterTemas();
+    
+    // Filtra temas de teste (z-*) para usuários não-admin
+    const isAdmin = estado.jogador && estado.jogador.toLowerCase() === 'admin';
+    if (!isAdmin) {
+        temas = temas.filter(t => !t.id.startsWith('z-'));
+    }
     
     elementos.temasGrid.innerHTML = '';
     

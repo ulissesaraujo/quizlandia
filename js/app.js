@@ -125,6 +125,7 @@ function separarEmojiDoTexto(enunciado) {
 // ========================================
 const estado = {
     jogador: '',
+    email: null,        // Email do usuário (se autenticado)
     autenticado: false, // Se está logado com Google
     isAdmin: false,     // Se é administrador
     fotoUsuario: null,  // URL da foto do Google
@@ -401,7 +402,7 @@ async function inicializarLogin() {
     // Verifica se já está logado com Google
     const usuarioGoogle = obterUsuarioAtual();
     if (usuarioGoogle) {
-        await processarLogin(usuarioGoogle.nome, true, usuarioGoogle.isAdmin, usuarioGoogle.foto);
+        await processarLogin(usuarioGoogle.nome, true, usuarioGoogle.isAdmin, usuarioGoogle.foto, usuarioGoogle.email);
         return;
     }
     
@@ -422,7 +423,7 @@ async function inicializarLogin() {
             const resultado = await loginComGoogle();
             
             if (resultado.success) {
-                await processarLogin(resultado.user.nome, true, resultado.user.isAdmin, resultado.user.foto);
+                await processarLogin(resultado.user.nome, true, resultado.user.isAdmin, resultado.user.foto, resultado.user.email);
             } else {
                 btnGoogle.disabled = false;
                 btnGoogle.innerHTML = `
@@ -455,17 +456,20 @@ async function inicializarLogin() {
 /**
  * Processa o login (Google ou visitante)
  */
-async function processarLogin(nome, autenticado = false, isAdminUser = false, foto = null) {
+async function processarLogin(nome, autenticado = false, isAdminUser = false, foto = null, email = null) {
     estado.jogador = nome;
     estado.autenticado = autenticado;
     estado.isAdmin = isAdminUser;
     estado.fotoUsuario = foto;
+    estado.email = email;
     
     if (!autenticado) {
         localStorage.setItem('quiz_jogador', nome);
     }
     
-    rankingManager.setJogador(nome);
+    // Para histórico: usa email se autenticado, senão usa nome
+    const identificador = autenticado && email ? email : nome;
+    rankingManager.setJogador(identificador);
     
     // Carrega histórico do jogador
     await rankingManager.carregarHistorico();

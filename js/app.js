@@ -7,6 +7,7 @@ import { RankingManager } from './ranking.js';
 import { TemasManager } from './temas.js';
 import { buscarPerguntasPorIds, buscarConfiguracoes, salvarHistoricoPerguntas, marcarPerguntaRevisao, marcarPerguntaDestaque } from './firebase-config.js';
 import { Anunciador, GerenciadorFoco, NavegacaoTeclado } from './acessibilidade.js';
+import { inicializarAuth, loginComGoogle, logout, obterUsuarioAtual, estaLogado, isAdmin, setOnAuthStateChanged } from './auth.js';
 
 // ========================================
 // FUNÇÕES UTILITÁRIAS
@@ -124,6 +125,9 @@ function separarEmojiDoTexto(enunciado) {
 // ========================================
 const estado = {
     jogador: '',
+    autenticado: false, // Se está logado com Google
+    isAdmin: false,     // Se é administrador
+    fotoUsuario: null,  // URL da foto do Google
     carregando: false,
     config: null, // Configurações globais do quiz
     perguntasReserva: [] // Perguntas extras para quando o usuário pular (pode ser mais de uma)
@@ -391,61 +395,149 @@ function mostrarAvisoUltimaPergunta() {
 // TELA DE LOGIN
 // ========================================
 async function inicializarLogin() {
-    // Verifica se já existe um jogador salvo
-    const jogadorSalvo = localStorage.getItem('quiz_jogador');
-    if (jogadorSalvo) {
-        estado.jogador = jogadorSalvo;
-        rankingManager.setJogador(jogadorSalvo);
-        elementos.inputNome.value = jogadorSalvo;
-        
-        // Auto-login: pula direto para temas se já tem jogador
-        await rankingManager.carregarHistorico();
-        elementos.displayJogador.textContent = jogadorSalvo;
-        await carregarTemas();
-        mostrarTela('temas');
-        
-        // Mostra atalho admin se jogador for Admin
-        const btnAdmin = document.getElementById('btn-painel-admin');
-        if (btnAdmin) {
-            if (jogadorSalvo.toLowerCase() === 'admin') {
-                btnAdmin.classList.remove('oculto');
-            } else {
-                btnAdmin.classList.add('oculto');
-            }
-        }
-        
-        console.log(`🚀 Auto-login: ${jogadorSalvo}`);
+    // Inicializa autenticação
+    await inicializarAuth();
+    
+    // Verifica se já está logado com Google
+    const usuarioGoogle = obterUsuarioAtual();
+    if (usuarioGoogle) {
+        await processarLogin(usuarioGoogle.nome, true, usuarioGoogle.isAdmin, usuarioGoogle.foto);
+        return;
     }
     
+    // Verifica se já existe um jogador salvo (visitante)
+    const jogadorSalvo = localStorage.getItem('quiz_jogador');
+    if (jogadorSalvo) {
+        await processarLogin(jogadorSalvo, false, jogadorSalvo.toLowerCase() === 'admin');
+        return;
+    }
+    
+    // Botão Login com Google
+    const btnGoogle = document.getElementById('btn-login-google');
+    if (btnGoogle) {
+        btnGoogle.addEventListener('click', async () => {
+            btnGoogle.disabled = true;
+            btnGoogle.innerHTML = '<span class="loading-spinner"></span> Entrando...';
+            
+            const resultado = await loginComGoogle();
+            
+            if (resultado.success) {
+                await processarLogin(resultado.user.nome, true, resultado.user.isAdmin, resultado.user.foto);
+            } else {
+                btnGoogle.disabled = false;
+                btnGoogle.innerHTML = `
+                    <svg class="google-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    Entrar com Google
+                `;
+                if (resultado.error !== 'Login cancelado') {
+                    mostrarMensagemRapida(resultado.error);
+                }
+            }
+        });
+    }
+    
+    // Form de login como visitante
     elementos.formLogin.addEventListener('submit', async (e) => {
         e.preventDefault();
         const nome = elementos.inputNome.value.trim();
         
         if (nome.length >= 2) {
-            estado.jogador = nome;
-            localStorage.setItem('quiz_jogador', nome);
-            rankingManager.setJogador(nome);
-            
-            // Carrega histórico do jogador
-            await rankingManager.carregarHistorico();
-            
-            // Atualiza display e vai para seleção de temas
-            elementos.displayJogador.textContent = nome;
-            await carregarTemas();
-            mostrarTela('temas');
-            
-            // Mostra atalho admin se jogador for Admin
-            const btnAdmin = document.getElementById('btn-painel-admin');
-            if (btnAdmin) {
-                if (nome.toLowerCase() === 'admin') {
-                    btnAdmin.classList.remove('oculto');
-                } else {
-                    btnAdmin.classList.add('oculto');
-                }
-            }
+            await processarLogin(nome, false, nome.toLowerCase() === 'admin');
         }
     });
 }
+
+/**
+ * Processa o login (Google ou visitante)
+ */
+async function processarLogin(nome, autenticado = false, isAdminUser = false, foto = null) {
+    estado.jogador = nome;
+    estado.autenticado = autenticado;
+    estado.isAdmin = isAdminUser;
+    estado.fotoUsuario = foto;
+    
+    if (!autenticado) {
+        localStorage.setItem('quiz_jogador', nome);
+    }
+    
+    rankingManager.setJogador(nome);
+    
+    // Carrega histórico do jogador
+    await rankingManager.carregarHistorico();
+    
+    // Atualiza display
+    elementos.displayJogador.textContent = nome;
+    
+    // Atualiza avatar se tiver foto
+    atualizarAvatarUsuario(foto, nome);
+    
+    // Atualiza visibilidade dos botões do menu
+    atualizarMenuUsuario(autenticado, isAdminUser);
+    
+    await carregarTemas();
+    mostrarTela('temas');
+    
+    console.log(`🚀 Login: ${nome} (${autenticado ? 'Google' : 'Visitante'}${isAdminUser ? ', Admin' : ''})`);
+}
+
+/**
+ * Atualiza a visibilidade dos botões do menu baseado no tipo de usuário
+ */
+function atualizarMenuUsuario(autenticado, isAdminUser) {
+    const btnAdmin = document.getElementById('btn-painel-admin');
+    const btnLogout = document.getElementById('btn-logout-google');
+    const btnTrocar = document.getElementById('btn-trocar-jogador');
+    
+    // Admin: só mostra se for admin
+    if (btnAdmin) {
+        btnAdmin.classList.toggle('oculto', !isAdminUser);
+    }
+    
+    // Logout Google: só mostra se estiver autenticado
+    if (btnLogout) {
+        btnLogout.classList.toggle('oculto', !autenticado);
+    }
+    
+    // Trocar jogador: só mostra se for visitante (não autenticado)
+    if (btnTrocar) {
+        btnTrocar.classList.toggle('oculto', autenticado);
+    }
+}
+
+/**
+ * Troca de jogador (visitante)
+ */
+function trocarJogador() {
+    localStorage.removeItem('quiz_jogador');
+    estado.jogador = '';
+    estado.autenticado = false;
+    estado.isAdmin = false;
+    estado.fotoUsuario = null;
+    elementos.inputNome.value = '';
+    mostrarTela('login');
+}
+
+/**
+ * Atualiza o avatar do usuário no header
+ */
+function atualizarAvatarUsuario(foto, nome) {
+    const avatarContainer = document.getElementById('avatar-usuario');
+    if (!avatarContainer) return;
+    
+    if (foto) {
+        avatarContainer.innerHTML = `<img src="${foto}" alt="${nome}" class="avatar-img">`;
+    } else {
+        const inicial = nome.charAt(0).toUpperCase();
+        avatarContainer.innerHTML = `<span class="avatar-inicial">${inicial}</span>`;
+    }
+    avatarContainer.classList.remove('oculto');
+}
+
 
 // ========================================
 // TELA DE SELEÇÃO DE TEMAS
@@ -467,8 +559,7 @@ function renderizarTemas() {
     let temas = temasManager.obterTemas();
     
     // Filtra temas de teste (z-*) para usuários não-admin
-    const isAdmin = estado.jogador && estado.jogador.toLowerCase() === 'admin';
-    if (!isAdmin) {
+    if (!estado.isAdmin) {
         temas = temas.filter(t => !t.id.startsWith('z-'));
     }
     
@@ -820,8 +911,23 @@ function inicializarTemas() {
     // Botão trocar jogador
     elementos.btnTrocarJogador.addEventListener('click', () => {
         elementos.menuDropdown?.classList.add('oculto');
-        mostrarTela('login');
+        trocarJogador();
     });
+    
+    // Botão logout Google
+    const btnLogoutGoogle = document.getElementById('btn-logout-google');
+    if (btnLogoutGoogle) {
+        btnLogoutGoogle.addEventListener('click', async () => {
+            elementos.menuDropdown?.classList.add('oculto');
+            await logout();
+            localStorage.removeItem('quiz_jogador');
+            estado.jogador = '';
+            estado.autenticado = false;
+            estado.isAdmin = false;
+            estado.fotoUsuario = null;
+            mostrarTela('login');
+        });
+    }
     
     // Botão ver ranking por sala (agrupado)
     elementos.btnVerRankingSalas.addEventListener('click', () => {

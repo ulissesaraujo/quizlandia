@@ -192,7 +192,7 @@ export class TemasManager {
         dica.innerHTML = `
             <div class="dica-backdrop"></div>
             <div class="dica-card">
-                <span class="dica-linha1">Clique aqui para selecionar mais temas</span>
+                <span class="dica-linha1">Clique aqui para<br>selecionar mais temas</span>
                 <span class="dica-linha2">ou iniciando em <span class="dica-countdown">${segundosRestantes}</span>s...</span>
             </div>
         `;

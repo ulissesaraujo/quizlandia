@@ -2108,6 +2108,46 @@ body {
     box-shadow: none;
 }
 
+/* Botão desafiar no histórico do jogador */
+.btn-desafiar-historico {
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.btn-desafiar-historico:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(245, 158, 11, 0.4);
+}
+
+/* Nome do jogador clicável */
+.jogador-link {
+    cursor: pointer;
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+    transition: var(--transition);
+}
+
+.jogador-link:hover {
+    color: var(--primary-dark);
+    text-decoration-style: solid;
+}
+
+/* Modal de histórico do jogador (por cima dos outros modais) */
+#modal-historico-jogador {
+    z-index: 110;
+}
+
 .td-desafiar {
     text-align: center;
     white-space: nowrap;

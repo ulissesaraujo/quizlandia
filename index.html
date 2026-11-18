@@ -115,7 +115,7 @@
                     </button>
                 </form>
                 
-                <p class="versao-debug">Build #188 - 17:15:00 08/10/2026</p>
+                <p class="versao-debug">Build #189 - 23:26:25 17/11/2026</p>
             </div>
         </section>
 
@@ -524,6 +524,46 @@
             </div>
         </div>
 
+        <!-- MODAL: HISTÓRICO DE JOGADOR -->
+        <div class="modal oculto" 
+             id="modal-historico-jogador"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="modal-historico-jogador-titulo">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-historico-jogador-titulo">
+                        <span aria-hidden="true">👤</span> Histórico de <span id="historico-jogador-nome">Jogador</span>
+                    </h2>
+                    <button class="modal-fechar" 
+                            id="modal-fechar-historico-jogador"
+                            aria-label="Fechar modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="ranking-legenda">Clique nos cabeçalhos para ordenar</p>
+                    <table class="ranking-tabela ranking-ordenavel"
+                           aria-label="Histórico de partidas do jogador">
+                        <thead>
+                            <tr>
+                                <th scope="col" abbr="Posição">#</th>
+                                <th scope="col">Temas</th>
+                                <th scope="col" data-sort="pontuacaoTotal" class="th-ordenavel">Pontos ⇅</th>
+                                <th scope="col" data-sort="acertos" class="th-ordenavel">Acertos ⇅</th>
+                                <th scope="col" data-sort="tempoTotal" class="th-ordenavel">Tempo ⇅</th>
+                                <th scope="col" data-sort="dataHora" class="th-ordenavel th-ativo" data-order="desc">Data ▼</th>
+                                <th scope="col">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historico-jogador-body">
+                            <!-- Histórico será carregado via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- MODAL: AJUDA / COMO JOGAR -->
         <div class="modal oculto" 
              id="modal-ajuda"
@@ -645,6 +685,6 @@
     </div>
 
     <!-- Scripts -->
-    <script type="module" src="js/app.js?v=188"></script>
+    <script type="module" src="js/app.js?v=189"></script>
 </body>
 </html>

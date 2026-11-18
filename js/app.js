@@ -5,7 +5,7 @@
 import { QuizEngine } from './quiz.js';
 import { RankingManager } from './ranking.js';
 import { TemasManager } from './temas.js';
-import { buscarPerguntasPorIds, buscarConfiguracoes, salvarHistoricoPerguntas, marcarPerguntaRevisao, marcarPerguntaDestaque } from './firebase-config.js';
+import { buscarPerguntasPorIds, buscarConfiguracoes, salvarHistoricoPerguntas, marcarPerguntaRevisao, marcarPerguntaDestaque, buscarHistoricoJogador } from './firebase-config.js';
 import { Anunciador, GerenciadorFoco, NavegacaoTeclado } from './acessibilidade.js';
 import { inicializarAuth, loginComGoogle, logout, obterUsuarioAtual, estaLogado, isAdmin, setOnAuthStateChanged } from './auth.js';
 
@@ -276,6 +276,12 @@ const elementos = {
     modalRankingGeral: document.getElementById('modal-ranking-geral'),
     modalFecharGeral: document.getElementById('modal-fechar-geral'),
     rankingGeralBody: document.getElementById('ranking-geral-body'),
+    
+    // Modal Histórico de Jogador
+    modalHistoricoJogador: document.getElementById('modal-historico-jogador'),
+    modalFecharHistoricoJogador: document.getElementById('modal-fechar-historico-jogador'),
+    historicoJogadorBody: document.getElementById('historico-jogador-body'),
+    historicoJogadorNome: document.getElementById('historico-jogador-nome'),
     
     // Modal Ajuda
     modalAjuda: document.getElementById('modal-ajuda'),
@@ -2096,7 +2102,7 @@ async function mostrarRankingGlobal() {
                 
                 tr.innerHTML = `
                     <td class="posicao-grupo">${medalha}</td>
-                    <td>${item.jogador}${isJogadorAtual ? ' <span class="tag-voce">(você)</span>' : ''}</td>
+                    <td><span class="jogador-link" data-jogador="${item.jogador}" title="Ver histórico de ${item.jogador}">${item.jogador}</span>${isJogadorAtual ? ' <span class="tag-voce">(você)</span>' : ''}</td>
                     <td>${item.pontuacaoTotal} pts</td>
                     <td>${item.acertos}/${item.totalPerguntas || 10}</td>
                     <td>${rankingManager.formatarTempo(item.tempoTotal)}</td>
@@ -2113,6 +2119,14 @@ async function mostrarRankingGlobal() {
                 const grupo = grupos[grupoIndex];
                 // Usa o primeiro resultado do grupo como base para o desafio
                 iniciarDesafio(grupo.resultados[0]);
+            });
+        });
+        
+        // Event listeners para nomes clicáveis
+        elementos.rankingGlobalBody.querySelectorAll('.jogador-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const jogadorNome = link.dataset.jogador;
+                mostrarHistoricoJogador(jogadorNome);
             });
         });
     }
@@ -2251,7 +2265,7 @@ function renderizarRankingGeral() {
         
         tr.innerHTML = `
             <td>${posicao}</td>
-            <td>${item.jogador}${isJogadorAtual ? ' <span class="tag-voce">(você)</span>' : ''}</td>
+            <td><span class="jogador-link" data-jogador="${item.jogador}" title="Ver histórico de ${item.jogador}">${item.jogador}</span>${isJogadorAtual ? ' <span class="tag-voce">(você)</span>' : ''}</td>
             <td>${temasDisplay}</td>
             <td>${item.pontuacaoTotal}</td>
             <td>${item.acertos}/${item.totalPerguntas || 10}</td>
@@ -2271,6 +2285,14 @@ function renderizarRankingGeral() {
             iniciarDesafio(rankingOrdenado[index]);
         });
     });
+    
+    // Adiciona event listeners para os nomes clicáveis
+    elementos.rankingGeralBody.querySelectorAll('.jogador-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const jogadorNome = link.dataset.jogador;
+            mostrarHistoricoJogador(jogadorNome);
+        });
+    });
 }
 
 /**
@@ -2278,6 +2300,100 @@ function renderizarRankingGeral() {
  */
 function mostrarModalAjuda() {
     abrirModal(elementos.modalAjuda, elementos.btnAjuda);
+}
+
+/**
+ * Mostra o histórico de partidas de um jogador específico
+ * @param {string} jogadorNome - Nome do jogador
+ */
+async function mostrarHistoricoJogador(jogadorNome) {
+    // Atualiza o título do modal
+    elementos.historicoJogadorNome.textContent = jogadorNome;
+    
+    // Mostra loading
+    elementos.historicoJogadorBody.innerHTML = '<tr><td colspan="6" class="ranking-vazio">Carregando...</td></tr>';
+    
+    // Abre o modal (não fecha os modais de ranking por baixo)
+    elementos.modalHistoricoJogador.classList.remove('oculto');
+    GerenciadorFoco.ativarFocusTrap(elementos.modalHistoricoJogador);
+    
+    try {
+        // Busca histórico do jogador
+        const historico = await buscarHistoricoJogador(jogadorNome, 20);
+        
+        if (historico.length === 0) {
+            elementos.historicoJogadorBody.innerHTML = '<tr><td colspan="6" class="ranking-vazio">Nenhuma partida encontrada</td></tr>';
+            return;
+        }
+        
+        elementos.historicoJogadorBody.innerHTML = '';
+        
+        const isProprioJogador = jogadorNome === estado.jogador;
+        
+        historico.forEach((item, index) => {
+            const tr = document.createElement('tr');
+            
+            const temasDisplay = rankingManager.formatarTemas(item.temasNomes || item.temas);
+            const dataFormatada = rankingManager.formatarData(item.dataHora);
+            
+            // Determina se pode desafiar esta partida
+            const sessaoId = item.sessaoOriginalId || item.sessaoId;
+            const jaJogou = sessaoId ? rankingManager.jaJogouSessao(sessaoId) : true;
+            const temPerguntasIds = item.perguntasIds && item.perguntasIds.length > 0;
+            
+            let btnDesafiarHtml = '';
+            if (!isProprioJogador && temPerguntasIds) {
+                if (jaJogou) {
+                    btnDesafiarHtml = `<button class="btn-desafiar disabled" disabled title="Você já jogou este desafio">✓ Jogado</button>`;
+                } else {
+                    btnDesafiarHtml = `<button class="btn-desafiar-historico" data-index="${index}" title="Jogar com as mesmas perguntas">⚔️ Desafiar</button>`;
+                }
+            } else if (isProprioJogador) {
+                btnDesafiarHtml = `<span class="desafiar-info">—</span>`;
+            } else {
+                btnDesafiarHtml = `<span class="desafiar-info">—</span>`;
+            }
+            
+            tr.innerHTML = `
+                <td>${temasDisplay}</td>
+                <td>${item.pontuacaoTotal}</td>
+                <td>${item.acertos}/${item.totalPerguntas || 10}</td>
+                <td>${rankingManager.formatarTempo(item.tempoTotal)}</td>
+                <td>${dataFormatada}</td>
+                <td class="td-desafiar">${btnDesafiarHtml}</td>
+            `;
+            
+            elementos.historicoJogadorBody.appendChild(tr);
+        });
+        
+        // Adiciona event listeners para os botões de desafio
+        elementos.historicoJogadorBody.querySelectorAll('.btn-desafiar-historico').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const index = parseInt(btn.dataset.index);
+                fecharModalHistoricoJogador();
+                // Fecha também os modais de ranking por baixo
+                if (!elementos.modalRankingGeral.classList.contains('oculto')) {
+                    fecharModal(elementos.modalRankingGeral);
+                }
+                if (!elementos.modalRanking.classList.contains('oculto')) {
+                    fecharModal(elementos.modalRanking);
+                }
+                iniciarDesafio(historico[index]);
+            });
+        });
+        
+    } catch (error) {
+        console.error('Erro ao buscar histórico:', error);
+        elementos.historicoJogadorBody.innerHTML = '<tr><td colspan="6" class="ranking-vazio">Erro ao carregar histórico</td></tr>';
+    }
+}
+
+/**
+ * Fecha o modal de histórico do jogador
+ */
+function fecharModalHistoricoJogador() {
+    elementos.modalHistoricoJogador.classList.add('oculto');
+    GerenciadorFoco.desativarFocusTrap();
 }
 
 function inicializarModal() {
@@ -2305,6 +2421,11 @@ function inicializarModal() {
     
     // Ativa ESC para fechar modais
     NavegacaoTeclado.ativarEscParaFechar(() => {
+        // Modal de histórico do jogador tem prioridade (está por cima)
+        if (elementos.modalHistoricoJogador && !elementos.modalHistoricoJogador.classList.contains('oculto')) {
+            fecharModalHistoricoJogador();
+            return true;
+        }
         if (!elementos.modalRanking.classList.contains('oculto')) {
             fecharModal(elementos.modalRanking);
             return true;
@@ -2319,6 +2440,21 @@ function inicializarModal() {
         }
         return false;
     });
+    
+    // Modal Histórico do Jogador
+    if (elementos.modalFecharHistoricoJogador) {
+        elementos.modalFecharHistoricoJogador.addEventListener('click', () => {
+            fecharModalHistoricoJogador();
+        });
+    }
+    
+    if (elementos.modalHistoricoJogador) {
+        elementos.modalHistoricoJogador.addEventListener('click', (e) => {
+            if (e.target === elementos.modalHistoricoJogador) {
+                fecharModalHistoricoJogador();
+            }
+        });
+    }
 }
 
 /**

@@ -2079,9 +2079,9 @@
                     destaqueTag = `<span class="tag-destaque" title="${p.observacaoDestaque || 'Sem observação'}">⭐ ${p.curtidas || 1}</span>`;
                 }
                 
-                // Observação do usuário (se houver)
+                // Observação do usuário (se houver e for útil)
                 let observacaoHtml = '';
-                if (p.revisar && p.motivoRevisao) {
+                if (p.revisar && p.motivoRevisao && p.motivoRevisao !== 'Reportado pelo jogador' && p.motivoRevisao !== 'Sem observação') {
                     observacaoHtml = `<div class="pergunta-observacao revisao">💬 <strong>Motivo:</strong> ${p.motivoRevisao}</div>`;
                 }
                 if (p.destaque && p.observacaoDestaque) {

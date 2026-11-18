@@ -2328,7 +2328,10 @@ async function mostrarHistoricoJogador(jogadorNome) {
         
         elementos.historicoJogadorBody.innerHTML = '';
         
-        const isProprioJogador = jogadorNome === estado.jogador;
+        // Verifica se é o próprio jogador (compara com nome E email)
+        const isProprioJogador = jogadorNome === estado.jogador || 
+                                 jogadorNome === estado.email ||
+                                 (estado.email && jogadorNome.toLowerCase() === estado.email.toLowerCase());
         
         historico.forEach((item, index) => {
             const tr = document.createElement('tr');
@@ -2348,8 +2351,6 @@ async function mostrarHistoricoJogador(jogadorNome) {
                 } else {
                     btnDesafiarHtml = `<button class="btn-desafiar-historico" data-index="${index}" title="Jogar com as mesmas perguntas">⚔️ Desafiar</button>`;
                 }
-            } else if (isProprioJogador) {
-                btnDesafiarHtml = `<span class="desafiar-info">—</span>`;
             } else {
                 btnDesafiarHtml = `<span class="desafiar-info">—</span>`;
             }

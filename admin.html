@@ -339,26 +339,31 @@
             transition: background 0.2s;
         }
 
-        /* Efeito zebra para separação visual */
+        /* Efeito zebra para separação visual - par e ímpar */
+        .pergunta-item:nth-child(odd) {
+            background: var(--white);
+        }
+        
         .pergunta-item:nth-child(even) {
-            background: var(--gray-50);
+            background: var(--gray-100);
         }
 
         .pergunta-item:hover {
-            background: var(--gray-100);
+            background: var(--gray-200);
         }
 
         .pergunta-item:last-child {
             border-bottom: none;
         }
 
-        .pergunta-item.revisar {
+        .pergunta-item.revisar:nth-child(odd) {
             background: #fff8e6;
             border-left: 4px solid var(--warning);
         }
         
         .pergunta-item.revisar:nth-child(even) {
-            background: #fff3cc;
+            background: #ffedba;
+            border-left: 4px solid var(--warning);
         }
 
         .tag-revisao {
@@ -422,8 +427,12 @@
             border-left: 3px solid #fbbf24;
         }
         
+        .pergunta-item.destaque:nth-child(odd) {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.05));
+        }
+        
         .pergunta-item.destaque:nth-child(even) {
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(245, 158, 11, 0.1));
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.22), rgba(245, 158, 11, 0.15));
         }
 
         .pergunta-tema {

@@ -907,9 +907,10 @@ export async function marcarPerguntaRevisao(perguntaId, motivo = '') {
 /**
  * Marca uma pergunta como destaque (excelente)
  * @param {string} perguntaId - ID da pergunta
+ * @param {string} observacao - Observação do jogador (opcional)
  * @returns {Promise<boolean>}
  */
-export async function marcarPerguntaDestaque(perguntaId) {
+export async function marcarPerguntaDestaque(perguntaId, observacao = '') {
     await firebasePromise;
     
     if (!firebaseDisponivel || !window._firestore) {
@@ -921,7 +922,8 @@ export async function marcarPerguntaDestaque(perguntaId) {
         await updateDoc(doc(db, "perguntas", perguntaId), {
             destaque: true,
             curtidas: increment(1),
-            dataDestaque: new Date().toISOString()
+            dataDestaque: new Date().toISOString(),
+            observacaoDestaque: observacao || null
         });
         console.log("⭐ Pergunta marcada como destaque:", perguntaId);
         return true;

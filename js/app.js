@@ -1750,13 +1750,23 @@ async function mostrarResultado(resultado) {
     elementos.detalhesLista.querySelectorAll('.btn-revisar').forEach(btn => {
         btn.addEventListener('click', async (e) => {
             const perguntaId = e.target.dataset.perguntaId;
-            if (perguntaId && confirm('Marcar esta pergunta para revisão?\n\nIsso indica que a resposta pode estar errada.')) {
+            if (perguntaId) {
+                const observacao = prompt(
+                    '⚠️ Marcar para revisão\n\n' +
+                    'Qual o problema com esta pergunta?\n' +
+                    '(opcional - deixe em branco para continuar)'
+                );
+                
+                // Se o usuário clicou em Cancelar, não faz nada
+                if (observacao === null) return;
+                
                 try {
-                    await marcarPerguntaRevisao(perguntaId, 'Reportado pelo jogador');
+                    await marcarPerguntaRevisao(perguntaId, observacao || 'Sem observação');
                     e.target.textContent = '✓';
                     e.target.disabled = true;
                     e.target.title = 'Marcada para revisão';
                     e.target.classList.add('revisada');
+                    mostrarMensagemRapida('Pergunta marcada para revisão!');
                 } catch (error) {
                     alert('Erro ao marcar pergunta. Tente novamente.');
                     console.error(error);
@@ -1769,13 +1779,23 @@ async function mostrarResultado(resultado) {
     elementos.detalhesLista.querySelectorAll('.btn-destaque').forEach(btn => {
         btn.addEventListener('click', async (e) => {
             const perguntaId = e.target.dataset.perguntaId;
-            if (perguntaId && confirm('Marcar esta pergunta como excelente?\n\nIsso indica que a pergunta é muito boa!')) {
+            if (perguntaId) {
+                const observacao = prompt(
+                    '⭐ Marcar como excelente\n\n' +
+                    'Por que você gostou desta pergunta?\n' +
+                    '(opcional - deixe em branco para continuar)'
+                );
+                
+                // Se o usuário clicou em Cancelar, não faz nada
+                if (observacao === null) return;
+                
                 try {
-                    await marcarPerguntaDestaque(perguntaId);
+                    await marcarPerguntaDestaque(perguntaId, observacao || '');
                     e.target.textContent = '🌟';
                     e.target.disabled = true;
                     e.target.title = 'Marcada como excelente!';
                     e.target.classList.add('destacada');
+                    mostrarMensagemRapida('Pergunta marcada como excelente!');
                 } catch (error) {
                     alert('Erro ao marcar pergunta. Tente novamente.');
                     console.error(error);

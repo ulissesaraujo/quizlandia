@@ -394,6 +394,20 @@
             color: #065f46;
         }
         
+        .obs-item {
+            margin-top: 4px;
+            padding-left: 8px;
+            border-left: 2px solid rgba(0,0,0,0.1);
+        }
+        
+        .obs-item:first-child {
+            margin-top: 8px;
+        }
+        
+        .obs-item strong {
+            color: inherit;
+        }
+        
         .pergunta-item.destaque {
             background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.05));
             border-left: 3px solid #fbbf24;
@@ -2067,24 +2081,51 @@
                     `<li class="${i === p.correta ? 'correta' : ''}">${alt}</li>`
                 ).join('');
                 
-                // Indicador de revisão com motivo
+                // Conta reportes e curtidas (nova estrutura: array)
+                const qtdReportes = Array.isArray(p.reportes) ? p.reportes.length : (p.reportes || 0);
+                const qtdCurtidas = Array.isArray(p.curtidas) ? p.curtidas.length : (p.curtidas || 0);
+                
+                // Indicador de revisão
                 let revisaoTag = '';
                 if (p.revisar) {
-                    revisaoTag = `<span class="tag-revisao" title="${p.motivoRevisao || 'Sem motivo'}">⚠️ ${p.reportes || 1}</span>`;
+                    revisaoTag = `<span class="tag-revisao">⚠️ ${qtdReportes}</span>`;
                 }
                 
-                // Indicador de destaque com observação
+                // Indicador de destaque
                 let destaqueTag = '';
                 if (p.destaque) {
-                    destaqueTag = `<span class="tag-destaque" title="${p.observacaoDestaque || 'Sem observação'}">⭐ ${p.curtidas || 1}</span>`;
+                    destaqueTag = `<span class="tag-destaque">⭐ ${qtdCurtidas}</span>`;
                 }
                 
-                // Observação do usuário (se houver e for útil)
+                // Observações dos reportes (nova estrutura: array de objetos)
                 let observacaoHtml = '';
-                if (p.revisar && p.motivoRevisao && p.motivoRevisao !== 'Reportado pelo jogador' && p.motivoRevisao !== 'Sem observação') {
+                if (p.revisar && Array.isArray(p.reportes) && p.reportes.length > 0) {
+                    const reportesHtml = p.reportes.map(r => {
+                        const motivo = r.motivo || 'Sem observação';
+                        if (motivo === 'Sem observação' || motivo === 'Reportado pelo jogador') {
+                            return `<div class="obs-item"><strong>${r.jogador || 'Anônimo'}</strong>: <em>(sem motivo)</em></div>`;
+                        }
+                        return `<div class="obs-item"><strong>${r.jogador || 'Anônimo'}</strong>: ${motivo}</div>`;
+                    }).join('');
+                    observacaoHtml = `<div class="pergunta-observacao revisao">💬 <strong>Reportes:</strong>${reportesHtml}</div>`;
+                }
+                // Fallback para estrutura antiga
+                else if (p.revisar && p.motivoRevisao && p.motivoRevisao !== 'Reportado pelo jogador' && p.motivoRevisao !== 'Sem observação') {
                     observacaoHtml = `<div class="pergunta-observacao revisao">💬 <strong>Motivo:</strong> ${p.motivoRevisao}</div>`;
                 }
-                if (p.destaque && p.observacaoDestaque) {
+                
+                // Observações das curtidas (nova estrutura: array de objetos)
+                if (p.destaque && Array.isArray(p.curtidas) && p.curtidas.length > 0) {
+                    const curtidasComObs = p.curtidas.filter(c => c.observacao && c.observacao.trim() !== '');
+                    if (curtidasComObs.length > 0) {
+                        const curtidasHtml = curtidasComObs.map(c => 
+                            `<div class="obs-item"><strong>${c.jogador || 'Anônimo'}</strong>: ${c.observacao}</div>`
+                        ).join('');
+                        observacaoHtml += `<div class="pergunta-observacao destaque">💬 <strong>Elogios:</strong>${curtidasHtml}</div>`;
+                    }
+                }
+                // Fallback para estrutura antiga
+                else if (p.destaque && p.observacaoDestaque) {
                     observacaoHtml += `<div class="pergunta-observacao destaque">💬 <strong>Elogio:</strong> ${p.observacaoDestaque}</div>`;
                 }
 
@@ -2199,13 +2240,15 @@
                 await atualizarPergunta(id, { 
                     revisar: false, 
                     motivoRevisao: null,
-                    dataRevisao: null 
+                    dataRevisao: null,
+                    reportes: [] // Limpa array de reportes
                 });
                 // Atualiza localmente
                 const pergunta = perguntas.find(p => p.id === id);
                 if (pergunta) {
                     pergunta.revisar = false;
                     pergunta.motivoRevisao = null;
+                    pergunta.reportes = [];
                 }
                 renderizarPerguntas();
                 mostrarMensagem('Pergunta aprovada!', 'sucesso');

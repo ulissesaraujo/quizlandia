@@ -1761,7 +1761,7 @@ async function mostrarResultado(resultado) {
                 if (observacao === null) return;
                 
                 try {
-                    await marcarPerguntaRevisao(perguntaId, observacao || 'Sem observação');
+                    await marcarPerguntaRevisao(perguntaId, observacao || 'Sem observação', estado.userId, estado.jogador);
                     e.target.textContent = '✓';
                     e.target.disabled = true;
                     e.target.title = 'Marcada para revisão';
@@ -1790,7 +1790,7 @@ async function mostrarResultado(resultado) {
                 if (observacao === null) return;
                 
                 try {
-                    await marcarPerguntaDestaque(perguntaId, observacao || '');
+                    await marcarPerguntaDestaque(perguntaId, observacao || '', estado.userId, estado.jogador);
                     e.target.textContent = '🌟';
                     e.target.disabled = true;
                     e.target.title = 'Marcada como excelente!';

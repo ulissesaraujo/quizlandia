@@ -879,9 +879,11 @@ export async function atualizarPergunta(perguntaId, dados) {
  * Marca uma pergunta para revisão
  * @param {string} perguntaId - ID da pergunta
  * @param {string} motivo - Motivo da revisão (opcional)
+ * @param {string} userId - ID do usuário que reportou
+ * @param {string} jogador - Nome do jogador (desnormalizado)
  * @returns {Promise<boolean>}
  */
-export async function marcarPerguntaRevisao(perguntaId, motivo = '') {
+export async function marcarPerguntaRevisao(perguntaId, motivo = '', userId = null, jogador = '') {
     await firebasePromise;
     
     if (!firebaseDisponivel || !window._firestore) {
@@ -889,12 +891,19 @@ export async function marcarPerguntaRevisao(perguntaId, motivo = '') {
     }
     
     try {
-        const { doc, updateDoc, increment, db } = window._firestore;
+        const { doc, updateDoc, arrayUnion, db } = window._firestore;
+        
+        // Novo registro de report
+        const novoReport = {
+            motivo: motivo || 'Sem observação',
+            userId: userId,
+            jogador: jogador,
+            data: new Date().toISOString()
+        };
+        
         await updateDoc(doc(db, "perguntas", perguntaId), {
             revisar: true,
-            motivoRevisao: motivo,
-            dataRevisao: new Date().toISOString(),
-            reportes: increment(1)
+            reportes: arrayUnion(novoReport)
         });
         console.log("🔍 Pergunta marcada para revisão:", perguntaId);
         return true;
@@ -908,9 +917,11 @@ export async function marcarPerguntaRevisao(perguntaId, motivo = '') {
  * Marca uma pergunta como destaque (excelente)
  * @param {string} perguntaId - ID da pergunta
  * @param {string} observacao - Observação do jogador (opcional)
+ * @param {string} userId - ID do usuário que curtiu
+ * @param {string} jogador - Nome do jogador (desnormalizado)
  * @returns {Promise<boolean>}
  */
-export async function marcarPerguntaDestaque(perguntaId, observacao = '') {
+export async function marcarPerguntaDestaque(perguntaId, observacao = '', userId = null, jogador = '') {
     await firebasePromise;
     
     if (!firebaseDisponivel || !window._firestore) {
@@ -918,12 +929,19 @@ export async function marcarPerguntaDestaque(perguntaId, observacao = '') {
     }
     
     try {
-        const { doc, updateDoc, increment, db } = window._firestore;
+        const { doc, updateDoc, arrayUnion, db } = window._firestore;
+        
+        // Novo registro de curtida
+        const novaCurtida = {
+            observacao: observacao || '',
+            userId: userId,
+            jogador: jogador,
+            data: new Date().toISOString()
+        };
+        
         await updateDoc(doc(db, "perguntas", perguntaId), {
             destaque: true,
-            curtidas: increment(1),
-            dataDestaque: new Date().toISOString(),
-            observacaoDestaque: observacao || null
+            curtidas: arrayUnion(novaCurtida)
         });
         console.log("⭐ Pergunta marcada como destaque:", perguntaId);
         return true;

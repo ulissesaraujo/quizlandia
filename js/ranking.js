@@ -16,6 +16,7 @@ import {
 export class RankingManager {
     constructor() {
         this.jogadorAtual = '';
+        this.userIdAtual = null;  // ID único do usuário na tabela users
         this.historicoPartidas = [];
         // Set para armazenar sessões já jogadas pelo jogador atual
         this.sessoesJogadas = new Set();
@@ -29,6 +30,15 @@ export class RankingManager {
         this.jogadorAtual = nome;
         // Carrega sessões jogadas do localStorage
         this.carregarSessoesJogadas();
+    }
+
+    /**
+     * Define o userId atual (ID do documento na tabela users)
+     * @param {string} userId - ID do usuário
+     */
+    setUserId(userId) {
+        this.userIdAtual = userId;
+        console.log('👤 RankingManager userId:', userId);
     }
 
     /**
@@ -115,8 +125,10 @@ export class RankingManager {
      * @returns {Promise}
      */
     async salvarResultadoPartida(resultado) {
-        // Adiciona o nome do jogador
+        // Adiciona o nome do jogador (desnormalizado para exibição)
         resultado.jogador = this.jogadorAtual;
+        // Adiciona o userId (referência única ao usuário)
+        resultado.userId = this.userIdAtual;
         
         // Adiciona ao histórico local
         this.historicoPartidas.unshift(resultado);

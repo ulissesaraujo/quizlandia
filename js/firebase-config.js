@@ -1121,6 +1121,160 @@ export async function buscarHistoricoJogador(jogador, limite = 20) {
 }
 
 // ========================================
+// FUNÇÕES DE USUÁRIO
+// ========================================
+
+/**
+ * Busca ou cria um usuário no Firebase
+ * @param {Object} dados - Dados do usuário
+ * @param {string} dados.visitorId - ID local do visitante (ou null se Google)
+ * @param {string} dados.googleUid - UID do Firebase Auth (ou null se visitante)
+ * @param {string} dados.nome - Nome de exibição
+ * @param {string} dados.email - Email (pode ser null)
+ * @param {string} dados.tipo - "google" ou "visitante"
+ * @param {string} dados.foto - URL da foto (pode ser null)
+ * @returns {Promise<Object>} - Documento do usuário com id
+ */
+export async function buscarOuCriarUsuario(dados) {
+    await firebasePromise;
+    
+    if (!firebaseDisponivel || !window._firestore) {
+        console.log('Firebase offline - usando usuário local');
+        return {
+            id: dados.visitorId || `local_${Date.now()}`,
+            ...dados,
+            criadoEm: new Date().toISOString(),
+            ultimoAcesso: new Date().toISOString()
+        };
+    }
+    
+    const { collection, getDocs, addDoc, updateDoc, doc, query, where, serverTimestamp, db } = window._firestore;
+    
+    try {
+        const usersRef = collection(db, 'users');
+        let usuarioExistente = null;
+        
+        // Busca por googleUid se for login Google
+        if (dados.googleUid) {
+            const q = query(usersRef, where('googleUid', '==', dados.googleUid));
+            const snapshot = await getDocs(q);
+            if (!snapshot.empty) {
+                usuarioExistente = { id: snapshot.docs[0].id, ...snapshot.docs[0].data() };
+            }
+        }
+        // Busca por visitorId se for visitante
+        else if (dados.visitorId) {
+            const q = query(usersRef, where('visitorId', '==', dados.visitorId));
+            const snapshot = await getDocs(q);
+            if (!snapshot.empty) {
+                usuarioExistente = { id: snapshot.docs[0].id, ...snapshot.docs[0].data() };
+            }
+        }
+        
+        // Se encontrou, atualiza último acesso e retorna
+        if (usuarioExistente) {
+            const userDocRef = doc(db, 'users', usuarioExistente.id);
+            await updateDoc(userDocRef, {
+                nome: dados.nome, // Atualiza nome caso tenha mudado
+                ultimoAcesso: serverTimestamp()
+            });
+            console.log('👤 Usuário existente:', usuarioExistente.id);
+            return { ...usuarioExistente, nome: dados.nome };
+        }
+        
+        // Se não encontrou, cria novo usuário
+        const novoUsuario = {
+            visitorId: dados.visitorId || null,
+            googleUid: dados.googleUid || null,
+            nome: dados.nome,
+            email: dados.email || null,
+            tipo: dados.tipo,
+            foto: dados.foto || null,
+            criadoEm: serverTimestamp(),
+            ultimoAcesso: serverTimestamp()
+        };
+        
+        const docRef = await addDoc(usersRef, novoUsuario);
+        console.log('👤 Novo usuário criado:', docRef.id);
+        
+        return { id: docRef.id, ...novoUsuario };
+        
+    } catch (error) {
+        console.error('Erro ao buscar/criar usuário:', error);
+        // Fallback: retorna objeto local
+        return {
+            id: dados.visitorId || `local_${Date.now()}`,
+            ...dados,
+            criadoEm: new Date().toISOString(),
+            ultimoAcesso: new Date().toISOString()
+        };
+    }
+}
+
+/**
+ * Busca um usuário pelo ID do Firestore
+ * @param {string} userId - ID do documento no Firestore
+ * @returns {Promise<Object|null>} - Dados do usuário ou null
+ */
+export async function buscarUsuarioPorId(userId) {
+    await firebasePromise;
+    
+    if (!firebaseDisponivel || !window._firestore || !userId) {
+        return null;
+    }
+    
+    const { doc, getDoc, db } = window._firestore;
+    
+    try {
+        const userDocRef = doc(db, 'users', userId);
+        const docSnap = await getDoc(userDocRef);
+        
+        if (docSnap.exists()) {
+            return { id: docSnap.id, ...docSnap.data() };
+        }
+        return null;
+    } catch (error) {
+        console.error('Erro ao buscar usuário:', error);
+        return null;
+    }
+}
+
+/**
+ * Atualiza dados de um usuário
+ * @param {string} userId - ID do documento no Firestore
+ * @param {Object} dados - Dados a atualizar
+ * @returns {Promise<boolean>} - true se atualizou com sucesso
+ */
+export async function atualizarUsuario(userId, dados) {
+    await firebasePromise;
+    
+    if (!firebaseDisponivel || !window._firestore || !userId) {
+        return false;
+    }
+    
+    const { doc, updateDoc, db } = window._firestore;
+    
+    try {
+        const userDocRef = doc(db, 'users', userId);
+        await updateDoc(userDocRef, dados);
+        return true;
+    } catch (error) {
+        console.error('Erro ao atualizar usuário:', error);
+        return false;
+    }
+}
+
+/**
+ * Gera um ID único para visitante
+ * @returns {string} - ID no formato "v_timestamp_random"
+ */
+export function gerarVisitorId() {
+    const timestamp = Date.now().toString(36);
+    const random = Math.random().toString(36).substring(2, 8);
+    return `v_${timestamp}_${random}`;
+}
+
+// ========================================
 // FUNÇÕES AUXILIARES
 // ========================================
 

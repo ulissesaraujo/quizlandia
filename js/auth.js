@@ -2,6 +2,8 @@
 // AUTH.JS - Autenticação com Google
 // ========================================
 
+import { buscarOuCriarUsuario } from './firebase-config.js';
+
 let auth = null;
 let googleProvider = null;
 let usuarioAtual = null;
@@ -103,11 +105,22 @@ export async function loginComGoogle() {
         
         console.log('✅ Login Google bem sucedido:', user.displayName);
         
+        // Busca ou cria usuário na tabela users
+        const usuarioFirestore = await buscarOuCriarUsuario({
+            googleUid: user.uid,
+            visitorId: null,
+            nome: user.displayName || user.email.split('@')[0], // Fallback se displayName for null
+            email: user.email,
+            tipo: 'google',
+            foto: user.photoURL
+        });
+        
         return {
             success: true,
             user: {
                 uid: user.uid,
-                nome: user.displayName,
+                userId: usuarioFirestore.id, // ID do documento na tabela users
+                nome: usuarioFirestore.nome,
                 email: user.email,
                 foto: user.photoURL,
                 isAdmin: isAdmin(user.email)

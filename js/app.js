@@ -5,7 +5,7 @@
 import { QuizEngine } from './quiz.js';
 import { RankingManager } from './ranking.js';
 import { TemasManager } from './temas.js';
-import { buscarPerguntasPorIds, buscarConfiguracoes, salvarHistoricoPerguntas, marcarPerguntaRevisao, marcarPerguntaDestaque, buscarHistoricoJogador } from './firebase-config.js';
+import { buscarPerguntasPorIds, buscarConfiguracoes, salvarHistoricoPerguntas, marcarPerguntaRevisao, marcarPerguntaDestaque, buscarHistoricoJogador, buscarOuCriarUsuario, gerarVisitorId } from './firebase-config.js';
 import { Anunciador, GerenciadorFoco, NavegacaoTeclado } from './acessibilidade.js';
 import { inicializarAuth, loginComGoogle, logout, obterUsuarioAtual, estaLogado, isAdmin, setOnAuthStateChanged } from './auth.js';
 
@@ -442,7 +442,14 @@ function inicializarHandlersLogin() {
                 const resultado = await loginComGoogle();
                 
                 if (resultado.success) {
-                    await processarLogin(resultado.user.nome, true, resultado.user.isAdmin, resultado.user.foto, resultado.user.email);
+                    await processarLogin(
+                        resultado.user.nome, 
+                        true, 
+                        resultado.user.isAdmin, 
+                        resultado.user.foto, 
+                        resultado.user.email,
+                        resultado.user.userId  // ID do documento na tabela users
+                    );
                 } else {
                     restaurarBotaoGoogle(btnGoogle);
                     if (resultado.error !== 'Login cancelado') {
@@ -463,7 +470,24 @@ function inicializarHandlersLogin() {
         const nome = elementos.inputNome.value.trim();
         
         if (nome.length >= 2) {
-            await processarLogin(nome, false, nome.toLowerCase() === 'admin');
+            // Busca ou cria visitorId no localStorage
+            let visitorId = localStorage.getItem('quiz_visitorId');
+            if (!visitorId) {
+                visitorId = gerarVisitorId();
+                localStorage.setItem('quiz_visitorId', visitorId);
+            }
+            
+            // Busca ou cria usuário na tabela users
+            const usuario = await buscarOuCriarUsuario({
+                visitorId: visitorId,
+                googleUid: null,
+                nome: nome,
+                email: null,
+                tipo: 'visitante',
+                foto: null
+            });
+            
+            await processarLogin(nome, false, nome.toLowerCase() === 'admin', null, null, usuario.id);
         }
     });
 }
@@ -487,20 +511,21 @@ function restaurarBotaoGoogle(btn) {
 /**
  * Processa o login (Google ou visitante)
  */
-async function processarLogin(nome, autenticado = false, isAdminUser = false, foto = null, email = null) {
+async function processarLogin(nome, autenticado = false, isAdminUser = false, foto = null, email = null, userId = null) {
     estado.jogador = nome;
     estado.autenticado = autenticado;
     estado.isAdmin = isAdminUser;
     estado.fotoUsuario = foto;
     estado.email = email;
+    estado.userId = userId;  // ID único do usuário na tabela users
     
     if (!autenticado) {
         localStorage.setItem('quiz_jogador', nome);
     }
     
-    // Para histórico: usa email se autenticado, senão usa nome
-    const identificador = autenticado && email ? email : nome;
-    rankingManager.setJogador(identificador);
+    // Configura o rankingManager com o userId
+    rankingManager.setJogador(nome);
+    rankingManager.setUserId(userId);
     
     // Carrega histórico do jogador
     await rankingManager.carregarHistorico();
@@ -517,7 +542,7 @@ async function processarLogin(nome, autenticado = false, isAdminUser = false, fo
     await carregarTemas();
     mostrarTela('temas');
     
-    console.log(`🚀 Login: ${nome} (${autenticado ? 'Google' : 'Visitante'}${isAdminUser ? ', Admin' : ''})`);
+    console.log(`🚀 Login: ${nome} (${autenticado ? 'Google' : 'Visitante'}${isAdminUser ? ', Admin' : ''}) - userId: ${userId}`);
 }
 
 /**
@@ -2062,7 +2087,10 @@ async function mostrarRankingGlobal() {
             
             // Verifica se o jogador atual pode desafiar este grupo
             const jaJogou = rankingManager.jaJogouSessao(grupo.sessaoId);
-            const jogadorNoGrupo = grupo.resultados.some(r => r.jogador === estado.jogador);
+            // Usa userId para verificação (fallback para nome se não tiver userId)
+            const jogadorNoGrupo = grupo.resultados.some(r => 
+                (r.userId && estado.userId) ? r.userId === estado.userId : r.jogador === estado.jogador
+            );
             const podeDesafiar = !jaJogou && !jogadorNoGrupo && grupo.perguntasIds && grupo.perguntasIds.length > 0;
             
             let btnDesafiarGrupoHtml = '';
@@ -2089,7 +2117,10 @@ async function mostrarRankingGlobal() {
             
             // Linhas dos resultados do grupo
             grupo.resultados.forEach((item, posicao) => {
-                const isJogadorAtual = item.jogador === estado.jogador;
+                // Usa userId para verificação (fallback para nome se não tiver userId)
+                const isJogadorAtual = (item.userId && estado.userId) 
+                    ? item.userId === estado.userId 
+                    : item.jogador === estado.jogador;
                 const tr = document.createElement('tr');
                 tr.className = `grupo-sessao-item${isJogadorAtual ? ' destaque' : ''}`;
                 
@@ -2230,7 +2261,10 @@ function renderizarRankingGeral() {
     });
     
     rankingOrdenado.forEach((item, index) => {
-        const isJogadorAtual = item.jogador === estado.jogador;
+        // Usa userId para verificação (fallback para nome se não tiver userId)
+        const isJogadorAtual = (item.userId && estado.userId) 
+            ? item.userId === estado.userId 
+            : item.jogador === estado.jogador;
         const tr = document.createElement('tr');
         tr.className = isJogadorAtual ? 'destaque' : '';
         
@@ -2328,10 +2362,11 @@ async function mostrarHistoricoJogador(jogadorNome) {
         
         elementos.historicoJogadorBody.innerHTML = '';
         
-        // Verifica se é o próprio jogador (compara com nome E email)
-        const isProprioJogador = jogadorNome === estado.jogador || 
-                                 jogadorNome === estado.email ||
-                                 (estado.email && jogadorNome.toLowerCase() === estado.email.toLowerCase());
+        // Verifica se é o próprio jogador usando userId (fallback para nome)
+        const primeiroItem = historico[0];
+        const isProprioJogador = (primeiroItem.userId && estado.userId) 
+            ? primeiroItem.userId === estado.userId 
+            : jogadorNome === estado.jogador;
         
         historico.forEach((item, index) => {
             const tr = document.createElement('tr');

@@ -374,6 +374,26 @@
             margin-left: 8px;
         }
         
+        .pergunta-observacao {
+            margin: 8px 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        .pergunta-observacao.revisao {
+            background: #fef3c7;
+            border-left: 3px solid #f59e0b;
+            color: #92400e;
+        }
+        
+        .pergunta-observacao.destaque {
+            background: #ecfdf5;
+            border-left: 3px solid #10b981;
+            color: #065f46;
+        }
+        
         .pergunta-item.destaque {
             background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.05));
             border-left: 3px solid #fbbf24;
@@ -2047,11 +2067,26 @@
                     `<li class="${i === p.correta ? 'correta' : ''}">${alt}</li>`
                 ).join('');
                 
-                // Indicador de revisão
-                const revisaoTag = p.revisar ? `<span class="tag-revisao">⚠️ ${p.reportes || 1}</span>` : '';
+                // Indicador de revisão com motivo
+                let revisaoTag = '';
+                if (p.revisar) {
+                    revisaoTag = `<span class="tag-revisao" title="${p.motivoRevisao || 'Sem motivo'}">⚠️ ${p.reportes || 1}</span>`;
+                }
                 
-                // Indicador de destaque
-                const destaqueTag = p.destaque ? `<span class="tag-destaque">⭐ ${p.curtidas || 1}</span>` : '';
+                // Indicador de destaque com observação
+                let destaqueTag = '';
+                if (p.destaque) {
+                    destaqueTag = `<span class="tag-destaque" title="${p.observacaoDestaque || 'Sem observação'}">⭐ ${p.curtidas || 1}</span>`;
+                }
+                
+                // Observação do usuário (se houver)
+                let observacaoHtml = '';
+                if (p.revisar && p.motivoRevisao) {
+                    observacaoHtml = `<div class="pergunta-observacao revisao">💬 <strong>Motivo:</strong> ${p.motivoRevisao}</div>`;
+                }
+                if (p.destaque && p.observacaoDestaque) {
+                    observacaoHtml += `<div class="pergunta-observacao destaque">💬 <strong>Elogio:</strong> ${p.observacaoDestaque}</div>`;
+                }
 
                 return `
                     <div class="pergunta-item ${p.revisar ? 'revisar' : ''} ${p.destaque ? 'destaque' : ''}" data-id="${p.id}">
@@ -2059,6 +2094,7 @@
                         ${destaqueTag}
                         ${revisaoTag}
                         <div class="pergunta-enunciado" onclick="toggleAlternativas('alt-${index}')">${p.enunciado}</div>
+                        ${observacaoHtml}
                         <div class="pergunta-alternativas" id="alt-${index}">
                             <ul>${alternativasHtml}</ul>
                         </div>
